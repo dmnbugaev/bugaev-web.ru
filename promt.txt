@@ -1,0 +1,56 @@
+Redesign my existing website for a digital marketing subscription service targeting beauty salons and clinics in Moscow.
+
+**Business context:**
+This is a landing page for a "Digital Subscription" service — 50,000 ₽/month that gives small beauty salons a full remote IT + SMM department: website, Telegram bot, CRM setup, and social media management. Target audience: solo salon owners who understand the value of social media but don't want to hire a full-time person.
+
+**Design direction — study these reference styles carefully:**
+1. Large editorial typography (oversized display fonts that overlap or bleed off-screen, like "woodcraft" or "City Arcade" references)
+2. Clean white/light backgrounds with black as dominant text color + 1 strong accent color
+3. Asymmetric layouts with big imagery and floating stat counters
+4. Generous whitespace mixed with dense feature sections
+5. Pill-shaped tag badges, arrow-link buttons (↗), subtle card borders with soft shadows
+6. Section contrast: alternate between all-white and dark (near-black) sections
+7. Beauty/cosmetics aesthetic — soft sage green, warm beige/cream, or dusty rose as accent — NOT purple gradients
+8. Monospace or condensed sans-serif for headings (something distinctive, NOT Inter or Roboto)
+
+**Page sections to redesign (keep the same structure, replace all styles):**
+
+**HERO:**
+- Giant headline: "Ваш удалённый отдел маркетинга" spanning 2–3 lines, typographic-poster style
+- Subtext: small, refined, left-aligned
+- Two CTAs: primary dark pill button "Оставить заявку →", secondary ghost "Узнать подробнее"
+- Right side: floating card showing "50 000 ₽/мес" with checkmarks of included services
+- Stat counters floating: "7 клиентов = 350к ₽", "С первого месяца", "1 менеджер = всё"
+
+**WHAT'S INCLUDED (5 services grid):**
+- Сайт-визитка, Telegram-бот, Ведение соцсетей, CRM-система, Личный менеджер
+- Each as a card with number (01, 02...), icon, title, 1-line description
+- One card highlighted in dark/inverted (like "Verified Pro Listings" in the real estate reference)
+
+**WHY US section:**
+- 4-block grid "Почему мы?" — similar to the beauty salon reference image (2x2 with center label)
+- Pain points addressed: разрозненные подрядчики → одно решение, нет времени на соцсети → мы ведём, страх удалёнки → прозрачная отчётность, дорогой штатный SMM → 50к всё включено
+
+**HOW IT WORKS (3 steps):**
+- Horizontal timeline or large numbered steps
+- Шаг 1: Оставляете заявку → Шаг 2: Внедрение за 1 месяц → Шаг 3: Система работает и растёт
+
+**PRICING:**
+- Single price card, centered, luxury treatment — "50 000 ₽ / месяц"
+- Full list of what's included
+- Bold CTA button
+- Note: "Всё внедрение в первый месяц без доп. оплаты"
+
+**FOOTER:**
+- Minimal, dark background, Telegram contact link
+
+**Technical requirements:**
+- Keep existing HTML/CSS/JS file structure, just replace all styling and layout
+- Use Google Fonts — pick something editorial and distinctive (e.g. Playfair Display + DM Mono, or Cormorant + Space Mono, or Syne + Syne Mono)
+- CSS custom properties for all colors and typography
+- Smooth scroll, subtle fade-in on scroll for sections
+- Fully responsive (mobile-first)
+- NO stock photo placeholders — use CSS geometric shapes, gradients, or abstract backgrounds where images would go
+- Accent color: choose ONE from sage green (#8FAF8A), warm sand (#C9B8A8), or charcoal rose (#9E7B7B) — whichever fits best
+
+Make it look like a premium Behance portfolio piece, not a generic template. The typography should be the hero of the design.
