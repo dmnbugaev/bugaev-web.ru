@@ -8,7 +8,7 @@
 
         <!-- Brand -->
         <div class="max-w-xs">
-          <a href="#" class="flex items-center gap-3 mb-4 group">
+          <a href="/" class="flex items-center gap-3 mb-4 group">
             <div
               class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 transition-transform duration-200 group-hover:scale-105"
               style="background: var(--accent);"
@@ -114,21 +114,16 @@
         <p class="text-xs order-2 sm:order-1 mono" style="color: rgba(255,255,255,0.18);">
           © {{ currentYear }} Bugaev Web. Все права защищены.
         </p>
-        <div class="flex items-center gap-5 order-1 sm:order-2">
+        <div class="flex flex-wrap items-center gap-4 order-1 sm:order-2">
           <a
-            href="#"
+            v-for="link in legalLinks"
+            :key="link.href"
+            :href="link.href"
             class="text-xs transition-colors duration-150"
             style="color: rgba(255,255,255,0.22);"
             @mouseenter="(e) => (e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.6)'"
             @mouseleave="(e) => (e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.22)'"
-          >Политика конфиденциальности</a>
-          <a
-            href="#"
-            class="text-xs transition-colors duration-150"
-            style="color: rgba(255,255,255,0.22);"
-            @mouseenter="(e) => (e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.6)'"
-            @mouseleave="(e) => (e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.22)'"
-          >Договор оферты</a>
+          >{{ link.label }}</a>
         </div>
       </div>
     </div>
@@ -162,6 +157,14 @@ const socials = [
   { label: 'Telegram',  href: 'https://t.me/bugaev_web',          icon: IconTelegram },
   { label: 'Instagram', href: 'https://instagram.com/bugaev_web', icon: IconInstagram },
   { label: 'ВКонтакте', href: 'https://vk.com/bugaev_web',        icon: IconVK },
+]
+
+const legalLinks = [
+  { href: '/privacy',     label: 'Политика конфиденциальности' },
+  { href: '/oferta',      label: 'Договор оферты' },
+  { href: '/terms',       label: 'Соглашение' },
+  { href: '/cookies',     label: 'Cookies' },
+  { href: '/requisites',  label: 'Реквизиты' },
 ]
 
 const serviceLinks = [

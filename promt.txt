@@ -1,56 +1,169 @@
-Redesign my existing website for a digital marketing subscription service targeting beauty salons and clinics in Moscow.
+Ты – опытный маркетолог и копирайтер с сильной экспертизой в SEO и продвижении локального бизнеса в сфере бьюти и медицины (салоны красоты, косметология, стоматология, студии). Твоя задача – написать продающий SEO‑оптимизированный текст для главной страницы лендинга на Nuxt.js под следующую бизнес‑модель.
 
-**Business context:**
-This is a landing page for a "Digital Subscription" service — 50,000 ₽/month that gives small beauty salons a full remote IT + SMM department: website, Telegram bot, CRM setup, and social media management. Target audience: solo salon owners who understand the value of social media but don't want to hire a full-time person.
+Важно:
 
-**Design direction — study these reference styles carefully:**
-1. Large editorial typography (oversized display fonts that overlap or bleed off-screen, like "woodcraft" or "City Arcade" references)
-2. Clean white/light backgrounds with black as dominant text color + 1 strong accent color
-3. Asymmetric layouts with big imagery and floating stat counters
-4. Generous whitespace mixed with dense feature sections
-5. Pill-shaped tag badges, arrow-link buttons (↗), subtle card borders with soft shadows
-6. Section contrast: alternate between all-white and dark (near-black) sections
-7. Beauty/cosmetics aesthetic — soft sage green, warm beige/cream, or dusty rose as accent — NOT purple gradients
-8. Monospace or condensed sans-serif for headings (something distinctive, NOT Inter or Roboto)
+Пиши на русском, живым, но деловым языком, без канцелярита и заезженных фраз.
 
-**Page sections to redesign (keep the same structure, replace all styles):**
+Фокус – владельцы небольших салонов красоты, студий ногтевого сервиса, косметологов и небольших клиник/стоматологий в Москве и МО.
 
-**HERO:**
-- Giant headline: "Ваш удалённый отдел маркетинга" spanning 2–3 lines, typographic-poster style
-- Subtext: small, refined, left-aligned
-- Two CTAs: primary dark pill button "Оставить заявку →", secondary ghost "Узнать подробнее"
-- Right side: floating card showing "50 000 ₽/мес" with checkmarks of included services
-- Stat counters floating: "7 клиентов = 350к ₽", "С первого месяца", "1 менеджер = всё"
+Стиль: уверенный, экспертный, без агрессивных продаж, с акцентом на выгоду и экономию времени/денег.
 
-**WHAT'S INCLUDED (5 services grid):**
-- Сайт-визитка, Telegram-бот, Ведение соцсетей, CRM-система, Личный менеджер
-- Each as a card with number (01, 02...), icon, title, 1-line description
-- One card highlighted in dark/inverted (like "Verified Pro Listings" in the real estate reference)
+Обязательно учитывай SEO:
 
-**WHY US section:**
-- 4-block grid "Почему мы?" — similar to the beauty salon reference image (2x2 with center label)
-- Pain points addressed: разрозненные подрядчики → одно решение, нет времени на соцсети → мы ведём, страх удалёнки → прозрачная отчётность, дорогой штатный SMM → 50к всё включено
+Вплетай в текст ключи (естественно, без спама):
+«digital для салона красоты», «digital для клиники», «ведение соцсетей для салона», «smm для салона красоты», «ведение Instagram салона красоты», «ведение Telegram салона», «сайт для салона красоты», «сайт для клиники», «telegram‑бот для салона красоты», «crm для салона красоты», «маркетинг для салона красоты», «привлечение клиентов в салон красоты», «продвижение салона красоты в интернете», «комплексный маркетинг для салона красоты», «любой салон красоты под ключ digital».
 
-**HOW IT WORKS (3 steps):**
-- Horizontal timeline or large numbered steps
-- Шаг 1: Оставляете заявку → Шаг 2: Внедрение за 1 месяц → Шаг 3: Система работает и растёт
+Добавь фразы с геопривязкой: «Москва», «Московская область», «для салонов Москвы», «для салонов в спальных районах Москвы» и т.п.
 
-**PRICING:**
-- Single price card, centered, luxury treatment — "50 000 ₽ / месяц"
-- Full list of what's included
-- Bold CTA button
-- Note: "Всё внедрение в первый месяц без доп. оплаты"
+Структурируй текст под H1–H3 заголовки, чтобы его можно было сразу разнести по секциям лендинга.
 
-**FOOTER:**
-- Minimal, dark background, Telegram contact link
+Учитывай, что услуга продается по фиксированной подписке 50 000 ₽/мес, без разовых платежей за внедрение. Сделай на этом сильный акцент.
 
-**Technical requirements:**
-- Keep existing HTML/CSS/JS file structure, just replace all styling and layout
-- Use Google Fonts — pick something editorial and distinctive (e.g. Playfair Display + DM Mono, or Cormorant + Space Mono, or Syne + Syne Mono)
-- CSS custom properties for all colors and typography
-- Smooth scroll, subtle fade-in on scroll for sections
-- Fully responsive (mobile-first)
-- NO stock photo placeholders — use CSS geometric shapes, gradients, or abstract backgrounds where images would go
-- Accent color: choose ONE from sage green (#8FAF8A), warm sand (#C9B8A8), or charcoal rose (#9E7B7B) — whichever fits best
+Важный посыл: это «удаленный digital‑отдел + SMM‑менеджер» для салона/клиники за фиксированную сумму.
 
-Make it look like a premium Behance portfolio piece, not a generic template. The typography should be the hero of the design.
+Используй следующую структуру лендинга и наполни её текстом.
+
+H1 + первый экран
+Задача блока – сразу зацепить владельца салона/клиники.
+Сделай:
+
+Сильный H1 (до 10–12 слов) с основной выгодой (digital + SMM под ключ за подписку).
+
+Подзаголовок 1–2 предложения, который раскрывает суть: единая подписка 50 000 ₽, вы – удаленный digital‑отдел и SMM‑отдел, рост заявок и порядка в заявках.
+
+3–4 коротких буллета с главными выгодами:
+
+сайт‑визитка
+
+умный Telegram‑бот
+
+ведение соцсетей (Instagram/Telegram)
+
+CRM и аналитика
+
+Короткий призыв к действию (записаться на консультацию в Telegram/оставить заявку на сайте).
+
+Блок «Для кого эта подписка»
+Опиши целевую аудиторию:
+
+небольшие салоны красоты, студии, кабинеты, клиники, стоматологии;
+
+гео – Москва и область;
+
+боли: нет времени вести соцсети, нет системного маркетинга, боязнь удаленщиков, разрозненные подрядчики.
+Сделай 3–5 буллетов, каждый – боль + как предложение её закрывает.
+
+Блок «Что входит в подписку 50 000 ₽ в месяц»
+Сделай подзаголовок и структурированный список с подзаголовками (можно H3). Покрой:
+
+Сайт‑визитка на Nuxt.js:
+
+лендинг под услуги салона/клиники, цены, контакты;
+
+мобильная адаптация, быстрая загрузка;
+
+базовая SEO‑оптимизация (ключи, мета‑теги, структура).
+
+Telegram‑бот на Python (aiogram):
+
+онлайн‑запись;
+
+напоминания о визите;
+
+сбор отзывов;
+
+автоворонка (приветственные цепочки, прогрев).
+
+Ведение соцсетей (Instagram и/или Telegram‑канал):
+
+3–4 поста в неделю;
+
+контент: полезные советы, акции, «до/после», новости салона;
+
+визуал в Canva, адаптированный под бьюти‑нишу;
+
+ответы на комментарии и сообщения в рабочее время;
+
+сторис/сторителлинг раз в неделю.
+
+CRM (например, YCLIENTS) и интеграции:
+
+подключение и настройка CRM;
+
+перенос базы клиентов;
+
+связка сайт → бот → CRM;
+
+базовая аналитика по заявкам и записям.
+
+Личный менеджер в Telegram:
+
+связь по рабочим вопросам;
+
+рекомендации по акциям, спецпредложениям, трендам.
+
+Блок «Как это работает по шагам»
+Опиши простую схему в 4–5 шагов, например:
+
+Заявка и короткая онлайн‑встреча.
+
+Сбор информации и запуск создания сайта/бота/соцсетей.
+
+Внедрение CRM и интеграций.
+
+Запуск контента и первой рекламной активности (если есть).
+
+Ежемесячная поддержка и отчеты.
+Текст должен снять страхи: «мне будет сложно», «это долго», «я ничего не понимаю в digital».
+
+Блок «Почему подписка выгоднее, чем нанимать людей по отдельности»
+Сделай контраст:
+
+Нанимать SMM‑менеджера, маркетолога, разработчика, отдельного человека по сайту и боту → дорого, долго, нет гарантии.
+
+Подписка за 50 000 ₽ → один подрядчик, единая ответственность, все digital‑инструменты под ключ, быстрый старт.
+Добавь примеры или мини‑калькуляцию в тексте (без таблицы, просто словами).
+
+Блок «Результат для салона/клиники»
+Опиши, что получает владелец через 1–3 месяца:
+
+больше заявок из интернета;
+
+запись через сайт и Telegram‑бот;
+
+живой аккаунт салона в соцсетях;
+
+порядок в базе клиентов;
+
+понятные цифры по заявкам и записям.
+Сделай акцент на том, что владелец сам почти не вовлечен в операционку digital – основное, что от него нужно, это иногда присылать фото и согласовывать акции.
+
+Блок FAQ (ответы на частые вопросы)
+Придумай 5–7 вопросов и ответов, которые снимают типичные возражения:
+
+«А если у нас уже есть Instagram?»
+
+«А если у нас нет нормальных фото?»
+
+«А если мы находимся не в центре Москвы?»
+
+«А если мы захотим уйти?»
+
+«Как быстро будут результаты?»
+
+«Насколько это безопасно с точки зрения данных клиентов?»
+Ответы делай короткими, но успокаивающими, с акцентом на пользу и простоту.
+
+Заключительный оффер + призыв к действию
+Собери в 2–3 предложения сильный финальный оффер формата:
+«Ваш персональный digital‑отдел и SMM для салона красоты или клиники в Москве за 50 000 ₽ в месяц. Без разовых платежей, без заморочек с подрядчиками, с понятным результатом по заявкам и записям.»
+Сделай четкий CTA: «Оставьте заявку на консультацию» или «Напишите в Telegram, чтобы обсудить ваш салон».
+
+Формат ответа:
+
+Строго структурированный текст с H1/H2/H3 (можно через #, ##, ###),
+
+Абзацы, списки, буллеты,
+
+Без лишних комментариев от себя, только готовый текст для вставки в лендинг.
+
