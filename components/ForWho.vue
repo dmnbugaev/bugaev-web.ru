@@ -4,21 +4,39 @@
 
       <div class="mb-14">
         <div class="mb-5" data-animate="fade-down">
-          <span class="badge">Наши клиенты</span>
+          <span class="badge">Для кого эта подписка</span>
         </div>
         <h2 class="section-title mb-4" data-animate="fade-up" data-delay="100">
-          Идеально подходит для
+          Узнаёте себя?
         </h2>
-        <p class="section-subtitle max-w-lg" data-animate="fade-up" data-delay="200">
-          Если вы устали нанимать фрилансеров по отдельности и хотите один понятный бюджет — этот абонемент для вас.
+        <p class="section-subtitle max-w-xl" data-animate="fade-up" data-delay="200">
+          Небольшие салоны красоты, студии, кабинеты, клиники и стоматологии Москвы и Московской области — для тех, кто хочет системный маркетинг без головной боли с подрядчиками.
         </p>
+      </div>
+
+      <!-- Pain → Solution list -->
+      <div class="grid sm:grid-cols-2 gap-4 mb-10" data-animate="fade-up" data-delay="200">
+        <div
+          v-for="pain in pains"
+          :key="pain.problem"
+          class="card p-6 flex flex-col gap-3"
+          style="background: var(--surface);"
+        >
+          <p class="text-sm font-semibold" style="color: var(--ink);">{{ pain.problem }}</p>
+          <div class="flex items-center gap-2">
+            <div class="h-px flex-1" style="background: var(--border);" />
+            <span style="color: var(--accent); font-size: 0.8rem;">↓</span>
+            <div class="h-px flex-1" style="background: var(--border);" />
+          </div>
+          <p class="text-sm" style="color: var(--accent-text); font-weight: 600;">{{ pain.solution }}</p>
+        </div>
       </div>
 
       <!-- Who list -->
       <div
         class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10"
         data-animate="fade-up"
-        data-delay="280"
+        data-delay="400"
       >
         <div
           v-for="item in whoList"
@@ -47,9 +65,9 @@
         data-delay="400"
       >
         <div>
-          <h3 class="text-xl font-bold mb-2" style="color: var(--ink); letter-spacing: -0.02em;">Готовы обсудить?</h3>
+          <h3 class="text-xl font-bold mb-2" style="color: var(--ink); letter-spacing: -0.02em;">Готовы обсудить ваш салон?</h3>
           <p class="text-sm" style="color: var(--ink-3);">
-            Оставьте заявку — проведём бесплатный аудит и составим план
+            Оставьте заявку — проведём бесплатный аудит и составим план продвижения
           </p>
         </div>
         <div class="flex flex-col sm:flex-row gap-3 flex-shrink-0">
@@ -82,6 +100,25 @@ const IconStudio = ic([['circle', { cx: 12, cy: 8, r: 4 }], ['path', { d: 'M12 1
 const IconNails  = ic([['path', { d: 'M7 4C5.4 4 4 5.4 4 7v10a3 3 0 006 0V7c0-1.6-1.4-3-3-3z' }], ['path', { d: 'M17 4c-1.6 0-3 1.4-3 3v10a3 3 0 006 0V7c0-1.6-1.4-3-3-3z' }]])
 const IconBrow   = ic([['path', { d: 'M2 14c3-5 7-7 10-7s7 2 10 7' }], ['circle', { cx: 12, cy: 14, r: 2 }]])
 const IconDent   = ic([['path', { d: 'M12 3c-2.5 0-5 1.5-5 4 0 3 1.5 5 2 8 .5 2 3 2 3 2s2.5 0 3-2c.5-3 2-5 2-8 0-2.5-2.5-4-5-4z' }]])
+
+const pains = [
+  {
+    problem:  'Нет времени вести соцсети — руки не доходят, контент выходит хаотично',
+    solution: 'Мы ведём Instagram и Telegram вместо вас: 3–4 поста в неделю, ответы на комментарии, сторис — ваше участие 10–15 минут.',
+  },
+  {
+    problem:  'Нет системного маркетинга — клиенты приходят «сарафаном», новых не прибавляется',
+    solution: 'Выстраиваем полный digital-цикл: сайт → соцсети → бот → CRM. Привлечение клиентов в салон красоты становится предсказуемым.',
+  },
+  {
+    problem:  'Боязнь удалёнщиков — непонятно, что они делают и есть ли результат',
+    solution: 'Еженедельные отчёты в Telegram, видите каждое действие и цифры. Личный менеджер на связи 6 дней в неделю.',
+  },
+  {
+    problem:  'Разрозненные подрядчики — отдельно сайт, отдельно SMM, отдельно реклама и всё не связано',
+    solution: 'Один подрядчик, единая ответственность. Сайт, бот, соцсети и CRM работают в связке под ключ.',
+  },
+]
 
 const whoList = [
   { icon: IconSalon,  text: 'Салон красоты любого формата', sub: 'Парикмахерские, барбершопы, beauty-студии' },

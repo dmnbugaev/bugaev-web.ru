@@ -23,7 +23,7 @@
           <div class="mb-8" data-animate="fade-down" data-delay="100">
             <span class="badge">
               <span class="w-1.5 h-1.5 rounded-full flex-shrink-0" style="background: var(--accent);" />
-              Цифровой пакет для салонов красоты · Москва
+              Digital для салона красоты · Москва и МО
             </span>
           </div>
 
@@ -41,21 +41,21 @@
               margin-bottom: 1.75rem;
             "
           >
-            Ваш<br />
-            удалённый<br />
-            <span style="color: var(--accent);">отдел</span><br />
-            маркетинга
+            Digital‑отдел<br />
+            и&nbsp;SMM для<br />
+            <span style="color: var(--accent);">салона</span><br />
+            под ключ
           </h1>
 
           <!-- Subtitle -->
           <p
             data-animate="fade-up"
             data-delay="250"
-            style="font-size: 1rem; line-height: 1.7; color: var(--ink-3); max-width: 380px; margin-bottom: 2.25rem;"
+            style="font-size: 1rem; line-height: 1.7; color: var(--ink-3); max-width: 420px; margin-bottom: 2.25rem;"
           >
-            Сайт, Telegram‑бот, соцсети и CRM&nbsp;— одна подписка
-            вместо четырёх подрядчиков. Для салонов красоты
-            и клиник.
+            Единая подписка 50&nbsp;000&nbsp;₽/мес — мы ваш удалённый digital‑отдел
+            и SMM‑менеджер для салона красоты или клиники в Москве.
+            Рост заявок и порядок в записях с первого месяца.
           </p>
 
           <!-- CTAs -->
@@ -193,16 +193,16 @@
 
 <script setup lang="ts">
 const stats = [
-  { value: '50+',   label: 'клиентов в работе' },
+  { value: '50+',   label: 'салонов в работе' },
   { value: '3×',    label: 'рост записей' },
   { value: '1 мес', label: 'до запуска системы' },
 ]
 
 const priceIncludes = [
-  'Сайт-визитка на Nuxt.js',
-  'Telegram-бот на Python',
-  'Ведение 2 соцсетей',
-  'Настройка CRM YCLIENTS',
-  'Личный менеджер',
+  'Сайт-визитка: SEO, мобайл, онлайн-запись',
+  'Умный Telegram-бот (запись, отзывы, прогрев)',
+  'Ведение Instagram и Telegram-канала',
+  'CRM YCLIENTS: настройка и интеграция',
+  'Личный менеджер в Telegram',
 ]
 </script>
