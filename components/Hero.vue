@@ -1,44 +1,47 @@
 <template>
   <section
     id="hero"
-    class="relative overflow-hidden"
-    style="background: var(--surface); min-height: 100vh; padding-top: 72px;"
+    class="relative overflow-hidden flex flex-col"
+    style="background: var(--surface); height: 100svh; min-height: 580px; padding-top: 72px;"
   >
-    <!-- Soft accent blob -->
+    <!-- Accent blobs -->
     <div
       class="absolute pointer-events-none"
-      style="top: 5%; right: 0; width: 480px; height: 480px; border-radius: 50%; background: var(--accent-dim); filter: blur(100px); transform: translateX(30%);"
+      style="top: 0; right: 0; width: 420px; height: 420px; border-radius: 50%; background: var(--accent-dim); filter: blur(90px); transform: translate(30%, -10%);"
     />
     <div
       class="absolute pointer-events-none"
-      style="bottom: 15%; left: -80px; width: 280px; height: 280px; border-radius: 50%; background: rgba(143,175,138,0.05); filter: blur(80px);"
+      style="bottom: 10%; left: -60px; width: 240px; height: 240px; border-radius: 50%; background: rgba(143,175,138,0.05); filter: blur(70px);"
     />
 
-    <div class="section-container relative z-10">
-      <div class="grid lg:grid-cols-[1fr_340px] gap-12 xl:gap-20 items-start py-16 lg:py-24">
+    <!-- Main content — vertically centered -->
+    <div class="section-container relative z-10 flex-1 flex flex-col justify-center py-6 sm:py-10">
+
+      <div class="grid lg:grid-cols-[1fr_320px] xl:grid-cols-[1fr_340px] gap-8 xl:gap-16 items-center">
 
         <!-- Left: headline + CTAs -->
         <div>
+
           <!-- Badge -->
-          <div class="mb-8" data-animate="fade-down" data-delay="100">
+          <div class="mb-4 sm:mb-5" data-animate="fade-down" data-delay="100">
             <span class="badge">
               <span class="w-1.5 h-1.5 rounded-full flex-shrink-0" style="background: var(--accent);" />
               Digital для салона красоты · Москва и МО
             </span>
           </div>
 
-          <!-- Giant editorial headline -->
+          <!-- H1 -->
           <h1
             data-animate="fade-up"
             data-delay="150"
             style="
               font-family: 'Syne', sans-serif;
               font-weight: 800;
-              line-height: 0.93;
+              line-height: 0.92;
               letter-spacing: -0.04em;
               color: var(--ink);
-              font-size: clamp(3.2rem, 8.5vw, 7rem);
-              margin-bottom: 1.75rem;
+              font-size: clamp(2.5rem, 7vw, 6rem);
+              margin-bottom: 1.25rem;
             "
           >
             Digital‑отдел<br />
@@ -51,30 +54,30 @@
           <p
             data-animate="fade-up"
             data-delay="250"
-            style="font-size: 1rem; line-height: 1.7; color: var(--ink-3); max-width: 420px; margin-bottom: 2.25rem;"
+            style="font-size: clamp(0.875rem, 1.5vw, 1rem); line-height: 1.65; color: var(--ink-3); max-width: 400px; margin-bottom: 1.75rem;"
           >
-            Единая подписка 50&nbsp;000&nbsp;₽/мес — мы ваш удалённый digital‑отдел
-            и SMM‑менеджер для салона красоты или клиники в Москве.
-            Рост заявок и порядок в записях с первого месяца.
+            Единая подписка 50&nbsp;000&nbsp;₽/мес — удалённый digital‑отдел
+            и SMM для салона красоты в Москве.
+            Рост заявок с первого месяца.
           </p>
 
           <!-- CTAs -->
-          <div class="flex flex-wrap gap-3 mb-14" data-animate="fade-up" data-delay="350">
+          <div class="flex flex-wrap gap-3 mb-5 sm:mb-7" data-animate="fade-up" data-delay="350">
             <a href="#contact" class="btn-primary">
               Оставить заявку
-              <span style="font-size: 1.15em; line-height: 1;">→</span>
+              <span style="font-size: 1.1em; line-height: 1;">→</span>
             </a>
             <a href="#features" class="btn-outline">
               Узнать подробнее
             </a>
           </div>
 
-          <!-- Floating stat chips -->
-          <div class="flex flex-wrap gap-2.5" data-animate="fade-up" data-delay="450">
+          <!-- Stat chips — hidden on very small screens -->
+          <div class="hidden sm:flex flex-wrap gap-2" data-animate="fade-up" data-delay="450">
             <div
               v-for="stat in stats"
               :key="stat.label"
-              class="flex items-center gap-2.5 px-4 py-2.5 rounded-full"
+              class="flex items-center gap-2 px-3.5 py-2 rounded-full"
               style="background: var(--surface-warm); border: 1px solid var(--border);"
             >
               <span class="mono text-sm font-bold" style="color: var(--ink);">{{ stat.value }}</span>
@@ -83,7 +86,7 @@
           </div>
         </div>
 
-        <!-- Right: price card (desktop) -->
+        <!-- Right: price card (desktop only) -->
         <div
           class="hidden lg:flex flex-col gap-3 flex-shrink-0"
           data-animate="fade-left"
@@ -91,22 +94,21 @@
         >
           <!-- Main price card -->
           <div
-            class="relative overflow-hidden rounded-2xl p-7"
+            class="relative overflow-hidden rounded-2xl p-6 xl:p-7"
             style="background: var(--ink); color: white;"
           >
-            <!-- Accent blob inside card -->
             <div style="position: absolute; top: -60px; right: -60px; width: 200px; height: 200px; border-radius: 50%; background: rgba(143,175,138,0.10); pointer-events: none;" />
 
-            <p class="mono text-xs mb-5 relative z-10" style="color: rgba(255,255,255,0.35); letter-spacing: 0.09em; text-transform: uppercase;">
+            <p class="mono text-xs mb-4 relative z-10" style="color: rgba(255,255,255,0.35); letter-spacing: 0.09em; text-transform: uppercase;">
               Подписка / месяц
             </p>
 
-            <div class="flex items-end gap-1.5 mb-6 relative z-10">
+            <div class="flex items-end gap-1.5 mb-5 relative z-10">
               <span
                 style="
                   font-family: 'Syne', sans-serif;
                   font-weight: 800;
-                  font-size: 3.6rem;
+                  font-size: clamp(2.8rem, 4vw, 3.6rem);
                   line-height: 1;
                   letter-spacing: -0.04em;
                 "
@@ -114,7 +116,7 @@
               <span class="text-xl font-semibold mb-1.5" style="color: rgba(255,255,255,0.4);">₽</span>
             </div>
 
-            <ul class="space-y-2.5 mb-6 relative z-10">
+            <ul class="space-y-2 mb-5 relative z-10">
               <li
                 v-for="item in priceIncludes"
                 :key="item"
@@ -143,49 +145,54 @@
             </a>
           </div>
 
-          <!-- Secondary info chip -->
+          <!-- No extra cost chip -->
           <div
-            class="rounded-2xl px-5 py-4 flex items-center justify-between"
+            class="rounded-2xl px-5 py-3.5 flex items-center justify-between"
             style="background: var(--surface-warm); border: 1px solid var(--border);"
           >
             <div>
               <p class="mono text-xs mb-0.5" style="color: var(--ink-3);">Внедрение в первый месяц</p>
               <p class="text-sm font-semibold" style="color: var(--ink);">Без доплат за запуск</p>
             </div>
-            <span class="text-2xl" style="color: var(--accent);">✓</span>
+            <span class="text-xl" style="color: var(--accent);">✓</span>
           </div>
         </div>
       </div>
 
-      <!-- Mobile price card -->
-      <div class="lg:hidden pb-16" data-animate="fade-up" data-delay="500">
-        <div class="rounded-2xl p-6" style="background: var(--ink);">
-          <div class="flex items-end justify-between mb-5">
-            <div>
-              <p class="mono text-xs mb-1" style="color: rgba(255,255,255,0.35);">Подписка / месяц</p>
-              <span
-                style="
-                  font-family: 'Syne', sans-serif;
-                  font-weight: 800;
-                  font-size: 2.5rem;
-                  line-height: 1;
-                  letter-spacing: -0.04em;
-                  color: white;
-                "
-              >50 000 ₽</span>
-            </div>
-            <span class="badge-dark">Всё включено</span>
+      <!-- Mobile: compact price strip -->
+      <div
+        class="lg:hidden mt-5"
+        data-animate="fade-up"
+        data-delay="500"
+      >
+        <div
+          class="flex items-center justify-between rounded-2xl px-5 py-4"
+          style="background: var(--ink);"
+        >
+          <div>
+            <p class="mono text-xs mb-0.5" style="color: rgba(255,255,255,0.35);">Подписка / месяц</p>
+            <span
+              style="
+                font-family: 'Syne', sans-serif;
+                font-weight: 800;
+                font-size: 1.6rem;
+                line-height: 1;
+                letter-spacing: -0.03em;
+                color: white;
+              "
+            >50 000 ₽</span>
           </div>
-          <a href="#contact" class="btn-accent w-full justify-center">
-            Оставить заявку →
+          <a href="#contact" class="btn-accent text-sm px-4 py-2.5 whitespace-nowrap">
+            Заявка →
           </a>
         </div>
       </div>
+
     </div>
 
     <!-- Bottom fade -->
     <div
-      class="absolute bottom-0 left-0 right-0 h-24 pointer-events-none"
+      class="absolute bottom-0 left-0 right-0 h-20 pointer-events-none"
       style="background: linear-gradient(to bottom, transparent, var(--surface));"
     />
   </section>

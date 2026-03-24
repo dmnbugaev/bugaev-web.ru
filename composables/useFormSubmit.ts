@@ -108,38 +108,29 @@ export const useFormSubmit = () => {
     }
 
     try {
-      // ─── STUB MODE ───────────────────────────────────────────────────────
-      // In production: remove the stub block below and uncomment the real fetch.
-      // ─────────────────────────────────────────────────────────────────────
-      await new Promise<void>((resolve) => setTimeout(resolve, 1200))
-      console.log('[Form Submit] Payload (stub mode):', payload)
-
-      // ─── Real fetch (uncomment when endpoint is ready) ───────────────────
-      // const response = await fetch(FORM_ENDPOINT, {
-      //   method: 'POST',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //     Accept: 'application/json',
-      //   },
-      //   body: JSON.stringify(payload),
-      // })
-      // if (!response.ok) {
-      //   const err = await response.json().catch(() => ({}))
-      //   throw new Error(
-      //     (err as { message?: string }).message || `Ошибка сервера: ${response.status}`
-      //   )
-      // }
-      // ─────────────────────────────────────────────────────────────────────
+      const response = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify(payload),
+      })
+      if (!response.ok) {
+        const err = await response.json().catch(() => ({}))
+        throw new Error(
+          (err as { message?: string }).message || `Ошибка сервера: ${response.status}`
+        )
+      }
 
       isSuccess.value = true
 
-      // Track conversion in Yandex Metrika (if loaded)
+      // Track conversion in Yandex Metrika
       if (typeof window !== 'undefined') {
         type WinWithYm = Window & { ym?: (...args: unknown[]) => void }
         const ym = (window as WinWithYm).ym
         if (typeof ym === 'function') {
-          // TODO: Replace XXXXXXXX with your Metrika counter ID
-          ym('XXXXXXXX', 'reachGoal', 'lead_form_submit')
+          ym(108208585, 'reachGoal', 'lead_form_submit')
         }
       }
 

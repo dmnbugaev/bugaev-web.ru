@@ -33,7 +33,7 @@
             <p>
               Наименование: ИП Бугаев Дмитрий Сергеевич<br>
               ОГРНИП: 326645700031745 | ИНН: 645212058772<br>
-              Электронная почта: <a href="mailto:dmnbugaev@gmain.com">dmnbugaev@gmain.com</a><br>
+              Электронная почта: <a href="mailto:dmnbugaev@gmail.com">dmnbugaev@gmail.com</a><br>
               Телефон: <a href="tel:+79964145143">+7 (996) 414-51-43</a><br>
               Telegram: <a href="https://t.me/bugaev_web" target="_blank" rel="noopener noreferrer">@bugaev_web</a>
             </p>
@@ -138,7 +138,7 @@
               <li><strong>ограничить обработку</strong> данных в случаях, предусмотренных ФЗ-152;</li>
               <li><strong>подать жалобу</strong> в Федеральную службу по надзору в сфере связи, информационных технологий и массовых коммуникаций (Роскомнадзор).</li>
             </ul>
-            <p>Для реализации прав обращайтесь по электронной почте: <a href="mailto:dmnbugaev@gmain.com">dmnbugaev@gmain.com</a> или в Telegram: <a href="https://t.me/bugaev_web" target="_blank" rel="noopener noreferrer">@bugaev_web</a>. Срок ответа — не более 30 (тридцати) дней.</p>
+            <p>Для реализации прав обращайтесь по электронной почте: <a href="mailto:dmnbugaev@gmail.com">dmnbugaev@gmail.com</a> или в Telegram: <a href="https://t.me/bugaev_web" target="_blank" rel="noopener noreferrer">@bugaev_web</a>. Срок ответа — не более 30 (тридцати) дней.</p>
           </section>
 
           <section class="legal-section">

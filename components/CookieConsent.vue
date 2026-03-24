@@ -35,10 +35,9 @@
           <div class="flex-1 min-w-0">
             <p class="text-sm leading-relaxed" style="color: #6e6e73;">
               Мы используем файлы cookie для анализа трафика (Яндекс.Метрика) и улучшения работы сайта.
-              <!-- TODO: Replace # with real privacy policy URL -->
-              <a href="#" class="underline transition-colors duration-150" style="color: #0071e3;">
-                Политика конфиденциальности
-              </a>.
+              <NuxtLink to="/cookies" class="underline transition-colors duration-150" style="color: #0071e3;">
+                Политике использования cookies
+              </NuxtLink>.
             </p>
           </div>
 

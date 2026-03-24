@@ -106,7 +106,7 @@
             <h2>10. Контакты Администратора</h2>
             <p>
               ИП Бугаев Дмитрий Сергеевич («Bugaev Web»)<br>
-              Email: <a href="mailto:dmnbugaev@gmain.com">dmnbugaev@gmain.com</a><br>
+              Email: <a href="mailto:dmnbugaev@gmail.com">dmnbugaev@gmail.com</a><br>
               Telegram: <a href="https://t.me/bugaev_web" target="_blank" rel="noopener noreferrer">@bugaev_web</a><br>
               Телефон: <a href="tel:+79964145143">+7 (996) 414-51-43</a>
             </p>

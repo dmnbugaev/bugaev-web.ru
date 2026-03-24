@@ -2,8 +2,6 @@
 // Manages cookie/analytics consent with localStorage persistence.
 // Yandex Metrika is initialized only after the user grants consent.
 //
-// TODO: Replace XXXXXXXX in loadYandexMetrika() with your real Metrika counter ID.
-
 const CONSENT_KEY = 'bugaev_cookie_consent'
 const CONSENT_VERSION = '1' // Bump this string to re-ask users after policy changes
 
@@ -92,14 +90,8 @@ export const useCookieConsent = () => {
     // ─── Yandex Metrika ──────────────────────────────────────────────────
     // TODO: Replace 'XXXXXXXX' with your real Yandex Metrika counter ID.
     // Example: const METRIKA_ID = 12345678
-    const METRIKA_ID = 'XXXXXXXX' // <-- ВСТАВЬТЕ НОМЕР СЧЁТЧИКА ЗДЕСЬ
+    const METRIKA_ID = 108208585
     // ─────────────────────────────────────────────────────────────────────
-
-    if (METRIKA_ID === 'XXXXXXXX') {
-      console.log('[Yandex Metrika] Counter ID not configured. Skipping.')
-      metrikaLoaded.value = true
-      return
-    }
 
     metrikaLoaded.value = true
 

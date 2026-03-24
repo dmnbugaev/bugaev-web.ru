@@ -117,7 +117,7 @@
             <h2>8. Контакты</h2>
             <p>По вопросам, связанным с использованием cookies, обращайтесь:</p>
             <p>
-              Email: <a href="mailto:dmnbugaev@gmain.com">dmnbugaev@gmain.com</a><br>
+              Email: <a href="mailto:dmnbugaev@gmail.com">dmnbugaev@gmail.com</a><br>
               Telegram: <a href="https://t.me/bugaev_web" target="_blank" rel="noopener noreferrer">@bugaev_web</a>
             </p>
           </section>

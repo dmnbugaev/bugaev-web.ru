@@ -103,7 +103,7 @@
               <tbody>
                 <tr>
                   <td>Электронная почта</td>
-                  <td><a href="mailto:dmnbugaev@gmain.com">dmnbugaev@gmain.com</a></td>
+                  <td><a href="mailto:dmnbugaev@gmail.com">dmnbugaev@gmail.com</a></td>
                 </tr>
                 <tr>
                   <td>Телефон</td>

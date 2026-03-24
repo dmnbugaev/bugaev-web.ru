@@ -168,7 +168,7 @@
               ИП Бугаев Дмитрий Сергеевич<br>
               ОГРНИП: 326645700031745<br>
               ИНН: 645212058772<br>
-              Электронная почта: <a href="mailto:dmnbugaev@gmain.com">dmnbugaev@gmain.com</a><br>
+              Электронная почта: <a href="mailto:dmnbugaev@gmail.com">dmnbugaev@gmail.com</a><br>
               Телефон: <a href="tel:+79964145143">+7 (996) 414-51-43</a><br>
               Telegram: <a href="https://t.me/bugaev_web" target="_blank" rel="noopener noreferrer">@bugaev_web</a>
             </p>
