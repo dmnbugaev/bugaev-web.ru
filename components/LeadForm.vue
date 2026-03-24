@@ -185,7 +185,7 @@
 
             <p class="text-xs text-center mt-4 leading-relaxed" style="color: var(--ink-3);">
               Нажимая «Отправить заявку», вы соглашаетесь с
-              <a href="#" class="underline" style="color: var(--ink);">политикой конфиденциальности</a>.
+              <NuxtLink to="/privacy" class="underline" style="color: var(--ink);">политикой конфиденциальности</NuxtLink>.
               Данные не передаются третьим лицам.
             </p>
           </form>
@@ -214,13 +214,11 @@
 
 <script setup lang="ts">
 const { utmParams } = useUtm()
-const { submit, isSubmitting, isSuccess, isError, errorMessage, errors, reset } = useFormSubmit()
+const { submit, isSubmitting, isSuccess, isError, errorMessage, errors, clearError, reset } = useFormSubmit()
 
 const form = reactive({ name: '', phone: '', email: '', salon: '' })
 
-const clearFieldError = (field: 'name' | 'phone' | 'email') => {
-  ;(errors.value as Record<string, string | undefined>)[field] = undefined
-}
+const clearFieldError = (field: 'name' | 'phone' | 'email') => clearError(field)
 
 const handleSubmit = async () => { await submit({ ...form }) }
 

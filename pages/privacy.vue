@@ -168,11 +168,10 @@
 useHead({
   title: 'Политика конфиденциальности — Bugaev Web',
   meta: [
-    {
-      name: 'description',
-      content: 'Политика конфиденциальности Bugaev Web: как мы собираем, храним и защищаем персональные данные пользователей в соответствии с ФЗ-152.',
-    },
+    { name: 'description', content: 'Политика конфиденциальности Bugaev Web: как мы собираем, храним и защищаем персональные данные пользователей в соответствии с ФЗ-152.' },
+    { name: 'robots', content: 'noindex, nofollow' },
   ],
+  link: [{ rel: 'canonical', href: 'https://bugaev-web.ru/privacy' }],
 })
 </script>
 

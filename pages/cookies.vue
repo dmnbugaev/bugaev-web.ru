@@ -137,11 +137,10 @@
 useHead({
   title: 'Политика cookies — Bugaev Web',
   meta: [
-    {
-      name: 'description',
-      content: 'Политика использования cookies на сайте Bugaev Web: какие cookies используем, для чего, как управлять ими через настройки браузера.',
-    },
+    { name: 'description', content: 'Политика использования cookies на сайте Bugaev Web: какие cookies используем, для чего, как управлять ими через настройки браузера.' },
+    { name: 'robots', content: 'noindex, nofollow' },
   ],
+  link: [{ rel: 'canonical', href: 'https://bugaev-web.ru/cookies' }],
 })
 </script>
 

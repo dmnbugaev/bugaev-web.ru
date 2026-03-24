@@ -85,6 +85,10 @@ export const useFormSubmit = () => {
     errorMessage.value = ''
   }
 
+  const clearError = (field: keyof FormErrors) => {
+    errors.value = { ...errors.value, [field]: undefined }
+  }
+
   const submit = async (data: FormData): Promise<boolean> => {
     clearErrors()
 
@@ -164,6 +168,7 @@ export const useFormSubmit = () => {
     submit,
     validate,
     clearErrors,
+    clearError,
     reset,
   }
 }

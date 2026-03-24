@@ -145,11 +145,10 @@
 useHead({
   title: 'Реквизиты исполнителя — Bugaev Web',
   meta: [
-    {
-      name: 'description',
-      content: 'Полные реквизиты ИП Бугаева Дмитрия Сергеевича: ОГРНИП, ИНН, регистрационные данные, контакты. Студия цифровых решений Bugaev Web.',
-    },
+    { name: 'description', content: 'Полные реквизиты ИП Бугаева Дмитрия Сергеевича: ОГРНИП, ИНН, регистрационные данные, контакты. Студия цифровых решений Bugaev Web.' },
+    { name: 'robots', content: 'noindex, nofollow' },
   ],
+  link: [{ rel: 'canonical', href: 'https://bugaev-web.ru/requisites' }],
 })
 </script>
 

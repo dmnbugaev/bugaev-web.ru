@@ -1,8 +1,18 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: { enabled: process.env.NODE_ENV !== 'production' },
 
-  modules: ['@nuxtjs/tailwindcss'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/fonts'],
+
+  fonts: {
+    families: [
+      { name: 'Syne',      provider: 'google', weights: [400, 500, 600, 700, 800] },
+      { name: 'Syne Mono', provider: 'google', weights: [400] },
+    ],
+    defaults: {
+      preload: true,
+    },
+  },
 
   css: ['~/assets/css/tailwind.css'],
 
@@ -10,14 +20,6 @@ export default defineNuxtConfig({
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
-      link: [
-        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
-        {
-          rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Syne+Mono:wght@400&display=swap',
-        },
-      ],
     },
   },
 

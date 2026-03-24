@@ -189,11 +189,10 @@
 useHead({
   title: 'Публичная оферта — Bugaev Web',
   meta: [
-    {
-      name: 'description',
-      content: 'Публичная оферта на оказание digital-услуг ИП Бугаева Д.С. (Bugaev Web): условия абонемента, стоимость, оплата и возврат, ответственность сторон.',
-    },
+    { name: 'description', content: 'Публичная оферта на оказание digital-услуг ИП Бугаева Д.С. (Bugaev Web): условия абонемента, стоимость, оплата и возврат, ответственность сторон.' },
+    { name: 'robots', content: 'noindex, nofollow' },
   ],
+  link: [{ rel: 'canonical', href: 'https://bugaev-web.ru/oferta' }],
 })
 </script>
 

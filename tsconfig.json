@@ -11,6 +11,7 @@
     "noEmit": true,
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
+    "types": ["node"],
     "paths": {
       "~/*": ["./*"],
       "@/*": ["./*"]
@@ -20,7 +21,9 @@
     "**/*.ts",
     "**/*.vue",
     "**/*.tsx",
-    ".nuxt/nuxt.d.ts"
+    ".nuxt/nuxt.d.ts",
+    ".nuxt/imports.d.ts",
+    ".nuxt/components.d.ts"
   ],
-  "exclude": ["node_modules", "dist", ".nuxt", ".output"]
+  "exclude": ["node_modules", "dist", ".output"]
 }

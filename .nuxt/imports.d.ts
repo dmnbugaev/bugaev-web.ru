@@ -34,4 +34,3 @@ export { useCookieConsent, ConsentStatus } from '../composables/useCookieConsent
 export { useFormSubmit, FormData, FormErrors, SubmitPayload } from '../composables/useFormSubmit';
 export { useScrollAnimation } from '../composables/useScrollAnimation';
 export { useUtm, UtmParams } from '../composables/useUtm';
-export { useNuxtDevTools } from '../node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools';

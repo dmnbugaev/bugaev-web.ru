@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /privacy
+Disallow: /cookies
+Disallow: /terms
+Disallow: /oferta
+Disallow: /requisites
+
+Sitemap: https://bugaev-web.ru/sitemap.xml

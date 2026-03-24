@@ -22,14 +22,6 @@
         <!-- Left: headline + CTAs -->
         <div>
 
-          <!-- Badge -->
-          <div class="mb-4 sm:mb-5" data-animate="fade-down" data-delay="100">
-            <span class="badge">
-              <span class="w-1.5 h-1.5 rounded-full flex-shrink-0" style="background: var(--accent);" />
-              Digital для салона красоты · Москва и МО
-            </span>
-          </div>
-
           <!-- H1 -->
           <h1
             data-animate="fade-up"

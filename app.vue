@@ -6,11 +6,14 @@
 </template>
 
 <script setup lang="ts">
-// Initialize scroll animations globally after mount
 const { observe } = useScrollAnimation()
+const router = useRouter()
 
 onMounted(() => {
-  // Re-run observer after full render to catch all [data-animate] elements
+  nextTick(() => observe())
+})
+
+router.afterEach(() => {
   nextTick(() => observe())
 })
 </script>

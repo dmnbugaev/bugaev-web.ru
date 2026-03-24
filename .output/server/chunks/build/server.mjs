@@ -1,8 +1,8 @@
-import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import { hasInjectionContext, getCurrentInstance, defineComponent, ref, inject, h, Suspense, Fragment, useSSRContext, createApp, provide, shallowReactive, unref, onErrorCaptured, onServerPrefetch, createVNode, resolveDynamicComponent, reactive, effectScope, readonly, defineAsyncComponent, mergeProps, getCurrentScope, toRef, shallowRef, isReadonly, isRef, isShallow, isReactive, toRaw } from 'vue';
-import { p as parseURL, l as encodePath, m as decodePath, n as hasProtocol, o as isScriptProtocol, k as joinURL, w as withQuery, q as sanitizeStatusCode, r as getContext, $ as $fetch, h as createError$1, v as executeAsync, x as defu } from '../_/nitro.mjs';
+import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import { hasInjectionContext, getCurrentInstance, defineComponent, shallowRef, h, resolveComponent, computed, unref, ref, inject, Suspense, Fragment, useSSRContext, createApp, provide, shallowReactive, withCtx, createTextVNode, nextTick, onErrorCaptured, onServerPrefetch, createVNode, resolveDynamicComponent, reactive, effectScope, readonly, defineAsyncComponent, mergeProps, getCurrentScope, toRef, isReadonly, isRef, isShallow, isReactive, toRaw } from 'vue';
+import { p as parseQuery, m as getContext, n as hasProtocol, l as joinURL, o as parseURL, q as encodePath, v as decodePath, w as withQuery, x as isScriptProtocol, y as withTrailingSlash, z as withoutTrailingSlash, A as sanitizeStatusCode, $ as $fetch, e as createError$1, B as executeAsync, C as defu } from '../_/nitro.mjs';
 import { b as baseURL } from '../routes/renderer.mjs';
 import { RouterView, createMemoryHistory, createRouter, START_LOCATION } from 'vue-router';
-import { ssrRenderTeleport, ssrRenderStyle, ssrRenderAttrs, ssrRenderComponent, ssrRenderSuspense, ssrRenderVNode } from 'vue/server-renderer';
+import { ssrRenderTeleport, ssrRenderStyle, ssrRenderComponent, ssrRenderAttrs, ssrRenderSuspense, ssrRenderVNode } from 'vue/server-renderer';
 import 'node:http';
 import 'node:https';
 import 'node:events';
@@ -613,7 +613,32 @@ const _routes = [
   {
     name: "index",
     path: "/",
-    component: () => import('./index-BarvnT7t.mjs')
+    component: () => import('./index-DUI8ABDB.mjs')
+  },
+  {
+    name: "terms",
+    path: "/terms",
+    component: () => import('./terms-DCuOwdpi.mjs')
+  },
+  {
+    name: "oferta",
+    path: "/oferta",
+    component: () => import('./oferta-CQToZcM3.mjs')
+  },
+  {
+    name: "cookies",
+    path: "/cookies",
+    component: () => import('./cookies-wsl83p8a.mjs')
+  },
+  {
+    name: "privacy",
+    path: "/privacy",
+    component: () => import('./privacy-Dfww73KS.mjs')
+  },
+  {
+    name: "requisites",
+    path: "/requisites",
+    component: () => import('./requisites-OGfFvucP.mjs')
   }
 ];
 const ROUTE_KEY_PARENTHESES_RE = /(:\w+)\([^)]+\)/g;
@@ -1000,7 +1025,7 @@ const defineRouteProvider = (name = "RouteProvider") => defineComponent({
   }
 });
 const RouteProvider = defineRouteProvider();
-const __nuxt_component_0 = defineComponent({
+const __nuxt_component_0$1 = defineComponent({
   name: "NuxtPage",
   inheritAttrs: false,
   props: {
@@ -1050,6 +1075,289 @@ const __nuxt_component_0 = defineComponent({
 function normalizeSlot(slot, data) {
   const slotContent = slot(data);
   return slotContent.length === 1 ? h(slotContent[0]) : h(Fragment, void 0, slotContent);
+}
+const firstNonUndefined = (...args) => args.find((arg) => arg !== void 0);
+// @__NO_SIDE_EFFECTS__
+function defineNuxtLink(options) {
+  const componentName = options.componentName || "NuxtLink";
+  function isHashLinkWithoutHashMode(link) {
+    return typeof link === "string" && link.startsWith("#");
+  }
+  function resolveTrailingSlashBehavior(to, resolve, trailingSlash) {
+    const effectiveTrailingSlash = trailingSlash ?? options.trailingSlash;
+    if (!to || effectiveTrailingSlash !== "append" && effectiveTrailingSlash !== "remove") {
+      return to;
+    }
+    if (typeof to === "string") {
+      return applyTrailingSlashBehavior(to, effectiveTrailingSlash);
+    }
+    const path = "path" in to && to.path !== void 0 ? to.path : resolve(to).path;
+    const resolvedPath = {
+      ...to,
+      name: void 0,
+      // named routes would otherwise always override trailing slash behavior
+      path: applyTrailingSlashBehavior(path, effectiveTrailingSlash)
+    };
+    return resolvedPath;
+  }
+  function useNuxtLink(props) {
+    const router = useRouter();
+    const config = /* @__PURE__ */ useRuntimeConfig();
+    const hasTarget = computed(() => !!unref(props.target) && unref(props.target) !== "_self");
+    const isAbsoluteUrl = computed(() => {
+      const path = unref(props.to) || unref(props.href) || "";
+      return typeof path === "string" && hasProtocol(path, { acceptRelative: true });
+    });
+    const builtinRouterLink = resolveComponent("RouterLink");
+    const useBuiltinLink = builtinRouterLink && typeof builtinRouterLink !== "string" ? builtinRouterLink.useLink : void 0;
+    const isExternal = computed(() => {
+      if (unref(props.external)) {
+        return true;
+      }
+      const path = unref(props.to) || unref(props.href) || "";
+      if (typeof path === "object") {
+        return false;
+      }
+      return path === "" || isAbsoluteUrl.value;
+    });
+    const to = computed(() => {
+      const path = unref(props.to) || unref(props.href) || "";
+      if (isExternal.value) {
+        return path;
+      }
+      return resolveTrailingSlashBehavior(path, router.resolve, unref(props.trailingSlash));
+    });
+    const link = isExternal.value ? void 0 : useBuiltinLink?.({ ...props, to, viewTransition: unref(props.viewTransition) });
+    const href = computed(() => {
+      const effectiveTrailingSlash = unref(props.trailingSlash) ?? options.trailingSlash;
+      if (!to.value || isAbsoluteUrl.value || isHashLinkWithoutHashMode(to.value)) {
+        return to.value;
+      }
+      if (isExternal.value) {
+        const path = typeof to.value === "object" && "path" in to.value ? resolveRouteObject(to.value) : to.value;
+        const href2 = typeof path === "object" ? router.resolve(path).href : path;
+        return applyTrailingSlashBehavior(href2, effectiveTrailingSlash);
+      }
+      if (typeof to.value === "object") {
+        return router.resolve(to.value)?.href ?? null;
+      }
+      return applyTrailingSlashBehavior(joinURL(config.app.baseURL, to.value), effectiveTrailingSlash);
+    });
+    return {
+      to,
+      hasTarget,
+      isAbsoluteUrl,
+      isExternal,
+      //
+      href,
+      isActive: link?.isActive ?? computed(() => to.value === router.currentRoute.value.path),
+      isExactActive: link?.isExactActive ?? computed(() => to.value === router.currentRoute.value.path),
+      route: link?.route ?? computed(() => router.resolve(to.value)),
+      async navigate(_e) {
+        await navigateTo(href.value, { replace: unref(props.replace), external: isExternal.value || hasTarget.value });
+      }
+    };
+  }
+  return defineComponent({
+    name: componentName,
+    props: {
+      // Routing
+      to: {
+        type: [String, Object],
+        default: void 0,
+        required: false
+      },
+      href: {
+        type: [String, Object],
+        default: void 0,
+        required: false
+      },
+      // Attributes
+      target: {
+        type: String,
+        default: void 0,
+        required: false
+      },
+      rel: {
+        type: String,
+        default: void 0,
+        required: false
+      },
+      noRel: {
+        type: Boolean,
+        default: void 0,
+        required: false
+      },
+      // Prefetching
+      prefetch: {
+        type: Boolean,
+        default: void 0,
+        required: false
+      },
+      prefetchOn: {
+        type: [String, Object],
+        default: void 0,
+        required: false
+      },
+      noPrefetch: {
+        type: Boolean,
+        default: void 0,
+        required: false
+      },
+      // Styling
+      activeClass: {
+        type: String,
+        default: void 0,
+        required: false
+      },
+      exactActiveClass: {
+        type: String,
+        default: void 0,
+        required: false
+      },
+      prefetchedClass: {
+        type: String,
+        default: void 0,
+        required: false
+      },
+      // Vue Router's `<RouterLink>` additional props
+      replace: {
+        type: Boolean,
+        default: void 0,
+        required: false
+      },
+      ariaCurrentValue: {
+        type: String,
+        default: void 0,
+        required: false
+      },
+      // Edge cases handling
+      external: {
+        type: Boolean,
+        default: void 0,
+        required: false
+      },
+      // Slot API
+      custom: {
+        type: Boolean,
+        default: void 0,
+        required: false
+      },
+      // Behavior
+      trailingSlash: {
+        type: String,
+        default: void 0,
+        required: false
+      }
+    },
+    useLink: useNuxtLink,
+    setup(props, { slots }) {
+      const router = useRouter();
+      const { to, href, navigate, isExternal, hasTarget, isAbsoluteUrl } = useNuxtLink(props);
+      shallowRef(false);
+      const el = void 0;
+      const elRef = void 0;
+      async function prefetch(nuxtApp = useNuxtApp()) {
+        {
+          return;
+        }
+      }
+      return () => {
+        if (!isExternal.value && !hasTarget.value && !isHashLinkWithoutHashMode(to.value)) {
+          const routerLinkProps = {
+            ref: elRef,
+            to: to.value,
+            activeClass: props.activeClass || options.activeClass,
+            exactActiveClass: props.exactActiveClass || options.exactActiveClass,
+            replace: props.replace,
+            ariaCurrentValue: props.ariaCurrentValue,
+            custom: props.custom
+          };
+          if (!props.custom) {
+            routerLinkProps.rel = props.rel || void 0;
+          }
+          return h(
+            resolveComponent("RouterLink"),
+            routerLinkProps,
+            slots.default
+          );
+        }
+        const target = props.target || null;
+        const rel = firstNonUndefined(
+          // converts `""` to `null` to prevent the attribute from being added as empty (`rel=""`)
+          props.noRel ? "" : props.rel,
+          options.externalRelAttribute,
+          /*
+          * A fallback rel of `noopener noreferrer` is applied for external links or links that open in a new tab.
+          * This solves a reverse tabnapping security flaw in browsers pre-2021 as well as improving privacy.
+          */
+          isAbsoluteUrl.value || hasTarget.value ? "noopener noreferrer" : ""
+        ) || null;
+        if (props.custom) {
+          if (!slots.default) {
+            return null;
+          }
+          return slots.default({
+            href: href.value,
+            navigate,
+            prefetch,
+            get route() {
+              if (!href.value) {
+                return void 0;
+              }
+              const url = new URL(href.value, "http://localhost");
+              return {
+                path: url.pathname,
+                fullPath: url.pathname,
+                get query() {
+                  return parseQuery(url.search);
+                },
+                hash: url.hash,
+                params: {},
+                name: void 0,
+                matched: [],
+                redirectedFrom: void 0,
+                meta: {},
+                href: href.value
+              };
+            },
+            rel,
+            target,
+            isExternal: isExternal.value || hasTarget.value,
+            isActive: false,
+            isExactActive: false
+          });
+        }
+        return h("a", {
+          ref: el,
+          href: href.value || null,
+          // converts `""` to `null` to prevent the attribute from being added as empty (`href=""`)
+          rel,
+          target,
+          onClick: async (event) => {
+            if (isExternal.value || hasTarget.value) {
+              return;
+            }
+            event.preventDefault();
+            try {
+              const encodedHref = encodeRoutePath(href.value);
+              return await (props.replace ? router.replace(encodedHref) : router.push(encodedHref));
+            } finally {
+            }
+          }
+        }, slots.default?.());
+      };
+    }
+  });
+}
+const __nuxt_component_0 = /* @__PURE__ */ defineNuxtLink(nuxtLinkDefaults);
+function applyTrailingSlashBehavior(to, trailingSlash) {
+  const normalizeFn = trailingSlash === "append" ? withTrailingSlash : withoutTrailingSlash;
+  const hasProtocolDifferentFromHttp = hasProtocol(to) && !to.startsWith("http");
+  if (hasProtocolDifferentFromHttp) {
+    return to;
+  }
+  return normalizeFn(to, true);
 }
 const CONSENT_KEY = "bugaev_cookie_consent";
 const CONSENT_VERSION = "1";
@@ -1106,9 +1414,27 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
   setup(__props) {
     const { showBanner: showBanner2 } = useCookieConsent();
     return (_ctx, _push, _parent, _attrs) => {
+      const _component_NuxtLink = __nuxt_component_0;
       ssrRenderTeleport(_push, (_push2) => {
         if (unref(showBanner2)) {
-          _push2(`<div class="fixed bottom-0 left-0 right-0 z-[9999] p-4 sm:p-5" role="region" aria-label="Уведомление об использовании cookie" data-v-74d75d02><div class="max-w-3xl mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-4 p-4 md:p-5 rounded-2xl" style="${ssrRenderStyle({ "background": "rgba(255,255,255,0.96)", "backdrop-filter": "blur(24px)", "-webkit-backdrop-filter": "blur(24px)", "border": "1px solid rgba(0,0,0,0.1)", "box-shadow": "0 8px 40px rgba(0,0,0,0.12)" })}" data-v-74d75d02><div class="flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center" style="${ssrRenderStyle({ "background": "rgba(0,113,227,0.08)" })}" data-v-74d75d02><svg width="20" height="20" viewBox="0 0 24 24" fill="none" data-v-74d75d02><circle cx="12" cy="12" r="10" stroke="#0071e3" stroke-width="1.5" data-v-74d75d02></circle><circle cx="9" cy="10" r="1.5" fill="#0071e3" data-v-74d75d02></circle><circle cx="14" cy="8.5" r="1" fill="#0071e3" opacity="0.6" data-v-74d75d02></circle><circle cx="15" cy="13.5" r="1.5" fill="#0071e3" data-v-74d75d02></circle><circle cx="9.5" cy="15" r="1" fill="#0071e3" opacity="0.6" data-v-74d75d02></circle></svg></div><div class="flex-1 min-w-0" data-v-74d75d02><p class="text-sm leading-relaxed" style="${ssrRenderStyle({ "color": "#6e6e73" })}" data-v-74d75d02> Мы используем файлы cookie для анализа трафика (Яндекс.Метрика) и улучшения работы сайта. <a href="#" class="underline transition-colors duration-150" style="${ssrRenderStyle({ "color": "#0071e3" })}" data-v-74d75d02> Политика конфиденциальности </a>. </p></div><div class="flex-shrink-0 flex items-center gap-2 w-full sm:w-auto" data-v-74d75d02><button class="flex-1 sm:flex-none text-sm px-4 py-2 rounded-lg font-medium transition-all duration-150 whitespace-nowrap" style="${ssrRenderStyle({ "color": "#86868b" })}" data-v-74d75d02> Отклонить </button><button class="flex-1 sm:flex-none btn-primary text-sm px-5 py-2 whitespace-nowrap" data-v-74d75d02> Принять <svg width="13" height="13" viewBox="0 0 13 13" fill="none" data-v-74d75d02><path d="M2 6.5l2.5 2.5 6.5-6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-v-74d75d02></path></svg></button></div></div></div>`);
+          _push2(`<div class="fixed bottom-0 left-0 right-0 z-[9999] p-4 sm:p-5" role="region" aria-label="Уведомление об использовании cookie" data-v-701f13c9><div class="max-w-3xl mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-4 p-4 md:p-5 rounded-2xl" style="${ssrRenderStyle({ "background": "rgba(255,255,255,0.96)", "backdrop-filter": "blur(24px)", "-webkit-backdrop-filter": "blur(24px)", "border": "1px solid rgba(0,0,0,0.1)", "box-shadow": "0 8px 40px rgba(0,0,0,0.12)" })}" data-v-701f13c9><div class="flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center" style="${ssrRenderStyle({ "background": "rgba(0,113,227,0.08)" })}" data-v-701f13c9><svg width="20" height="20" viewBox="0 0 24 24" fill="none" data-v-701f13c9><circle cx="12" cy="12" r="10" stroke="#0071e3" stroke-width="1.5" data-v-701f13c9></circle><circle cx="9" cy="10" r="1.5" fill="#0071e3" data-v-701f13c9></circle><circle cx="14" cy="8.5" r="1" fill="#0071e3" opacity="0.6" data-v-701f13c9></circle><circle cx="15" cy="13.5" r="1.5" fill="#0071e3" data-v-701f13c9></circle><circle cx="9.5" cy="15" r="1" fill="#0071e3" opacity="0.6" data-v-701f13c9></circle></svg></div><div class="flex-1 min-w-0" data-v-701f13c9><p class="text-sm leading-relaxed" style="${ssrRenderStyle({ "color": "#6e6e73" })}" data-v-701f13c9> Мы используем файлы cookie для анализа трафика (Яндекс.Метрика) и улучшения работы сайта. `);
+          _push2(ssrRenderComponent(_component_NuxtLink, {
+            to: "/cookies",
+            class: "underline transition-colors duration-150",
+            style: { "color": "#0071e3" }
+          }, {
+            default: withCtx((_, _push3, _parent2, _scopeId) => {
+              if (_push3) {
+                _push3(` Политике использования cookies `);
+              } else {
+                return [
+                  createTextVNode(" Политике использования cookies ")
+                ];
+              }
+            }),
+            _: 1
+          }, _parent));
+          _push2(`. </p></div><div class="flex-shrink-0 flex items-center gap-2 w-full sm:w-auto" data-v-701f13c9><button class="flex-1 sm:flex-none text-sm px-4 py-2 rounded-lg font-medium transition-all duration-150 whitespace-nowrap" style="${ssrRenderStyle({ "color": "#86868b" })}" data-v-701f13c9> Отклонить </button><button class="flex-1 sm:flex-none btn-primary text-sm px-5 py-2 whitespace-nowrap" data-v-701f13c9> Принять <svg width="13" height="13" viewBox="0 0 13 13" fill="none" data-v-701f13c9><path d="M2 6.5l2.5 2.5 6.5-6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-v-701f13c9></path></svg></button></div></div></div>`);
         } else {
           _push2(`<!---->`);
         }
@@ -1129,13 +1455,29 @@ _sfc_main$3.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/CookieConsent.vue");
   return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
 };
-const __nuxt_component_1 = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__scopeId", "data-v-74d75d02"]]);
+const __nuxt_component_1 = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__scopeId", "data-v-701f13c9"]]);
+const useScrollAnimation = () => {
+  const observe = (container) => {
+    return;
+  };
+  const unobserve = () => {
+  };
+  const observeEl = (el) => {
+    return;
+  };
+  return { observe, unobserve, observeEl };
+};
 const _sfc_main$2 = /* @__PURE__ */ defineComponent({
   __name: "app",
   __ssrInlineRender: true,
   setup(__props) {
+    const { observe } = useScrollAnimation();
+    const router = useRouter();
+    router.afterEach(() => {
+      nextTick(() => observe());
+    });
     return (_ctx, _push, _parent, _attrs) => {
-      const _component_NuxtPage = __nuxt_component_0;
+      const _component_NuxtPage = __nuxt_component_0$1;
       const _component_CookieConsent = __nuxt_component_1;
       _push(`<div${ssrRenderAttrs(_attrs)}>`);
       _push(ssrRenderComponent(_component_NuxtPage, null, null, _parent));
@@ -1164,7 +1506,7 @@ const _sfc_main$1 = {
     const statusText = _error.statusMessage ?? (is404 ? "Page Not Found" : "Internal Server Error");
     const description = _error.message || _error.toString();
     const stack = void 0;
-    const _Error404 = defineAsyncComponent(() => import('./error-404-vd0hKY1w.mjs'));
+    const _Error404 = defineAsyncComponent(() => import('./error-404-CjJbCK9X.mjs'));
     const _Error = defineAsyncComponent(() => import('./error-500-OI48FrJY.mjs'));
     const ErrorTemplate = is404 ? _Error404 : _Error;
     return (_ctx, _push, _parent, _attrs) => {
@@ -1246,5 +1588,5 @@ let entry;
 }
 const entry_default = ((ssrContext) => entry(ssrContext));
 
-export { _export_sfc as _, useNuxtApp as a, useRuntimeConfig as b, nuxtLinkDefaults as c, entry_default as default, encodeRoutePath as e, navigateTo as n, resolveRouteObject as r, tryUseNuxtApp as t, useRouter as u };
+export { _export_sfc as _, __nuxt_component_0 as a, entry_default as default, tryUseNuxtApp as t };
 //# sourceMappingURL=server.mjs.map

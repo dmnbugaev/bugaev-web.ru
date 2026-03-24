@@ -127,11 +127,10 @@
 useHead({
   title: 'Пользовательское соглашение — Bugaev Web',
   meta: [
-    {
-      name: 'description',
-      content: 'Пользовательское соглашение Bugaev Web: правила использования сайта, интеллектуальная собственность, ограничение ответственности и разрешение споров.',
-    },
+    { name: 'description', content: 'Пользовательское соглашение Bugaev Web: правила использования сайта, интеллектуальная собственность, ограничение ответственности и разрешение споров.' },
+    { name: 'robots', content: 'noindex, nofollow' },
   ],
+  link: [{ rel: 'canonical', href: 'https://bugaev-web.ru/terms' }],
 })
 </script>
 
