@@ -1,41 +1,387 @@
-РОЛЬ: Опытный frontend-разработчик (Nuxt.js/Vue.js) и специалист по верстке (CSS/HTML).
+Add comprehensive SEO optimization to my Nuxt.js landing page for a digital subscription service.
 
-ЗАДАЧА: Оптимизировать мобильную версию сайта на Nuxt.js. Необходимо исправить проблему со слайдером (полоса прокрутки), который в мобильной версии сдвигает все элементы сайта вправо, создавая некрасивый горизонтальный сдвиг и пустое пространство.
+========================================
+BUSINESS INFO
+========================================
+Service name: Bugaev Web / Бугаев Веб
+Owner: Бугаев Дмитрий
+Instagram: @dmnbugaev_ → https://instagram.com/dmnbugaev_
+Telegram: @bugggd → https://t.me/bugggd
+Website: https://bugaev-web.ru/
+Framework: Nuxt.js
+Service: "Цифровой абонемент Digital + SMM" — 50,000 ₽/month
+Target clients: owners of beauty salons, nail studios, cosmetology clinics, brow bars, small dental clinics in Moscow and Moscow region
 
-ТРЕБОВАНИЯ:
-1. Сделать полосу прокрутки (слайдер) прозрачной.
-2. Обеспечить, чтобы полоса прокрутки не влияла на ширину контейнеров и не сдвигала элементы верстки. Полоса должна накладываться поверх контента, а не занимать место в макете.
+========================================
+1. nuxt.config.ts — HEAD META TAGS
+========================================
 
-ОЖИДАЕМЫЙ РЕЗУЛЬТАТ:
-- В мобильной версии (и в целом для всех устройств, если применимо) скроллбар остается функциональным, но визуально невидим или полупрозрачен.
-- Ширина блоков (`width: 100%`) остается равной ширине окна браузера, даже если появляется стандартная полоса прокрутки. Контент не дергается при открытии/закрытии модальных окон или навигации.
+In nuxt.config.ts, update the app.head section:
 
-РЕШЕНИЕ (ИНСТРУКЦИЯ ДЛЯ РАЗРАБОТЧИКА):
-
-1.  **Глобальные CSS стили (для переопределения стандартного скролла):**
-    Необходимо добавить в глобальные стили проекта (например, `assets/css/global.css` или в секцию `style` в `app.vue`) следующий код:
-
-    ```css
-    /* Для WebKit браузеров (Chrome, Safari, Edge) */
-    ::-webkit-scrollbar {
-      width: 0;          /* Полная прозрачность и отсутствие места на десктопе */
-      background: transparent;
+export default defineNuxtConfig({
+  app: {
+    head: {
+      htmlAttrs: { lang: 'ru' },
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
+      title: 'Бугаев Веб — Сайт, SMM и Telegram-бот для салона красоты в Москве | от 50 000 ₽/мес',
+      meta: [
+        {
+          name: 'description',
+          content: 'Бугаев Веб (Бугаев Дмитрий) — помогаем салонам красоты и клиникам в Москве зарабатывать больше. Разработка сайта, ведение Instagram и Telegram, бот для записи клиентов, настройка CRM YCLIENTS — всё за 50 000 ₽/мес. Без скрытых платежей, результат с первого месяца.'
+        },
+        {
+          name: 'keywords',
+          content: 'как салону красоты начать больше зарабатывать, как увеличить прибыль салона красоты, как привлечь клиентов в салон красоты, как открыть салон красоты, сколько денег нужно на открытие салона красоты, разработка сайта для салона красоты, сайт для салона красоты Москва, сайт для салона красоты под ключ, как вести соцсети салону красоты, ведение Instagram салона красоты, ведение Telegram канала салона красоты, SMM для салона красоты Москва, SMM для косметологии, продвижение салона красоты в соцсетях, Telegram бот для записи клиентов, бот для салона красоты, CRM для салона красоты, YCLIENTS настройка, digital маркетинг для салона красоты, абонемент SMM салон красоты, удалённый SMM менеджер для салона, автоматическая запись клиентов, как не терять клиентов салону красоты, как сделать салон красоты популярным, маркетинг для косметолога, продвижение косметолога в Instagram, продвижение ногтевой студии, реклама салона красоты, Бугаев Веб, Bugaev Web, Бугаев Дмитрий'
+        },
+        { name: 'robots', content: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' },
+        { name: 'author', content: 'Бугаев Дмитрий — Бугаев Веб' },
+        { name: 'theme-color', content: '#1a1a1a' },
+        { name: 'geo.region', content: 'RU-MOW' },
+        { name: 'geo.placename', content: 'Москва' },
+        { name: 'geo.position', content: '55.7558;37.6173' },
+        { name: 'ICBM', content: '55.7558, 37.6173' },
+        // Open Graph
+        { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: 'https://bugaev-web.ru/' },
+        { property: 'og:title', content: 'Бугаев Веб — Сайт, SMM и Telegram-бот для салона красоты | 50 000 ₽/мес' },
+        { property: 'og:description', content: 'Помогаем салонам красоты и клиникам в Москве зарабатывать больше. Сайт, бот для записи, ведение соцсетей, CRM — под ключ за одну подписку от Бугаев Веб.' },
+        { property: 'og:locale', content: 'ru_RU' },
+        { property: 'og:site_name', content: 'Бугаев Веб' },
+        // Twitter Card
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:title', content: 'Бугаев Веб — Digital-абонемент для салона красоты — 50 000 ₽/мес' },
+        { name: 'twitter:description', content: 'Сайт + Telegram-бот + SMM + CRM для салона красоты в Москве. Один подрядчик. Один платёж. Бугаев Дмитрий.' }
+      ],
+      link: [
+        { rel: 'canonical', href: 'https://bugaev-web.ru/' },
+        { rel: 'sitemap', type: 'application/xml', href: '/sitemap.xml' },
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+        { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
+        { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' }
+      ]
     }
+  }
+})
 
-    /* Для Firefox */
-    * {
-      scrollbar-width: thin; /* Тонкая полоса */
-      scrollbar-color: rgba(0, 0, 0, 0.2) transparent; /* Прозрачный фон дорожки */
-    }
+========================================
+2. useSeoMeta() — В ГЛАВНОЙ СТРАНИЦЕ pages/index.vue
+========================================
 
-    /* Опционально: если нужно оставить тонкую полосу, но поверх контента,
-       и при этом убрать смещение (только для body) */
-    html {
-      overflow-x: hidden;
-      margin-right: calc(-1 * (100vw - 100%)); /* Классический хак от смещения */
-    }
+Add at the top of <script setup> in pages/index.vue:
 
-    body {
-      overflow-x: hidden;
-      width: 100%;
+useSeoMeta({
+  title: 'Бугаев Веб — Сайт, SMM и Telegram-бот для салона красоты в Москве | от 50 000 ₽/мес',
+  description: 'Бугаев Веб (Бугаев Дмитрий) — помогаем салонам красоты и клиникам в Москве зарабатывать больше. Сайт, Telegram-бот, ведение Instagram и Telegram, настройка CRM — 50 000 ₽/мес.',
+  ogTitle: 'Бугаев Веб — Digital-абонемент для салона красоты | 50 000 ₽/мес',
+  ogDescription: 'Помогаем салонам красоты зарабатывать больше. Сайт, бот, соцсети, CRM под ключ от Бугаев Веб.',
+  ogUrl: 'https://bugaev-web.ru/',
+  ogType: 'website',
+  ogLocale: 'ru_RU',
+  ogSiteName: 'Бугаев Веб',
+  twitterCard: 'summary_large_image',
+  twitterTitle: 'Бугаев Веб — Digital-абонемент для салона красоты',
+  twitterDescription: 'Сайт + Telegram-бот + SMM + CRM для салона красоты в Москве от Бугаев Веб.'
+})
+
+useHead({
+  htmlAttrs: { lang: 'ru' },
+  link: [{ rel: 'canonical', href: 'https://bugaev-web.ru/' }]
+})
+
+========================================
+3. JSON-LD — СОЗДАТЬ КОМПОНЕНТ
+========================================
+
+Create file components/SeoSchema.vue:
+
+<template>
+  <div>
+    <component :is="'script'" type="application/ld+json" v-html="schemaJson" />
+  </div>
+</template>
+
+<script setup>
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://bugaev-web.ru/#business",
+      "name": "Бугаев Веб",
+      "alternateName": "Bugaev Web",
+      "description": "Комплексный digital-абонемент для салонов красоты и клиник Москвы. Разработка сайта, Telegram-бот для записи клиентов, ведение Instagram и Telegram-канала, настройка CRM YCLIENTS — всё за 50 000 ₽ в месяц. Основатель — Бугаев Дмитрий.",
+      "url": "https://bugaev-web.ru/",
+      "founder": {
+        "@type": "Person",
+        "name": "Бугаев Дмитрий",
+        "sameAs": [
+          "https://instagram.com/dmnbugaev_",
+          "https://t.me/bugggd"
+        ]
+      },
+      "priceRange": "50000 ₽/месяц",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Москва",
+        "addressCountry": "RU"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Москва" },
+        { "@type": "AdministrativeArea", "name": "Московская область" }
+      ],
+      "serviceType": "Digital маркетинг, SMM, разработка сайтов для салонов красоты",
+      "sameAs": [
+        "https://t.me/bugggd",
+        "https://instagram.com/dmnbugaev_"
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "Digital-абонемент для салона красоты — Бугаев Веб",
+      "provider": { "@id": "https://bugaev-web.ru/#business" },
+      "description": "Ежемесячная подписка: сайт-визитка на Nuxt.js, Telegram-бот для онлайн-записи, ведение Instagram и Telegram-канала (3-4 поста в неделю), настройка CRM YCLIENTS, личный менеджер — Бугаев Дмитрий.",
+      "offers": {
+        "@type": "Offer",
+        "price": "50000",
+        "priceCurrency": "RUB",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "50000",
+          "priceCurrency": "RUB",
+          "unitText": "месяц"
+        }
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Что входит в абонемент Бугаев Веб",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Сайт-визитка для салона красоты на Nuxt.js" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Telegram-бот для онлайн-записи клиентов" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ведение Instagram салона красоты" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ведение Telegram-канала салона красоты" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Настройка CRM YCLIENTS" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Личный менеджер в Telegram" } }
+        ]
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://bugaev-web.ru/#founder",
+      "name": "Бугаев Дмитрий",
+      "jobTitle": "Основатель Бугаев Веб — digital-специалист для салонов красоты",
+      "worksFor": { "@id": "https://bugaev-web.ru/#business" },
+      "url": "https://bugaev-web.ru/",
+      "sameAs": [
+        "https://t.me/bugggd",
+        "https://instagram.com/dmnbugaev_"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Как салону красоты начать зарабатывать больше?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Чтобы салон красоты начал зарабатывать больше, нужно выстроить систему привлечения и удержания клиентов: активные соцсети с регулярными постами, сайт-визитка для доверия, Telegram-бот для удобной онлайн-записи и CRM для учёта клиентов. Бугаев Веб предоставляет всё это в рамках одной подписки за 50 000 ₽/мес."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Сколько стоит ведение соцсетей для салона красоты?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Комплексный digital-абонемент от Бугаев Веб стоит 50 000 ₽ в месяц. Помимо SMM (Instagram + Telegram), в него входят сайт-визитка, Telegram-бот для записи клиентов, настройка CRM и личный менеджер. Никаких скрытых платежей."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как вести соцсети салону красоты?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Для эффективного ведения соцсетей салону красоты нужны: чёткий контент-план, регулярность (3-4 поста в неделю), качественный визуал, посты до/после, акции и полезные советы. Бугаев Веб берёт ведение Instagram и Telegram-канала полностью под ключ."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как открыть салон красоты с нуля?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Для открытия салона красоты нужно: выбрать формат и локацию, зарегистрировать ИП или ООО, оборудовать помещение, нанять персонал и выстроить digital-присутствие — сайт, соцсети, систему онлайн-записи. Бугаев Веб помогает с digital-частью под ключ."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Сколько денег нужно на открытие салона красоты?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Открытие небольшого салона красоты в Москве обычно обходится от 800 000 до 3 000 000 ₽. Дополнительно нужен бюджет на маркетинг и digital — сайт, соцсети, CRM. Бугаев Веб закрывает всю digital-часть за 50 000 ₽/мес."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Нужен ли сайт салону красоты?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. Сайт-визитка повышает доверие и помогает найти вас в Google и Яндексе. Бугаев Веб разрабатывает быстрый сайт на Nuxt.js с прайсом, услугами и формой записи — он входит в абонемент без доп. оплаты."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Зачем салону красоты Telegram-бот?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Telegram-бот автоматизирует запись клиентов, напоминает о визитах и снижает процент неявок. Клиенты записываются сами в любое время суток. Бугаев Веб разрабатывает и подключает бота в рамках абонемента."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как привлечь клиентов в новый салон красоты?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Для привлечения клиентов эффективнее всего работают: активный Instagram с постами до/после, Telegram-канал с акциями, сайт с SEO и удобная онлайн-запись. Бугаев Веб выстраивает эту систему под ключ с первого месяца."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Кто такой Бугаев Дмитрий и чем занимается Бугаев Веб?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Бугаев Дмитрий — основатель агентства Бугаев Веб (Bugaev Web). Специализируется на digital-продвижении салонов красоты и клиник в Москве: сайты, Telegram-боты, CRM и ведение соцсетей в рамках единой подписки 50 000 ₽/мес. Telegram: @bugggd, Instagram: @dmnbugaev_."
+          }
+        }
+      ]
     }
+  ]
+}
+
+const schemaJson = JSON.stringify(schema)
+</script>
+
+Then add <SeoSchema /> at the bottom of pages/index.vue before </template> closing tag.
+
+========================================
+4. SEMANTIC HTML — ОБНОВИТЬ pages/index.vue
+========================================
+
+- Убедиться что lang="ru" установлен через useHead (уже добавлен выше)
+
+- Главный заголовок — ОДИН тег <h1>:
+  "Удалённый digital-отдел для салона красоты в Москве — Бугаев Веб"
+
+- Подзаголовок под h1 тегом <p>:
+  "Помогаем салонам красоты и клиникам зарабатывать больше:
+  сайт, Telegram-бот, ведение Instagram и Telegram, CRM — всё за 50 000 ₽/мес"
+
+- Разделы оформить как <h2>:
+  "Что входит в абонемент Бугаев Веб"
+  "Как салон красоты начнёт зарабатывать больше"
+  "Почему владельцы салонов выбирают Бугаев Веб"
+  "Как это работает — 3 шага"
+  "Стоимость абонемента"
+  "Частые вопросы о продвижении салона красоты"
+  "Связаться с Бугаев Веб — Бугаев Дмитрий"
+
+- Подпункты услуг — <h3>:
+  "Разработка сайта для салона красоты"
+  "Telegram-бот для автоматической записи клиентов"
+  "Ведение Instagram салона красоты"
+  "Ведение Telegram-канала салона красоты"
+  "Настройка CRM YCLIENTS для салона"
+  "Личный менеджер — Бугаев Дмитрий"
+
+- Все <img> или <NuxtImg> добавить атрибут alt:
+  alt="Бугаев Веб — разработка сайта для салона красоты Москва"
+  alt="Telegram-бот для записи клиентов в салон красоты"
+  alt="Ведение Instagram салона красоты — Бугаев Дмитрий"
+  alt="CRM YCLIENTS настройка для салона красоты — Bugaev Web"
+
+- Все img добавить loading="lazy" (кроме первого — loading="eager")
+- Все img добавить явные width и height
+- Контактный блок обернуть в тег <address>
+
+- В блоке "Личный менеджер" текст:
+  "Бугаев Дмитрий — основатель Бугаев Веб.
+  На связи каждый день:
+  Telegram @bugggd · Instagram @dmnbugaev_"
+
+========================================
+5. КОНТАКТНЫЕ ССЫЛКИ — ВЕЗДЕ ОДИНАКОВО
+========================================
+
+В header, hero, блоке менеджера и footer:
+
+<a href="https://t.me/bugggd" rel="noopener noreferrer" target="_blank">
+  Написать в Telegram @bugggd
+</a>
+
+<a href="https://instagram.com/dmnbugaev_" rel="noopener noreferrer" target="_blank">
+  Instagram @dmnbugaev_
+</a>
+
+========================================
+6. СОЗДАТЬ public/robots.txt
+========================================
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Sitemap: https://bugaev-web.ru/sitemap.xml
+
+User-agent: Yandex
+Allow: /
+Sitemap: https://bugaev-web.ru/sitemap.xml
+
+========================================
+7. СОЗДАТЬ public/sitemap.xml
+========================================
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://bugaev-web.ru/</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>
+
+========================================
+8. SEO-ТЕКСТОВЫЙ БЛОК — ДОБАВИТЬ В pages/index.vue
+========================================
+
+Add before the closing </template> tag (above <SeoSchema />):
+
+<section aria-label="О сервисе Бугаев Веб" style="font-size:13px;color:#999;margin-top:60px;padding:0 20px;">
+  <h2>Бугаев Веб — digital-продвижение для салонов красоты и клиник</h2>
+  <p>
+    Бугаев Веб (основатель — Бугаев Дмитрий) — комплексный сервис
+    digital-продвижения для владельцев салонов красоты, косметологических кабинетов,
+    ногтевых студий и бьюти-клиник в Москве. Помогаем салонам красоты
+    зарабатывать больше, выстраивая полную систему привлечения клиентов
+    под ключ за одну ежемесячную подписку.
+  </p>
+  <p>
+    Многие владельцы задаются вопросом: как салону красоты начать зарабатывать
+    больше и как привлечь новых клиентов? Ответ — выстроенное digital-присутствие:
+    профессиональный сайт, активные соцсети и автоматизированная запись.
+    Именно это предоставляет Бугаев Веб в рамках единого абонемента.
+  </p>
+  <p>
+    Разработка сайта для салона красоты в Москве, ведение Instagram
+    и Telegram-канала, создание Telegram-бота для онлайн-записи клиентов,
+    настройка CRM YCLIENTS — всё входит в один пакет 50 000 ₽/мес без скрытых доплат.
+  </p>
+  <address>
+    Написать Бугаеву Дмитрию напрямую:
+    Telegram —
+    <a href="https://t.me/bugggd" rel="noopener noreferrer">@bugggd</a>,
+    Instagram —
+    <a href="https://instagram.com/dmnbugaev_" rel="noopener noreferrer">@dmnbugaev_</a>
+  </address>
+</section>

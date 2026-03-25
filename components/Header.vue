@@ -10,7 +10,7 @@
       <div class="flex items-center justify-between h-14 md:h-16">
 
         <!-- Logo -->
-        <a href="#" class="flex items-center gap-2.5 group">
+        <a href="/" class="flex items-center gap-2.5 group">
           <div
             class="w-8 h-8 rounded-xl flex items-center justify-center flex-shrink-0 transition-transform duration-200 group-hover:scale-105"
             style="background: var(--accent);"
@@ -105,7 +105,7 @@
       style="background: var(--surface); border-left: 1px solid var(--border);"
     >
       <div class="flex items-center justify-between px-5 py-4" style="border-bottom: 1px solid var(--border);">
-        <div class="flex items-center gap-2.5">
+        <a href="/" class="flex items-center gap-2.5" @click="closeMenu">
           <div class="w-7 h-7 rounded-lg flex items-center justify-center" style="background: var(--accent);">
             <svg width="14" height="14" viewBox="0 0 18 18" fill="none">
               <path d="M4 14L9 3L14 14H4Z" fill="var(--ink)" />
@@ -113,7 +113,7 @@
             </svg>
           </div>
           <span class="font-bold text-sm" style="color: var(--ink); font-family: 'Syne', sans-serif;">Bugaev Web</span>
-        </div>
+        </a>
         <button
           class="w-8 h-8 flex items-center justify-center rounded-lg transition-colors"
           style="background: var(--surface-warm);"

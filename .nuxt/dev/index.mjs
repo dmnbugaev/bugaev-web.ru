@@ -2041,7 +2041,7 @@ const _4WNH1MdRanU2s7fPg_XVsw1rZsK7Q2KGkX1Vep1jk = (function(nitro) {
 
 const rootDir = "D:/pr/bugaev_web";
 
-const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1, viewport-fit=cover"},{"charset":"utf-8"}],"link":[],"style":[],"script":[],"noscript":[],"charset":"utf-8","viewport":"width=device-width, initial-scale=1, viewport-fit=cover"};
+const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1, viewport-fit=cover"},{"charset":"utf-8"}],"link":[{"rel":"icon","type":"image/svg+xml","href":"/favicon.svg"}],"style":[],"script":[],"noscript":[],"charset":"utf-8","viewport":"width=device-width, initial-scale=1, viewport-fit=cover"};
 
 const appRootTag = "div";
 
@@ -2143,22 +2143,7 @@ _ZHSaTJ5zyLAFLxqRvB8jYCxsLxN1wNme6uAgydjGN1I,
 _wH6JrtIxmaSoA8lCPWFnE9z4lQeXW6H5z3l5aymEQw
 ];
 
-const assets = {
-  "/index.mjs": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"1b62e-m8KAHdImQa7FqRSYfmuuoiOEjKU\"",
-    "mtime": "2026-03-25T17:19:16.308Z",
-    "size": 112174,
-    "path": "index.mjs"
-  },
-  "/index.mjs.map": {
-    "type": "application/json",
-    "etag": "\"6f29b-9y3nFyZTqCqYyat+36pKc6FI0NQ\"",
-    "mtime": "2026-03-25T17:19:16.309Z",
-    "size": 455323,
-    "path": "index.mjs.map"
-  }
-};
+const assets = {};
 
 function readAsset (id) {
   const serverDir = dirname$1(fileURLToPath(globalThis._importMeta_.url));

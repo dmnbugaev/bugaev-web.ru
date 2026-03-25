@@ -64,18 +64,6 @@
             </a>
           </div>
 
-          <!-- Stat chips -->
-          <div class="flex flex-wrap gap-2" data-animate="fade-up" data-delay="450">
-            <div
-              v-for="stat in stats"
-              :key="stat.label"
-              class="flex items-center gap-2 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-full"
-              style="background: var(--surface-warm); border: 1px solid var(--border);"
-            >
-              <span class="mono text-xs sm:text-sm font-bold" style="color: var(--ink);">{{ stat.value }}</span>
-              <span class="text-xs" style="color: var(--ink-3);">{{ stat.label }}</span>
-            </div>
-          </div>
         </div>
 
         <!-- Right: price card (desktop only) -->
@@ -194,12 +182,6 @@
 </template>
 
 <script setup lang="ts">
-const stats = [
-  { value: '50+',   label: 'салонов в работе' },
-  { value: '3×',    label: 'рост записей' },
-  { value: '1 мес', label: 'до запуска системы' },
-]
-
 const priceIncludes = [
   'Сайт-визитка: SEO, мобайл, онлайн-запись',
   'Умный Telegram-бот (запись, отзывы, прогрев)',
