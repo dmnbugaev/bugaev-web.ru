@@ -1,8 +1,9 @@
 <template>
   <header
     :class="[
-      'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+      'fixed top-0 left-0 right-0 transition-all duration-300',
       isScrolled ? 'scrolled' : '',
+      mobileMenuOpen ? 'z-30' : 'z-50',
     ]"
   >
     <div class="section-container">
@@ -42,19 +43,33 @@
 
         <!-- CTA + Burger -->
         <div class="flex items-center gap-3">
-          <a
-            href="https://t.me/bugaev_web"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="hidden md:inline-flex btn-primary text-sm"
-            style="padding: 0.5rem 1.25rem;"
-            @click="trackTelegram('header_desktop')"
-          >
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z" />
-            </svg>
-            Telegram
-          </a>
+          <div class="hidden md:flex items-center gap-2">
+            <a
+              href="https://t.me/bugaev_web"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex btn-primary text-sm"
+              style="padding: 0.5rem 1.25rem;"
+              @click="trackTelegram('header_desktop')"
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z" />
+              </svg>
+              Telegram
+            </a>
+            <a
+              href="https://max.ru/join/hPzwZMH8FPTH8xvPLPpzqP2HnHyArReIQkqcP2E4U5Q"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex btn-outline text-sm"
+              style="padding: 0.5rem 1.25rem;"
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M13 2L4.5 13.5H11L10 22L19.5 10.5H13L13 2Z" />
+              </svg>
+              Max
+            </a>
+          </div>
 
           <!-- Hamburger -->
           <button
@@ -71,6 +86,10 @@
       </div>
     </div>
 
+  </header>
+
+  <!-- Teleport mobile UI outside <header> to avoid backdrop-filter stacking context bug -->
+  <Teleport to="body">
     <!-- Mobile overlay -->
     <Transition name="fade">
       <div
@@ -121,22 +140,39 @@
         </a>
       </nav>
 
-      <div class="absolute bottom-0 left-0 right-0 p-4" style="border-top: 1px solid var(--border);">
-        <a
-          href="https://t.me/bugaev_web"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn-primary w-full justify-center text-sm"
-          @click="closeMenu(); trackTelegram('header_mobile')"
-        >
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z" />
-          </svg>
-          Написать в Telegram
-        </a>
+      <div
+        class="absolute bottom-0 left-0 right-0 p-4"
+        style="border-top: 1px solid var(--border); padding-bottom: max(1rem, env(safe-area-inset-bottom));"
+      >
+        <div class="flex gap-2">
+          <a
+            href="https://t.me/bugaev_web"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-primary flex-1 justify-center text-sm"
+            @click="closeMenu(); trackTelegram('header_mobile')"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z" />
+            </svg>
+            Telegram
+          </a>
+          <a
+            href="https://max.ru/join/hPzwZMH8FPTH8xvPLPpzqP2HnHyArReIQkqcP2E4U5Q"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-outline flex-1 justify-center text-sm"
+            @click="closeMenu()"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M13 2L4.5 13.5H11L10 22L19.5 10.5H13L13 2Z" />
+            </svg>
+            Max
+          </a>
+        </div>
       </div>
     </div>
-  </header>
+  </Teleport>
 </template>
 
 <script setup lang="ts">
@@ -192,10 +228,10 @@ header {
 }
 
 header.scrolled {
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06), 0 4px 20px rgba(0, 0, 0, 0.04);
 }
 
 .fade-enter-active, .fade-leave-active { transition: opacity 0.2s ease; }

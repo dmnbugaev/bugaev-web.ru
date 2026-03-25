@@ -45,7 +45,13 @@
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z" />
                   </svg>
-                  Написать в Telegram
+                  Telegram
+                </a>
+                <a href="https://max.ru/join/hPzwZMH8FPTH8xvPLPpzqP2HnHyArReIQkqcP2E4U5Q" target="_blank" rel="noopener noreferrer" class="btn-outline">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M13 2L4.5 13.5H11L10 22L19.5 10.5H13L13 2Z" />
+                  </svg>
+                  Max
                 </a>
                 <button class="btn-outline" @click="resetForm">Отправить ещё одну</button>
               </div>
@@ -59,17 +65,19 @@
               <!-- Name + Phone -->
               <div class="grid sm:grid-cols-2 gap-5">
                 <div>
-                  <label class="block text-sm font-semibold mb-2" style="color: var(--ink);">
-                    Имя <span style="color: #D94F4F;">*</span>
-                  </label>
-                  <input
-                    v-model="form.name"
-                    type="text"
-                    placeholder="Анна"
-                    autocomplete="given-name"
-                    :class="['form-input', errors.name ? 'error' : '']"
-                    @input="clearFieldError('name')"
-                  />
+                  <div class="floating-group">
+                    <input
+                      v-model="form.name"
+                      type="text"
+                      placeholder=" "
+                      autocomplete="given-name"
+                      :class="['floating-input', errors.name ? 'error' : '']"
+                      @input="clearFieldError('name')"
+                    />
+                    <label class="floating-label">
+                      Имя <span style="color: #D94F4F;">*</span>
+                    </label>
+                  </div>
                   <Transition name="err">
                     <p v-if="errors.name" class="mt-1.5 text-xs flex items-center gap-1" style="color: #D94F4F;">
                       <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
@@ -82,17 +90,19 @@
                 </div>
 
                 <div>
-                  <label class="block text-sm font-semibold mb-2" style="color: var(--ink);">
-                    Телефон <span style="color: #D94F4F;">*</span>
-                  </label>
-                  <input
-                    v-model="form.phone"
-                    type="tel"
-                    placeholder="+7 (999) 000-00-00"
-                    autocomplete="tel"
-                    :class="['form-input', errors.phone ? 'error' : '']"
-                    @input="clearFieldError('phone')"
-                  />
+                  <div class="floating-group">
+                    <input
+                      v-model="form.phone"
+                      type="tel"
+                      placeholder=" "
+                      autocomplete="tel"
+                      :class="['floating-input', errors.phone ? 'error' : '']"
+                      @input="clearFieldError('phone')"
+                    />
+                    <label class="floating-label">
+                      Телефон <span style="color: #D94F4F;">*</span>
+                    </label>
+                  </div>
                   <Transition name="err">
                     <p v-if="errors.phone" class="mt-1.5 text-xs flex items-center gap-1" style="color: #D94F4F;">
                       <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
@@ -107,17 +117,19 @@
 
               <!-- Email -->
               <div>
-                <label class="block text-sm font-semibold mb-2" style="color: var(--ink);">
-                  Email <span style="color: #D94F4F;">*</span>
-                </label>
-                <input
-                  v-model="form.email"
-                  type="email"
-                  placeholder="anna@mysalon.ru"
-                  autocomplete="email"
-                  :class="['form-input', errors.email ? 'error' : '']"
-                  @input="clearFieldError('email')"
-                />
+                <div class="floating-group">
+                  <input
+                    v-model="form.email"
+                    type="email"
+                    placeholder=" "
+                    autocomplete="email"
+                    :class="['floating-input', errors.email ? 'error' : '']"
+                    @input="clearFieldError('email')"
+                  />
+                  <label class="floating-label">
+                    Email <span style="color: #D94F4F;">*</span>
+                  </label>
+                </div>
                 <Transition name="err">
                   <p v-if="errors.email" class="mt-1.5 text-xs flex items-center gap-1" style="color: #D94F4F;">
                     <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
@@ -130,18 +142,17 @@
               </div>
 
               <!-- Salon name -->
-              <div>
-                <label class="block text-sm font-semibold mb-2" style="color: var(--ink);">
-                  Название салона / клиники
-                  <span class="font-normal" style="color: var(--ink-3);">(необязательно)</span>
-                </label>
+              <div class="floating-group">
                 <input
                   v-model="form.salon"
                   type="text"
-                  placeholder="Студия Prism Beauty"
+                  placeholder=" "
                   autocomplete="organization"
-                  class="form-input"
+                  class="floating-input"
                 />
+                <label class="floating-label">
+                  Название салона / клиники <span style="color: var(--ink-3); font-size: 0.8em;">(необязательно)</span>
+                </label>
               </div>
 
               <!-- Honeypot для защиты от ботов (скрыто через CSS) -->
@@ -197,18 +208,32 @@
         <!-- Alternative contact -->
         <div class="mt-6 text-center" data-animate="fade-up" data-delay="400">
           <p class="text-sm mb-2" style="color: var(--ink-3);">Предпочитаете общаться напрямую?</p>
-          <a
-            href="https://t.me/bugaev_web"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center gap-2 text-sm font-semibold transition-colors duration-150"
-            style="color: var(--ink);"
-          >
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z" />
-            </svg>
-            @bugaev_web — написать в Telegram ↗
-          </a>
+          <div class="flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="https://t.me/bugaev_web"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 text-sm font-semibold transition-colors duration-150"
+              style="color: var(--ink);"
+            >
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z" />
+              </svg>
+              @bugaev_web — Telegram ↗
+            </a>
+            <a
+              href="https://max.ru/join/hPzwZMH8FPTH8xvPLPpzqP2HnHyArReIQkqcP2E4U5Q"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 text-sm font-semibold transition-colors duration-150"
+              style="color: var(--ink);"
+            >
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M13 2L4.5 13.5H11L10 22L19.5 10.5H13L13 2Z" />
+              </svg>
+              Max ↗
+            </a>
+          </div>
         </div>
       </div>
     </div>

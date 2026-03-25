@@ -130,6 +130,15 @@
           >
             Написать в Telegram
           </a>
+          <a
+            href="https://max.ru/join/hPzwZMH8FPTH8xvPLPpzqP2HnHyArReIQkqcP2E4U5Q"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full text-sm font-semibold transition-all duration-200"
+            style="background: rgba(15,15,15,0.10); color: var(--ink); border: 1.5px solid rgba(15,15,15,0.15);"
+          >
+            Написать в Max
+          </a>
         </div>
       </div>
     </div>

@@ -64,15 +64,15 @@
             </a>
           </div>
 
-          <!-- Stat chips — hidden on very small screens -->
-          <div class="hidden sm:flex flex-wrap gap-2" data-animate="fade-up" data-delay="450">
+          <!-- Stat chips -->
+          <div class="flex flex-wrap gap-2" data-animate="fade-up" data-delay="450">
             <div
               v-for="stat in stats"
               :key="stat.label"
-              class="flex items-center gap-2 px-3.5 py-2 rounded-full"
+              class="flex items-center gap-2 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-full"
               style="background: var(--surface-warm); border: 1px solid var(--border);"
             >
-              <span class="mono text-sm font-bold" style="color: var(--ink);">{{ stat.value }}</span>
+              <span class="mono text-xs sm:text-sm font-bold" style="color: var(--ink);">{{ stat.value }}</span>
               <span class="text-xs" style="color: var(--ink-3);">{{ stat.label }}</span>
             </div>
           </div>
@@ -159,22 +159,25 @@
       >
         <div
           class="flex items-center justify-between rounded-2xl px-5 py-4"
-          style="background: var(--ink);"
+          style="background: var(--ink); box-shadow: 0 8px 32px rgba(0,0,0,0.18);"
         >
           <div>
-            <p class="mono text-xs mb-0.5" style="color: rgba(255,255,255,0.35);">Подписка / месяц</p>
-            <span
-              style="
-                font-family: 'Syne', sans-serif;
-                font-weight: 800;
-                font-size: 1.6rem;
-                line-height: 1;
-                letter-spacing: -0.03em;
-                color: white;
-              "
-            >50 000 ₽</span>
+            <p class="mono text-xs mb-0.5" style="color: rgba(255,255,255,0.35); letter-spacing: 0.07em; text-transform: uppercase;">Подписка / месяц</p>
+            <div class="flex items-baseline gap-1">
+              <span
+                style="
+                  font-family: 'Syne', sans-serif;
+                  font-weight: 800;
+                  font-size: 1.6rem;
+                  line-height: 1;
+                  letter-spacing: -0.03em;
+                  color: white;
+                "
+              >50 000</span>
+              <span style="color: rgba(255,255,255,0.45); font-size: 1rem; font-weight: 600;">₽</span>
+            </div>
           </div>
-          <a href="#contact" class="btn-accent text-sm px-4 py-2.5 whitespace-nowrap">
+          <a href="#contact" class="btn-accent text-sm whitespace-nowrap" style="padding: 0.625rem 1.25rem;">
             Заявка →
           </a>
         </div>

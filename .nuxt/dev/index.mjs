@@ -2041,7 +2041,7 @@ const _4WNH1MdRanU2s7fPg_XVsw1rZsK7Q2KGkX1Vep1jk = (function(nitro) {
 
 const rootDir = "D:/pr/bugaev_web";
 
-const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"}],"link":[],"style":[],"script":[],"noscript":[],"charset":"utf-8","viewport":"width=device-width, initial-scale=1"};
+const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1, viewport-fit=cover"},{"charset":"utf-8"}],"link":[],"style":[],"script":[],"noscript":[],"charset":"utf-8","viewport":"width=device-width, initial-scale=1, viewport-fit=cover"};
 
 const appRootTag = "div";
 
@@ -2143,7 +2143,22 @@ _ZHSaTJ5zyLAFLxqRvB8jYCxsLxN1wNme6uAgydjGN1I,
 _wH6JrtIxmaSoA8lCPWFnE9z4lQeXW6H5z3l5aymEQw
 ];
 
-const assets = {};
+const assets = {
+  "/index.mjs": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"1b62e-m8KAHdImQa7FqRSYfmuuoiOEjKU\"",
+    "mtime": "2026-03-25T17:19:16.308Z",
+    "size": 112174,
+    "path": "index.mjs"
+  },
+  "/index.mjs.map": {
+    "type": "application/json",
+    "etag": "\"6f29b-9y3nFyZTqCqYyat+36pKc6FI0NQ\"",
+    "mtime": "2026-03-25T17:19:16.309Z",
+    "size": 455323,
+    "path": "index.mjs.map"
+  }
+};
 
 function readAsset (id) {
   const serverDir = dirname$1(fileURLToPath(globalThis._importMeta_.url));
@@ -2601,16 +2616,12 @@ async function getIslandContext(event) {
 	};
 }
 
-const _lazy_BZ9nYo = () => Promise.resolve().then(function () { return leads_get$1; });
 const _lazy_Q1IxtF = () => Promise.resolve().then(function () { return leads_post$1; });
-const _lazy_SQEPrL = () => Promise.resolve().then(function () { return makeWebhook_post$1; });
 const _lazy_kvSlaH = () => Promise.resolve().then(function () { return renderer; });
 
 const handlers = [
   { route: '', handler: _GnHw7K, lazy: false, middleware: true, method: undefined },
-  { route: '/api/leads', handler: _lazy_BZ9nYo, lazy: true, middleware: false, method: "get" },
   { route: '/api/leads', handler: _lazy_Q1IxtF, lazy: true, middleware: false, method: "post" },
-  { route: '/api/make-webhook', handler: _lazy_SQEPrL, lazy: true, middleware: false, method: "post" },
   { route: '/__nuxt_error', handler: _lazy_kvSlaH, lazy: true, middleware: false, method: undefined },
   { route: '/__nuxt_island/**', handler: handler$1, lazy: false, middleware: false, method: undefined },
   { route: '/_fonts/**', handler: _lazy_kvSlaH, lazy: true, middleware: false, method: undefined },
@@ -2954,23 +2965,6 @@ const styles$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   default: styles
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const leads_get = defineEventHandler((event) => {
-  const config = useRuntimeConfig(event);
-  const token = config.telegramBotToken || process.env.NUXT_TELEGRAM_BOT_TOKEN || process.env.TELEGRAM_BOT_TOKEN;
-  const chatId = config.telegramChatId || process.env.NUXT_TELEGRAM_CHAT_ID || process.env.TELEGRAM_CHAT_ID;
-  return {
-    ok: !!(token && chatId),
-    token: typeof token === "string" && token ? `${token.slice(0, 10)}...` : null,
-    chatId: chatId || null,
-    message: token && chatId ? "\u041A\u043E\u043D\u0444\u0438\u0433\u0443\u0440\u0430\u0446\u0438\u044F \u0432 \u043F\u043E\u0440\u044F\u0434\u043A\u0435. \u0424\u043E\u0440\u043C\u0430 \u0433\u043E\u0442\u043E\u0432\u0430 \u043A \u0440\u0430\u0431\u043E\u0442\u0435." : "\u0422\u043E\u043A\u0435\u043D \u0438\u043B\u0438 chat_id \u043D\u0435 \u043D\u0430\u0439\u0434\u0435\u043D\u044B. \u041F\u0440\u043E\u0432\u0435\u0440\u044C\u0442\u0435 .env \u0438 \u043F\u0435\u0440\u0435\u0437\u0430\u043F\u0443\u0441\u0442\u0438\u0442\u0435 npm run dev."
-  };
-});
-
-const leads_get$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
-  __proto__: null,
-  default: leads_get
-}, Symbol.toStringTag, { value: 'Module' }));
-
 const leads_post = defineEventHandler(async (event) => {
   const config = useRuntimeConfig(event);
   const smtpUser = config.smtpUser;
@@ -3022,30 +3016,6 @@ const leads_post = defineEventHandler(async (event) => {
 const leads_post$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
   default: leads_post
-}, Symbol.toStringTag, { value: 'Module' }));
-
-const makeWebhook_post = defineEventHandler(async (event) => {
-  const config = useRuntimeConfig(event);
-  const webhookUrl = config.makeWebhookUrl;
-  if (!webhookUrl) return { ok: false, reason: "no webhook url configured" };
-  const body = await readBody(event).catch(() => ({}));
-  try {
-    const res = await fetch(webhookUrl, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(body)
-    });
-    const text = await res.text();
-    console.log(`[make-webhook] status=${res.status} body=${text}`);
-  } catch (err) {
-    console.error("[make-webhook] fetch error:", err);
-  }
-  return { ok: true };
-});
-
-const makeWebhook_post$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
-  __proto__: null,
-  default: makeWebhook_post
 }, Symbol.toStringTag, { value: 'Module' }));
 
 function renderPayloadResponse(ssrContext) {

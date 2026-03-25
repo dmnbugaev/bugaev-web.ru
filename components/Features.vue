@@ -25,7 +25,7 @@
         <div
           v-for="(feature, index) in features"
           :key="feature.title"
-          class="p-7 flex flex-col gap-4 rounded-2xl cursor-default transition-transform duration-300 hover:-translate-y-1"
+          class="p-6 sm:p-7 flex flex-col gap-4 rounded-2xl cursor-default transition-transform duration-300 hover:-translate-y-1 active:scale-[0.99]"
           :style="feature.highlight
             ? 'background: var(--accent); border: 1px solid transparent;'
             : 'background: var(--dark-card); border: 1px solid rgba(255,255,255,0.06);'"

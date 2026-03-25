@@ -84,7 +84,23 @@
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink: 0;">
                     <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z" />
                   </svg>
-                  @bugaev_web
+                  @bugaev_web — Telegram
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://max.ru/join/hPzwZMH8FPTH8xvPLPpzqP2HnHyArReIQkqcP2E4U5Q"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex items-center gap-2 text-sm transition-colors duration-150"
+                  style="color: rgba(255,255,255,0.4);"
+                  @mouseenter="(e) => (e.currentTarget as HTMLElement).style.color = '#FFFFFF'"
+                  @mouseleave="(e) => (e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.4)'"
+                >
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink: 0;">
+                    <path d="M13 2L4.5 13.5H11L10 22L19.5 10.5H13L13 2Z" />
+                  </svg>
+                  Max
                 </a>
               </li>
               <li>
@@ -153,10 +169,17 @@ const IconVK = defineComponent({
   ]),
 })
 
+const IconMax = defineComponent({
+  render: () => h('svg', { width: 14, height: 14, viewBox: '0 0 24 24', fill: 'rgba(255,255,255,0.45)' }, [
+    h('path', { d: 'M13 2L4.5 13.5H11L10 22L19.5 10.5H13L13 2Z' }),
+  ]),
+})
+
 const socials = [
-  { label: 'Telegram',  href: 'https://t.me/bugaev_web',          icon: IconTelegram },
-  { label: 'Instagram', href: 'https://instagram.com/bugaev_web', icon: IconInstagram },
-  { label: 'ВКонтакте', href: 'https://vk.com/bugaev_web',        icon: IconVK },
+  { label: 'Telegram',  href: 'https://t.me/bugaev_web',                  icon: IconTelegram },
+  { label: 'Max',       href: 'https://max.ru/join/hPzwZMH8FPTH8xvPLPpzqP2HnHyArReIQkqcP2E4U5Q',          icon: IconMax },
+  { label: 'Instagram', href: 'https://instagram.com/bugaev_web',          icon: IconInstagram },
+  { label: 'ВКонтакте', href: 'https://vk.com/bugaev_web',                 icon: IconVK },
 ]
 
 const legalLinks = [

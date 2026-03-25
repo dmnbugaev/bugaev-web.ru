@@ -77,6 +77,9 @@
           <a href="https://t.me/bugaev_web" target="_blank" rel="noopener noreferrer" class="btn-outline whitespace-nowrap">
             Telegram ↗
           </a>
+          <a href="https://max.ru/join/hPzwZMH8FPTH8xvPLPpzqP2HnHyArReIQkqcP2E4U5Q" target="_blank" rel="noopener noreferrer" class="btn-outline whitespace-nowrap">
+            Max ↗
+          </a>
         </div>
       </div>
     </div>

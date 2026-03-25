@@ -17,12 +17,20 @@
   --dark-card:     #1C1C1C;
   --border:        rgba(0, 0, 0, 0.07);
   --border-dark:   rgba(255, 255, 255, 0.08);
+
+  /* Safe area insets (Dynamic Island / notch support) */
+  --safe-top:    env(safe-area-inset-top, 0px);
+  --safe-right:  env(safe-area-inset-right, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left:   env(safe-area-inset-left, 0px);
 }
 
 /* ─── Base ───────────────────────────────────────────────────────────── */
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    margin-right: calc(-1 * (100vw - 100%)); /* Prevent layout shift from scrollbar */
   }
 
   body {
@@ -32,10 +40,16 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
+    width: 100%;
+    /* Faster tap response on mobile (eliminates 300ms delay) */
+    touch-action: manipulation;
   }
 
   * {
     box-sizing: border-box;
+    /* Firefox: thin transparent scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
   }
 
   ::selection {
@@ -43,10 +57,11 @@
     color: var(--ink);
   }
 
-  ::-webkit-scrollbar { width: 5px; }
-  ::-webkit-scrollbar-track { background: var(--surface-warm); }
-  ::-webkit-scrollbar-thumb { background: #CBCBCB; border-radius: 3px; }
-  ::-webkit-scrollbar-thumb:hover { background: #999; }
+  /* WebKit: invisible scrollbar (overlay, no layout space) */
+  ::-webkit-scrollbar { width: 0; background: transparent; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: transparent; border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: rgba(0, 0, 0, 0.2); }
 }
 
 /* ─── Components ─────────────────────────────────────────────────────── */
@@ -148,11 +163,14 @@
   .btn-primary {
     @apply inline-flex items-center justify-center gap-2 font-semibold text-sm transition-all duration-200 select-none;
     padding: 0.75rem 1.75rem;
+    min-height: 44px; /* iOS HIG touch target */
     border-radius: 100px;
     background: var(--ink);
     color: #FFFFFF;
     border: none;
     letter-spacing: 0.005em;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .btn-primary:hover {
@@ -161,16 +179,19 @@
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22);
   }
 
-  .btn-primary:active { transform: translateY(0); }
+  .btn-primary:active { transform: translateY(0); box-shadow: none; }
 
   /* Accent button — sage green pill */
   .btn-accent {
     @apply inline-flex items-center justify-center gap-2 font-semibold text-sm transition-all duration-200 select-none;
     padding: 0.75rem 1.75rem;
+    min-height: 44px;
     border-radius: 100px;
     background: var(--accent);
     color: var(--ink);
     border: none;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .btn-accent:hover {
@@ -179,16 +200,19 @@
     box-shadow: 0 6px 20px rgba(143, 175, 138, 0.35);
   }
 
-  .btn-accent:active { transform: translateY(0); }
+  .btn-accent:active { transform: translateY(0); filter: brightness(0.97); }
 
   /* Outline button — for light sections */
   .btn-outline {
     @apply inline-flex items-center justify-center gap-2 font-semibold text-sm transition-all duration-200 select-none;
     padding: 0.75rem 1.75rem;
+    min-height: 44px;
     border-radius: 100px;
     background: transparent;
     color: var(--ink);
     border: 1.5px solid rgba(0, 0, 0, 0.18);
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .btn-outline:hover {
@@ -196,20 +220,65 @@
     transform: translateY(-1px);
   }
 
-  /* Ghost button — for dark sections */
-  .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 font-semibold text-sm transition-all duration-200 select-none;
-    padding: 0.75rem 1.75rem;
-    border-radius: 100px;
-    background: transparent;
-    color: rgba(255, 255, 255, 0.65);
-    border: 1.5px solid rgba(255, 255, 255, 0.18);
+  .btn-outline:active { transform: translateY(0); }
+
+  /* ── Floating label form inputs ─────────────────────────────────── */
+  .floating-group {
+    position: relative;
   }
 
-  .btn-ghost:hover {
-    color: #FFFFFF;
-    border-color: rgba(255, 255, 255, 0.45);
-    transform: translateY(-1px);
+  .floating-input {
+    @apply w-full transition-all duration-200 outline-none;
+    padding: 1.375rem 1rem 0.5rem;
+    min-height: 56px;
+    border-radius: 12px;
+    background: var(--surface-warm);
+    border: 1.5px solid transparent;
+    color: var(--ink);
+    font-family: inherit;
+    font-size: 0.9375rem;
+  }
+
+  .floating-input::placeholder { color: transparent; }
+
+  .floating-input:focus {
+    border-color: var(--accent);
+    background: #FFFFFF;
+    box-shadow: 0 0 0 3px var(--accent-dim);
+  }
+
+  .floating-input.error {
+    border-color: #D94F4F;
+    box-shadow: 0 0 0 3px rgba(217, 79, 79, 0.10);
+  }
+
+  .floating-label {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.875rem;
+    color: var(--ink-3);
+    pointer-events: none;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: left top;
+  }
+
+  /* Float up when input has content or is focused */
+  .floating-input:focus + .floating-label,
+  .floating-input:not(:placeholder-shown) + .floating-label {
+    top: 0.6rem;
+    transform: translateY(0) scale(0.75);
+    color: var(--accent-text);
+  }
+
+  .floating-input:focus + .floating-label {
+    color: var(--accent-text);
+  }
+
+  .floating-input.error + .floating-label,
+  .floating-input.error:not(:placeholder-shown) + .floating-label {
+    color: #D94F4F;
   }
 
   /* Form inputs */
@@ -238,14 +307,6 @@
   /* Mono utility */
   .mono {
     font-family: 'Syne Mono', monospace;
-  }
-
-  /* Accent divider */
-  .accent-line {
-    width: 40px;
-    height: 2px;
-    background: var(--accent);
-    border-radius: 2px;
   }
 
   /* Spinner */
@@ -299,7 +360,10 @@
 /* ─── Mobile menu ────────────────────────────────────────────────────── */
 .mobile-menu {
   transform: translateX(100%);
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1);
+  /* Safe area: account for Dynamic Island and home indicator */
+  padding-top: var(--safe-top);
+  padding-bottom: var(--safe-bottom);
 }
 
 .mobile-menu.open { transform: translateX(0); }
@@ -307,6 +371,16 @@
 /* ─── Keyframes ──────────────────────────────────────────────────────── */
 @keyframes spin {
   to { transform: rotate(360deg); }
+}
+
+/* Micro-tap feedback for interactive elements */
+@media (hover: none) and (pointer: coarse) {
+  .btn-primary:active  { transform: scale(0.97); background: var(--ink-2); }
+  .btn-accent:active   { transform: scale(0.97); filter: brightness(0.95); }
+  .btn-outline:active  { transform: scale(0.97); }
+  .btn-ghost:active    { transform: scale(0.97); }
+  .card:hover          { transform: none; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+  .card-dark:hover     { transform: none; box-shadow: none; }
 }
 
 /* ─── Success notification ───────────────────────────────────────────── */
