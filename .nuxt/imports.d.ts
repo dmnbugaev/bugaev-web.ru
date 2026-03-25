@@ -31,6 +31,7 @@ export { setInterval } from '#app/compat/interval';
 export { definePageMeta } from '../node_modules/nuxt/dist/pages/runtime/composables';
 export { defineLazyHydrationComponent } from '#app/composables/lazy-hydration';
 export { useCookieConsent, ConsentStatus } from '../composables/useCookieConsent';
-export { useFormSubmit, FormData, FormErrors, SubmitPayload } from '../composables/useFormSubmit';
+export { useFormSubmit, FormData, FormErrors } from '../composables/useFormSubmit';
 export { useScrollAnimation } from '../composables/useScrollAnimation';
 export { useUtm, UtmParams } from '../composables/useUtm';
+export { useNuxtDevTools } from '../node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools';

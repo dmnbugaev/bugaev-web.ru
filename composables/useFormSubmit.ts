@@ -1,5 +1,4 @@
 // composables/useFormSubmit.ts
-// Handles lead form validation, UTM enrichment, and submission via fetch API.
 
 export interface FormData {
   name: string
@@ -14,36 +13,16 @@ export interface FormErrors {
   email?: string
 }
 
-export interface SubmitPayload extends FormData {
-  utm_source?: string
-  utm_medium?: string
-  utm_campaign?: string
-  utm_term?: string
-  utm_content?: string
-  submitted_at: string
-  page_url: string
-}
-
-// ─── API Endpoint ────────────────────────────────────────────────────────────
-// TODO: Replace with your real form submission endpoint before going live.
-// Options:
-//   - Your own API: 'https://api.bugaev.web/leads'
-//   - Formspree:    'https://formspree.io/f/YOUR_FORM_ID'
-//   - GetForm:      'https://getform.io/f/YOUR_FORM_ID'
-const FORM_ENDPOINT = '/api/leads' // <-- ЗАМЕНИТЕ НА РЕАЛЬНЫЙ ENDPOINT
-// ─────────────────────────────────────────────────────────────────────────────
-
 export const useFormSubmit = () => {
   const { getUtmForForm } = useUtm()
 
   const isSubmitting = ref(false)
-  const isSuccess = ref(false)
-  const isError = ref(false)
+  const isSuccess    = ref(false)
+  const isError      = ref(false)
   const errorMessage = ref('')
-  const errors = ref<FormErrors>({})
+  const errors       = ref<FormErrors>({})
 
   const validatePhone = (phone: string): boolean => {
-    // Accepts: +7XXXXXXXXXX, 8XXXXXXXXXX, +7 (XXX) XXX-XX-XX, 8-XXX-XXX-XX-XX, etc.
     const cleaned = phone.replace(/[\s\-\(\)\.]/g, '')
     return /^(\+7|7|8)\d{10}$/.test(cleaned)
   }
@@ -91,51 +70,43 @@ export const useFormSubmit = () => {
 
   const submit = async (data: FormData): Promise<boolean> => {
     clearErrors()
-
     if (!validate(data)) return false
 
     isSubmitting.value = true
-    isSuccess.value = false
-    isError.value = false
+    isSuccess.value    = false
+    isError.value      = false
 
     const utmData = getUtmForForm()
+    const pageUrl = typeof window !== 'undefined' ? window.location.href : ''
 
-    const payload: SubmitPayload = {
-      ...data,
-      name: data.name.trim(),
-      phone: data.phone.trim(),
-      email: data.email.trim().toLowerCase(),
-      salon: data.salon.trim(),
+    const payload = {
+      name:     data.name.trim(),
+      phone:    data.phone.trim(),
+      email:    data.email.trim().toLowerCase(),
+      salon:    data.salon.trim() || '—',
+      page_url: pageUrl,
       ...utmData,
-      submitted_at: new Date().toISOString(),
-      page_url: typeof window !== 'undefined' ? window.location.href : '',
     }
 
     try {
-      const response = await fetch(FORM_ENDPOINT, {
+      const response = await fetch('/api/leads', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
       })
+
       if (!response.ok) {
-        const err = await response.json().catch(() => ({}))
-        throw new Error(
-          (err as { message?: string }).message || `Ошибка сервера: ${response.status}`
-        )
+        const result = await response.json().catch(() => ({})) as { statusMessage?: string }
+        throw new Error(result.statusMessage || `Ошибка сервера: ${response.status}`)
       }
 
       isSuccess.value = true
 
-      // Track conversion in Yandex Metrika
+      // Цель в Яндекс.Метрике
       if (typeof window !== 'undefined') {
         type WinWithYm = Window & { ym?: (...args: unknown[]) => void }
         const ym = (window as WinWithYm).ym
-        if (typeof ym === 'function') {
-          ym(108208585, 'reachGoal', 'lead_form_submit')
-        }
+        if (typeof ym === 'function') ym(108208585, 'reachGoal', 'lead_form_submit')
       }
 
       return true
@@ -153,18 +124,18 @@ export const useFormSubmit = () => {
 
   const reset = () => {
     isSubmitting.value = false
-    isSuccess.value = false
-    isError.value = false
+    isSuccess.value    = false
+    isError.value      = false
     errorMessage.value = ''
-    errors.value = {}
+    errors.value       = {}
   }
 
   return {
     isSubmitting: readonly(isSubmitting),
-    isSuccess: readonly(isSuccess),
-    isError: readonly(isError),
+    isSuccess:    readonly(isSuccess),
+    isError:      readonly(isError),
     errorMessage: readonly(errorMessage),
-    errors: readonly(errors),
+    errors:       readonly(errors),
     submit,
     validate,
     clearErrors,

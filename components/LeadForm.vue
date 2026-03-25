@@ -144,6 +144,9 @@
                 />
               </div>
 
+              <!-- Honeypot для защиты от ботов (скрыто через CSS) -->
+              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
               <!-- Hidden UTM fields -->
               <input type="hidden" name="utm_source"   :value="utmParams.utm_source" />
               <input type="hidden" name="utm_medium"   :value="utmParams.utm_medium" />

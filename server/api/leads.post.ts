@@ -1,61 +1,59 @@
 // server/api/leads.post.ts
-// Receives lead form submissions and forwards them to Telegram.
-//
-// Required environment variables (.env):
-//   TELEGRAM_BOT_TOKEN  — токен бота от @BotFather
-//   TELEGRAM_CHAT_ID    — ID чата/канала для уведомлений (можно получить через @userinfobot)
+import nodemailer from 'nodemailer'
 
 export default defineEventHandler(async (event) => {
-  const body = await readBody(event)
+  const config = useRuntimeConfig(event)
 
-  const token = process.env.TELEGRAM_BOT_TOKEN
-  const chatId = process.env.TELEGRAM_CHAT_ID
+  const smtpUser = config.smtpUser as string
+  const smtpPass = config.smtpPass as string
+  const smtpTo   = config.smtpTo   as string
 
-  if (!token || !chatId) {
-    throw createError({
-      statusCode: 500,
-      statusMessage: 'Telegram not configured. Set TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID in .env',
-    })
+  if (!smtpUser || !smtpPass || !smtpTo) {
+    throw createError({ statusCode: 500, statusMessage: 'Email не настроен. Добавьте NUXT_SMTP_USER, NUXT_SMTP_PASS, NUXT_SMTP_TO в .env' })
+  }
+
+  let body: Record<string, string>
+  try {
+    body = await readBody(event)
+  } catch {
+    throw createError({ statusCode: 400, statusMessage: 'Неверный формат данных' })
   }
 
   const utmLine = body.utm_source
-    ? `\n📊 UTM: ${body.utm_source}/${body.utm_medium || '—'}/${body.utm_campaign || '—'}`
+    ? `UTM: ${body.utm_source} / ${body.utm_medium || '—'} / ${body.utm_campaign || '—'}`
     : ''
 
-  const text = [
-    '🎯 <b>Новая заявка с сайта!</b>',
-    '',
-    `👤 <b>Имя:</b> ${body.name}`,
-    `📞 <b>Телефон:</b> ${body.phone}`,
-    `✉️ <b>Email:</b> ${body.email}`,
-    `💇 <b>Салон:</b> ${body.salon || '—'}`,
-    '',
-    `📍 <b>Источник:</b> ${body.page_url}`,
-    `🕐 <b>Время:</b> ${new Date(body.submitted_at).toLocaleString('ru-RU', { timeZone: 'Europe/Moscow' })}`,
-    utmLine,
-  ]
-    .filter((line) => line !== '')
-    .join('\n')
+  const html = `
+    <h2 style="color:#1a1a1a">🎯 Новая заявка с сайта!</h2>
+    <table style="border-collapse:collapse;width:100%;max-width:500px">
+      <tr><td style="padding:8px;color:#666;width:120px">Имя</td><td style="padding:8px;font-weight:600">${body.name || '—'}</td></tr>
+      <tr style="background:#f9f9f9"><td style="padding:8px;color:#666">Телефон</td><td style="padding:8px;font-weight:600">${body.phone || '—'}</td></tr>
+      <tr><td style="padding:8px;color:#666">Email</td><td style="padding:8px;font-weight:600">${body.email || '—'}</td></tr>
+      <tr style="background:#f9f9f9"><td style="padding:8px;color:#666">Салон</td><td style="padding:8px">${body.salon || '—'}</td></tr>
+      <tr><td style="padding:8px;color:#666">Страница</td><td style="padding:8px"><a href="${body.page_url || ''}">${body.page_url || '—'}</a></td></tr>
+      ${utmLine ? `<tr style="background:#f9f9f9"><td style="padding:8px;color:#666">UTM</td><td style="padding:8px;color:#888">${utmLine}</td></tr>` : ''}
+    </table>
+  `
 
-  const tgResponse = await fetch(
-    `https://api.telegram.org/bot${token}/sendMessage`,
-    {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        chat_id: chatId,
-        text,
-        parse_mode: 'HTML',
-      }),
-    }
-  )
+  const transporter = nodemailer.createTransport({
+    host: 'smtp.yandex.ru',
+    port: 465,
+    secure: true,
+    auth: { user: smtpUser, pass: smtpPass },
+  })
 
-  if (!tgResponse.ok) {
-    const err = await tgResponse.json().catch(() => ({}))
-    throw createError({
-      statusCode: 502,
-      statusMessage: `Telegram API error: ${JSON.stringify(err)}`,
+  try {
+    await transporter.sendMail({
+      from: `"Bugaev Web" <${smtpUser}>`,
+      to: smtpTo,
+      subject: `Новая заявка: ${body.name || '—'} (${body.phone || '—'})`,
+      html,
     })
+    console.log(`[leads] Email отправлен на ${smtpTo}`)
+  } catch (err) {
+    const msg = err instanceof Error ? err.message : String(err)
+    console.error('[leads] Email error:', msg)
+    throw createError({ statusCode: 502, statusMessage: `Ошибка отправки email: ${msg}` })
   }
 
   return { ok: true }

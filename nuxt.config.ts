@@ -2,6 +2,14 @@
 export default defineNuxtConfig({
   devtools: { enabled: process.env.NODE_ENV !== 'production' },
 
+  runtimeConfig: {
+    // Серверные переменные (не утекают в браузер)
+    // Переопределяются через NUXT_SMTP_* в .env
+    smtpUser: '',
+    smtpPass: '',
+    smtpTo:   '',
+  },
+
   modules: ['@nuxtjs/tailwindcss', '@nuxt/fonts'],
 
   fonts: {
