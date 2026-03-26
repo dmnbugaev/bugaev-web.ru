@@ -64,6 +64,17 @@
       <h3 style="font-size:14px;color:#888;margin:16px 0 6px;">Как выбрать SMM-агентство для салона красоты</h3>
       <p>При выборе SMM для салона красоты важно: специализация именно на бьюти-нише (общие агентства не знают специфику), наличие кейсов с реальными цифрами, понятный отчёт каждую неделю, и — самое главное — комплексный подход, а не только «посты в Instagram». Бугаев Веб специализируется исключительно на бьюти-бизнесе в Москве, показывает реальные результаты (рост записей, снижение неявок) и работает в формате «один платёж — полный digital-отдел».</p>
 
+      <h3 style="font-size:14px;color:#888;margin:16px 0 6px;">Подробнее об услугах Бугаев Веб</h3>
+      <p>Узнайте больше о каждой услуге в составе абонемента:</p>
+      <ul style="line-height:2;padding-left:0;list-style:none;">
+        <li><a href="/uslugi" style="color:#8FAF8A;">Все услуги Бугаев Веб</a> — полный обзор digital-абонемента для бьюти-бизнеса</li>
+        <li><a href="/smm-salon-krasoty" style="color:#8FAF8A;">SMM для салона красоты</a> — ведение Instagram и Telegram под ключ</li>
+        <li><a href="/sait-salon-krasoty" style="color:#8FAF8A;">Разработка сайта для салона красоты</a> — SEO-сайт на Nuxt.js с онлайн-записью</li>
+        <li><a href="/telegram-bot-zapis" style="color:#8FAF8A;">Telegram-бот для онлайн-записи</a> — автозапись клиентов 24/7</li>
+        <li><a href="/crm-yclients" style="color:#8FAF8A;">Настройка CRM YCLIENTS</a> — учёт клиентов, расписание, финансы</li>
+        <li><a href="/nogtevaiya-studiya" style="color:#8FAF8A;">Продвижение ногтевой студии</a> — SMM, сайт и бот для мастеров маникюра</li>
+      </ul>
+
       <address style="margin-top:20px;font-style:normal;">
         Написать Бугаеву Дмитрию напрямую:
         Telegram — <a href="https://t.me/bugggd" rel="noopener noreferrer" style="color:#8FAF8A;">@bugggd</a>,
@@ -84,14 +95,14 @@ useSeoMeta({
   ogType: 'website',
   ogLocale: 'ru_RU',
   ogSiteName: 'Бугаев Веб',
-  ogImage: 'https://bugaev-web.ru/og-image.png',
+  ogImage: 'https://bugaev-web.ru/og-image.svg',
   ogImageWidth: '1200',
   ogImageHeight: '630',
   ogImageAlt: 'Бугаев Веб — Digital-абонемент для салона красоты в Москве',
   twitterCard: 'summary_large_image',
   twitterTitle: 'Бугаев Веб — Digital-абонемент для салона красоты',
   twitterDescription: 'Сайт + Telegram-бот + SMM + CRM для салона красоты в Москве от Бугаев Веб.',
-  twitterImage: 'https://bugaev-web.ru/og-image.png',
+  twitterImage: 'https://bugaev-web.ru/og-image.svg',
 })
 
 useHead({

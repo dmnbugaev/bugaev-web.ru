@@ -15,15 +15,7 @@ const schema = {
       "name": "Бугаев Веб",
       "description": "Комплексное digital-продвижение для салонов красоты, ногтевых студий и клиник в Москве",
       "publisher": { "@id": "https://bugaev-web.ru/#business" },
-      "inLanguage": "ru-RU",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://bugaev-web.ru/?s={search_term_string}"
-        },
-        "query-input": "required name=search_term_string"
-      }
+      "inLanguage": "ru-RU"
     },
     {
       "@type": "WebPage",

@@ -12,12 +12,18 @@ export default defineNuxtConfig({
 
   // ── Pre-render статических страниц при билде (HTML отдаётся мгновенно) ──
   routeRules: {
-    '/':            { prerender: true },
-    '/privacy':     { prerender: true },
-    '/cookies':     { prerender: true },
-    '/oferta':      { prerender: true },
-    '/terms':       { prerender: true },
-    '/requisites':  { prerender: true },
+    '/':                    { prerender: true },
+    '/privacy':             { prerender: true },
+    '/cookies':             { prerender: true },
+    '/oferta':              { prerender: true },
+    '/terms':               { prerender: true },
+    '/requisites':          { prerender: true },
+    '/smm-salon-krasoty':   { prerender: true },
+    '/sait-salon-krasoty':  { prerender: true },
+    '/telegram-bot-zapis':  { prerender: true },
+    '/crm-yclients':        { prerender: true },
+    '/nogtevaiya-studiya':  { prerender: true },
+    '/uslugi':              { prerender: true },
     // Иммутабельный кэш для хешированных ассетов Nuxt (JS/CSS бандлы)
     '/_nuxt/**': {
       headers: { 'cache-control': 'public, max-age=31536000, immutable' },
@@ -78,11 +84,12 @@ export default defineNuxtConfig({
           content: 'Бугаев Веб (Бугаев Дмитрий) — комплексное digital-продвижение для салонов красоты, ногтевых студий, косметологических клиник и бьюти-мастеров в Москве. Сайт на Nuxt.js, Telegram-бот для онлайн-записи, ведение Instagram и Telegram-канала, настройка CRM YCLIENTS — всё за 50 000 ₽/мес. Результат с первого месяца. Без скрытых платежей.'
         },
         // OG Image — используется при шеринге в соцсетях и мессенджерах
-        { property: 'og:image',        content: 'https://bugaev-web.ru/og-image.png' },
+        { property: 'og:image',        content: 'https://bugaev-web.ru/og-image.svg' },
+        { property: 'og:image:type',   content: 'image/svg+xml' },
         { property: 'og:image:width',  content: '1200' },
         { property: 'og:image:height', content: '630' },
         { property: 'og:image:alt',    content: 'Бугаев Веб — Digital-абонемент для салона красоты' },
-        { name: 'twitter:image',       content: 'https://bugaev-web.ru/og-image.png' },
+        { name: 'twitter:image',       content: 'https://bugaev-web.ru/og-image.svg' },
         { name: 'twitter:image:alt',   content: 'Бугаев Веб — Digital-абонемент для салона красоты' },
         {
           name: 'keywords',
