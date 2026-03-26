@@ -25,6 +25,7 @@ export const Hero: typeof import("../components/Hero.vue")['default']
 export const HowItWorks: typeof import("../components/HowItWorks.vue")['default']
 export const LeadForm: typeof import("../components/LeadForm.vue")['default']
 export const Pricing: typeof import("../components/Pricing.vue")['default']
+export const SeoSchema: typeof import("../components/SeoSchema.vue")['default']
 export const Testimonials: typeof import("../components/Testimonials.vue")['default']
 export const NuxtWelcome: typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']
 export const NuxtLayout: typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
@@ -60,6 +61,7 @@ export const LazyHero: LazyComponent<typeof import("../components/Hero.vue")['de
 export const LazyHowItWorks: LazyComponent<typeof import("../components/HowItWorks.vue")['default']>
 export const LazyLeadForm: LazyComponent<typeof import("../components/LeadForm.vue")['default']>
 export const LazyPricing: LazyComponent<typeof import("../components/Pricing.vue")['default']>
+export const LazySeoSchema: LazyComponent<typeof import("../components/SeoSchema.vue")['default']>
 export const LazyTestimonials: LazyComponent<typeof import("../components/Testimonials.vue")['default']>
 export const LazyNuxtWelcome: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']>
 export const LazyNuxtLayout: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']>

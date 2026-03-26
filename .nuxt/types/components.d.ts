@@ -25,6 +25,7 @@ interface _GlobalComponents {
   HowItWorks: typeof import("../../components/HowItWorks.vue")['default']
   LeadForm: typeof import("../../components/LeadForm.vue")['default']
   Pricing: typeof import("../../components/Pricing.vue")['default']
+  SeoSchema: typeof import("../../components/SeoSchema.vue")['default']
   Testimonials: typeof import("../../components/Testimonials.vue")['default']
   NuxtWelcome: typeof import("../../node_modules/nuxt/dist/app/components/welcome.vue")['default']
   NuxtLayout: typeof import("../../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
@@ -60,6 +61,7 @@ interface _GlobalComponents {
   LazyHowItWorks: LazyComponent<typeof import("../../components/HowItWorks.vue")['default']>
   LazyLeadForm: LazyComponent<typeof import("../../components/LeadForm.vue")['default']>
   LazyPricing: LazyComponent<typeof import("../../components/Pricing.vue")['default']>
+  LazySeoSchema: LazyComponent<typeof import("../../components/SeoSchema.vue")['default']>
   LazyTestimonials: LazyComponent<typeof import("../../components/Testimonials.vue")['default']>
   LazyNuxtWelcome: LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/welcome.vue")['default']>
   LazyNuxtLayout: LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/nuxt-layout")['default']>

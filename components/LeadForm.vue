@@ -206,7 +206,7 @@
         </div>
 
         <!-- Alternative contact -->
-        <div class="mt-6 text-center" data-animate="fade-up" data-delay="400">
+        <address class="mt-6 text-center not-italic" data-animate="fade-up" data-delay="400">
           <p class="text-sm mb-2" style="color: var(--ink-3);">Предпочитаете общаться напрямую?</p>
           <div class="flex flex-wrap items-center justify-center gap-4">
             <a
@@ -234,7 +234,7 @@
               Max ↗
             </a>
           </div>
-        </div>
+        </address>
       </div>
     </div>
   </section>

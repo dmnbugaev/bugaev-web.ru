@@ -170,7 +170,7 @@ const whyItems = [
 ]
 
 const teamStats = [
-  { value: '50+',  label: 'Клиентов\nв работе' },
+  { value: '10+',  label: 'Клиентов\nв работе' },
   { value: '4.9★', label: 'Средняя\nоценка' },
   { value: '3×',   label: 'Рост\nзаписей' },
   { value: '96%',  label: 'Продлевают\nподписку' },
