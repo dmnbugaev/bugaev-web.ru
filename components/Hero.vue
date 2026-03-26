@@ -4,14 +4,16 @@
     class="relative overflow-hidden flex flex-col"
     style="background: var(--surface); height: 100svh; min-height: 580px; padding-top: 72px;"
   >
-    <!-- Accent blobs -->
+    <!-- Accent blobs — GPU layer (will-change + translateZ) предотвращает перерисовки -->
     <div
       class="absolute pointer-events-none"
-      style="top: 0; right: 0; width: 420px; height: 420px; border-radius: 50%; background: var(--accent-dim); filter: blur(90px); transform: translate(30%, -10%);"
+      style="top: 0; right: 0; width: 420px; height: 420px; border-radius: 50%; background: var(--accent-dim); filter: blur(90px); transform: translate(30%, -10%) translateZ(0); will-change: transform; contain: layout style paint;"
+      aria-hidden="true"
     />
     <div
       class="absolute pointer-events-none"
-      style="bottom: 10%; left: -60px; width: 240px; height: 240px; border-radius: 50%; background: rgba(143,175,138,0.05); filter: blur(70px);"
+      style="bottom: 10%; left: -60px; width: 240px; height: 240px; border-radius: 50%; background: rgba(143,175,138,0.05); filter: blur(70px); transform: translateZ(0); will-change: transform; contain: layout style paint;"
+      aria-hidden="true"
     />
 
     <!-- Main content — vertically centered -->

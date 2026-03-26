@@ -324,6 +324,8 @@
 [data-animate] {
   opacity: 0;
   transition: opacity 0.7s ease, transform 0.7s ease;
+  /* Подсказка браузеру — выделить GPU-слой заранее, без Layout/Paint */
+  will-change: opacity, transform;
 }
 
 [data-animate="fade-up"]    { transform: translateY(32px); }
@@ -335,6 +337,8 @@
 [data-animate].animate-in {
   opacity: 1 !important;
   transform: none !important;
+  /* Освобождаем GPU-память после завершения анимации */
+  will-change: auto;
 }
 
 /* Stagger delays */

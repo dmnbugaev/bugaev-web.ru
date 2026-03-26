@@ -10,6 +10,48 @@ export default defineNuxtConfig({
     smtpTo:   '',
   },
 
+  // ── Pre-render статических страниц при билде (HTML отдаётся мгновенно) ──
+  routeRules: {
+    '/':            { prerender: true },
+    '/privacy':     { prerender: true },
+    '/cookies':     { prerender: true },
+    '/oferta':      { prerender: true },
+    '/terms':       { prerender: true },
+    '/requisites':  { prerender: true },
+    // Иммутабельный кэш для хешированных ассетов Nuxt (JS/CSS бандлы)
+    '/_nuxt/**': {
+      headers: { 'cache-control': 'public, max-age=31536000, immutable' },
+    },
+    // Кэш статики (шрифты, иконки, изображения)
+    '/fonts/**': {
+      headers: { 'cache-control': 'public, max-age=31536000, immutable' },
+    },
+  },
+
+  // ── Nitro: сжатие и оптимизация отдачи ──────────────────────────────────
+  nitro: {
+    compressPublicAssets: { gzip: true, brotli: true },
+    minify: true,
+  },
+
+  // ── Vite: оптимизация бандла ─────────────────────────────────────────────
+  vite: {
+    build: {
+      cssMinify: true,
+      rollupOptions: {
+        output: {
+          // Выделяем тяжёлые зависимости в отдельный чанк
+          manualChunks(id) {
+            if (id.includes('node_modules')) return 'vendor'
+          },
+        },
+      },
+    },
+    optimizeDeps: {
+      include: ['vue', 'vue-router'],
+    },
+  },
+
   modules: ['@nuxtjs/tailwindcss', '@nuxt/fonts'],
 
   fonts: {
@@ -35,6 +77,13 @@ export default defineNuxtConfig({
           name: 'description',
           content: 'Бугаев Веб (Бугаев Дмитрий) — комплексное digital-продвижение для салонов красоты, ногтевых студий, косметологических клиник и бьюти-мастеров в Москве. Сайт на Nuxt.js, Telegram-бот для онлайн-записи, ведение Instagram и Telegram-канала, настройка CRM YCLIENTS — всё за 50 000 ₽/мес. Результат с первого месяца. Без скрытых платежей.'
         },
+        // OG Image — используется при шеринге в соцсетях и мессенджерах
+        { property: 'og:image',        content: 'https://bugaev-web.ru/og-image.png' },
+        { property: 'og:image:width',  content: '1200' },
+        { property: 'og:image:height', content: '630' },
+        { property: 'og:image:alt',    content: 'Бугаев Веб — Digital-абонемент для салона красоты' },
+        { name: 'twitter:image',       content: 'https://bugaev-web.ru/og-image.png' },
+        { name: 'twitter:image:alt',   content: 'Бугаев Веб — Digital-абонемент для салона красоты' },
         {
           name: 'keywords',
           content: 'SMM для салона красоты, продвижение салона красоты, маркетинг для салона красоты, реклама салона красоты, как привлечь клиентов в салон красоты, как увеличить выручку салона красоты, как раскрутить салон красоты с нуля, как сделать салон красоты прибыльным, как не терять клиентов в салоне красоты, как увеличить запись в салоне красоты, SMM для салона красоты Москва, продвижение салона красоты Москва, ведение Instagram салона красоты, ведение Telegram канала салона красоты, контент план для салона красоты, посты для салона красоты, SMM специалист для салона красоты, удалённый SMM менеджер для салона, сколько стоит SMM для салона красоты, разработка сайта для салона красоты, сайт для салона красоты Москва, сайт для салона красоты под ключ, сколько стоит сайт для салона красоты, создать сайт для салона красоты, сайт визитка для салона красоты, Telegram бот для салона красоты, бот для онлайн записи клиентов, онлайн запись для салона красоты, автоматическая запись клиентов салон красоты, как сделать онлайн запись для салона, CRM для салона красоты, YCLIENTS настройка, настройка YCLIENTS для салона красоты, CRM YCLIENTS Москва, продвижение ногтевой студии, SMM для ногтевой студии, реклама ногтевой студии, сайт для ногтевой студии, как привлечь клиентов в ногтевую студию, SMM для косметолога, продвижение косметолога, реклама косметологического кабинета, сайт для косметолога, маркетинг для косметолога, как привлечь клиентов косметологу, SMM для бровиста, продвижение бровиста в Instagram, реклама бrow bar, сайт для бrow bar, SMM для лэшмейкера, продвижение мастера наращивания ресниц, маркетинг для мастера маникюра, продвижение мастера маникюра, сайт для мастера маникюра, SMM для стоматологии, продвижение стоматологической клиники, маркетинг для стоматологии, digital абонемент для салона красоты, комплексный маркетинг для салона красоты, маркетинг под ключ для салона красоты, как открыть салон красоты с нуля, как открыть ногтевую студию, бизнес план салона красоты, сколько денег нужно на открытие салона красоты, как сделать салон красоты популярным, как вести соцсети салону красоты, как вести Instagram для салона красоты, как вести Telegram для салона красоты, Бугаев Веб, Bugaev Web, Бугаев Дмитрий, dmnbugaev'
@@ -61,9 +110,13 @@ export default defineNuxtConfig({
         { rel: 'sitemap', type: 'application/xml', href: '/sitemap.xml' },
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
         { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
+        // Шрифты — preconnect уменьшает задержку на ~200мс
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
-        { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' }
+        { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
+        { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
+        // Preload главного шрифта (критический путь рендера)
+        { rel: 'preload', as: 'style', href: 'https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Syne+Mono&display=swap' },
       ]
     },
   },

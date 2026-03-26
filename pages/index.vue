@@ -116,16 +116,21 @@
 <script setup lang="ts">
 useSeoMeta({
   title: 'Бугаев Веб — Сайт, SMM и Telegram-бот для салона красоты в Москве | от 50 000 ₽/мес',
-  description: 'Бугаев Веб (Бугаев Дмитрий) — помогаем салонам красоты и клиникам в Москве зарабатывать больше. Сайт, Telegram-бот, ведение Instagram и Telegram, настройка CRM — 50 000 ₽/мес.',
+  description: 'Бугаев Веб (Бугаев Дмитрий) — комплексное digital-продвижение для салонов красоты, ногтевых студий, косметологов в Москве. Сайт, Telegram-бот, SMM, CRM YCLIENTS под ключ — 50 000 ₽/мес.',
   ogTitle: 'Бугаев Веб — Digital-абонемент для салона красоты | 50 000 ₽/мес',
-  ogDescription: 'Помогаем салонам красоты зарабатывать больше. Сайт, бот, соцсети, CRM под ключ от Бугаев Веб.',
+  ogDescription: 'Удалённый digital-отдел для салона красоты: сайт, бот, SMM, CRM под ключ. Результат с первого месяца. Бугаев Дмитрий.',
   ogUrl: 'https://bugaev-web.ru/',
   ogType: 'website',
   ogLocale: 'ru_RU',
   ogSiteName: 'Бугаев Веб',
+  ogImage: 'https://bugaev-web.ru/og-image.png',
+  ogImageWidth: '1200',
+  ogImageHeight: '630',
+  ogImageAlt: 'Бугаев Веб — Digital-абонемент для салона красоты в Москве',
   twitterCard: 'summary_large_image',
   twitterTitle: 'Бугаев Веб — Digital-абонемент для салона красоты',
-  twitterDescription: 'Сайт + Telegram-бот + SMM + CRM для салона красоты в Москве от Бугаев Веб.'
+  twitterDescription: 'Сайт + Telegram-бот + SMM + CRM для салона красоты в Москве от Бугаев Веб.',
+  twitterImage: 'https://bugaev-web.ru/og-image.png',
 })
 
 useHead({
