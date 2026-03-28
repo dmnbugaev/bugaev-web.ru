@@ -4,6 +4,15 @@
     <main class="pt-28 pb-20">
       <div class="section-container">
 
+        <!-- Breadcrumbs -->
+        <nav aria-label="Хлебные крошки" style="margin-bottom: 32px; font-size: 0.8rem; color: var(--ink-3); display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">
+          <NuxtLink to="/" style="color: var(--ink-3); text-decoration: none;">Главная</NuxtLink>
+          <span>→</span>
+          <NuxtLink to="/uslugi" style="color: var(--ink-3); text-decoration: none;">Услуги</NuxtLink>
+          <span>→</span>
+          <span style="color: var(--ink);">Сайт для салона красоты</span>
+        </nav>
+
         <!-- Заголовок -->
         <div class="mb-16">
           <span class="badge mb-5">Разработка сайта</span>
@@ -13,7 +22,7 @@
             портфолио работ, форма онлайн-записи, адаптация под смартфоны. Входит в абонемент <strong>50 000 ₽/мес</strong>.
           </p>
           <div class="flex flex-wrap gap-4">
-            <NuxtLink to="/#form" class="btn-primary">Заказать сайт</NuxtLink>
+            <a href="#contact" class="btn-primary">Заказать сайт</a>
             <NuxtLink to="/" class="btn-outline">← На главную</NuxtLink>
           </div>
         </div>
@@ -128,8 +137,11 @@
         <section style="background: var(--ink); border-radius: 20px; padding: 56px 40px; text-align: center;" aria-label="Заказать сайт для салона красоты">
           <h2 style="font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(1.5rem, 3vw, 2.2rem); color: #fff; margin-bottom: 12px;">Получите сайт для салона красоты в составе абонемента</h2>
           <p style="color: rgba(255,255,255,0.5); margin-bottom: 32px; max-width: 480px; margin-left: auto; margin-right: auto;">50 000 ₽/мес — сайт + SMM + Telegram-бот + CRM YCLIENTS. Без доплат и скрытых платежей.</p>
-          <NuxtLink to="/#form" class="btn-accent">Оставить заявку</NuxtLink>
+          <a href="#contact" class="btn-accent">Оставить заявку</a>
         </section>
+
+        <LeadForm />
+        <ServiceRelated current="/sait-salon-krasoty" />
 
       </div>
     </main>
@@ -165,6 +177,14 @@ useHead({
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Главная",                "item": "https://bugaev-web.ru/" },
+        { "@type": "ListItem", "position": 2, "name": "Услуги",                 "item": "https://bugaev-web.ru/uslugi" },
+        { "@type": "ListItem", "position": 3, "name": "Сайт для салона красоты","item": "https://bugaev-web.ru/sait-salon-krasoty" }
+      ]
+    },
     {
       "@type": "Service",
       "name": "Разработка сайта для салона красоты в Москве",

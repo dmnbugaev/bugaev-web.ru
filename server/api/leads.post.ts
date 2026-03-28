@@ -1,4 +1,5 @@
 import nodemailer from 'nodemailer'
+import { validatePhone, validateEmail } from '../../utils/validation'
 
 // ── Rate limiting (in-memory): max 3 requests per IP per 60s ────────────────
 const rateLimitMap = new Map<string, number[]>()
@@ -22,16 +23,6 @@ function esc(value: unknown): string {
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#039;')
-}
-
-// ── Validation helpers ────────────────────────────────────────────────────────
-function validatePhone(phone: string): boolean {
-  const cleaned = phone.replace(/[\s\-().]/g, '')
-  return /^(\+7|7|8)\d{10}$/.test(cleaned)
-}
-
-function validateEmail(email: string): boolean {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)
 }
 
 // ── Handler ───────────────────────────────────────────────────────────────────
@@ -82,7 +73,10 @@ export default defineEventHandler(async (event) => {
     ? `<tr style="background:#fafafa"><td style="padding:10px 12px;color:#666;border-bottom:1px solid #eee;">UTM</td><td style="padding:10px 12px;color:#888;border-bottom:1px solid #eee;">${esc(utmParts.join(' / '))}</td></tr>`
     : ''
 
-  const pageUrl = esc(body.page_url)
+  // Only allow safe http/https URLs to prevent javascript: href injection in email
+  const rawPageUrl = String(body.page_url ?? '')
+  const safePageUrl = /^https?:\/\//.test(rawPageUrl) ? rawPageUrl : ''
+  const pageUrl = esc(safePageUrl)
 
   const html = `
     <h2 style="color:#1a1a1a;font-family:Arial,sans-serif;margin-bottom:16px;">🎯 Новая заявка — Bugaev Web</h2>
@@ -106,7 +100,7 @@ export default defineEventHandler(async (event) => {
       <tr>
         <td style="padding:10px 12px;color:#666;border-bottom:1px solid #eee;">Страница</td>
         <td style="padding:10px 12px;border-bottom:1px solid #eee;">
-          <a href="${pageUrl}" style="color:#8FAF8A;">${pageUrl}</a>
+          ${pageUrl ? `<a href="${pageUrl}" style="color:#8FAF8A;">${pageUrl}</a>` : '—'}
         </td>
       </tr>
       ${utmRow}

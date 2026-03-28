@@ -4,6 +4,15 @@
     <main class="pt-28 pb-20">
       <div class="section-container">
 
+        <!-- Breadcrumbs -->
+        <nav aria-label="Хлебные крошки" style="margin-bottom: 32px; font-size: 0.8rem; color: var(--ink-3); display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">
+          <NuxtLink to="/" style="color: var(--ink-3); text-decoration: none;">Главная</NuxtLink>
+          <span>→</span>
+          <NuxtLink to="/uslugi" style="color: var(--ink-3); text-decoration: none;">Услуги</NuxtLink>
+          <span>→</span>
+          <span style="color: var(--ink);">Telegram-бот для записи</span>
+        </nav>
+
         <!-- Заголовок -->
         <div class="mb-16">
           <span class="badge mb-5">Telegram-бот</span>
@@ -14,7 +23,7 @@
             Неявки снижаются на <strong>60–70%</strong>. Входит в абонемент <strong>50 000 ₽/мес</strong>.
           </p>
           <div class="flex flex-wrap gap-4">
-            <NuxtLink to="/#form" class="btn-primary">Подключить бота</NuxtLink>
+            <a href="#contact" class="btn-primary">Подключить бота</a>
             <NuxtLink to="/" class="btn-outline">← На главную</NuxtLink>
           </div>
         </div>
@@ -140,8 +149,11 @@
         <section style="background: var(--ink); border-radius: 20px; padding: 56px 40px; text-align: center;" aria-label="Подключить Telegram-бот для онлайн-записи">
           <h2 style="font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(1.5rem, 3vw, 2.2rem); color: #fff; margin-bottom: 12px;">Подключите онлайн-запись через Telegram-бот</h2>
           <p style="color: rgba(255,255,255,0.5); margin-bottom: 32px; max-width: 480px; margin-left: auto; margin-right: auto;">Бот + сайт + SMM + CRM в одном абонементе 50 000 ₽/мес. Запись пойдёт уже в первую неделю.</p>
-          <NuxtLink to="/#form" class="btn-accent">Оставить заявку</NuxtLink>
+          <a href="#contact" class="btn-accent">Оставить заявку</a>
         </section>
+
+        <LeadForm />
+        <ServiceRelated current="/telegram-bot-zapis" />
 
       </div>
     </main>
@@ -177,6 +189,14 @@ useHead({
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Главная",           "item": "https://bugaev-web.ru/" },
+        { "@type": "ListItem", "position": 2, "name": "Услуги",            "item": "https://bugaev-web.ru/uslugi" },
+        { "@type": "ListItem", "position": 3, "name": "Telegram-бот для записи", "item": "https://bugaev-web.ru/telegram-bot-zapis" }
+      ]
+    },
     {
       "@type": "Service",
       "name": "Telegram-бот для онлайн-записи клиентов в салон красоты",

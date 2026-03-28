@@ -1,6 +1,29 @@
+# Dependencies
 node_modules/
-.claude/
-package.json
+
+# Nuxt build artifacts
+.nuxt/
+.output/
+dist/
+
+# Environment variables (секреты)
 .env
 .env.local
 .env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/settings.json
+.idea/
+
+# Claude
+.claude/
+
+# Dev notes (не для репо)
+promt.txt
+QA_REPORT.md

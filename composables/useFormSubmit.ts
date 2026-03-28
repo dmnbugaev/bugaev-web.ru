@@ -1,5 +1,3 @@
-// composables/useFormSubmit.ts
-
 export interface FormData {
   name: string
   phone: string
@@ -21,15 +19,6 @@ export const useFormSubmit = () => {
   const isError      = ref(false)
   const errorMessage = ref('')
   const errors       = ref<FormErrors>({})
-
-  const validatePhone = (phone: string): boolean => {
-    const cleaned = phone.replace(/[\s\-\(\)\.]/g, '')
-    return /^(\+7|7|8)\d{10}$/.test(cleaned)
-  }
-
-  const validateEmail = (email: string): boolean => {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)
-  }
 
   const validate = (data: FormData): boolean => {
     const newErrors: FormErrors = {}

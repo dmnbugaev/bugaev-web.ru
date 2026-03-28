@@ -27,14 +27,8 @@ export default defineNuxtConfig({
     '/barbershop':          { prerender: true },
     '/uslugi':              { prerender: true },
     '/blog':                { prerender: true },
-    '/blog/kak-privlech-klientov-v-salon-krasoty':  { prerender: true },
-    '/blog/skolko-stoit-smm-dlya-salona-krasoty':   { prerender: true },
-    '/blog/kak-razkrutit-salon-krasoty-s-nulya':    { prerender: true },
-    '/blog/kak-vesti-instagram-dlya-salona-krasoty': { prerender: true },
-    '/blog/kak-uvelichit-zapis-v-salone-krasoty':   { prerender: true },
-    '/blog/telegram-bot-dlya-zapisi-klientov':       { prerender: true },
-    '/blog/kontent-plan-dlya-salona-krasoty':        { prerender: true },
-    '/blog/yclients-nastroyka-dlya-salona':          { prerender: true },
+    '/blog/**':             { prerender: true },
+    '/sitemap.xml':         { prerender: true },
     // Иммутабельный кэш для хешированных ассетов Nuxt (JS/CSS бандлы)
     '/_nuxt/**': {
       headers: { 'cache-control': 'public, max-age=31536000, immutable' },
@@ -69,7 +63,9 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@nuxtjs/tailwindcss', '@nuxt/fonts'],
+  components: [{ path: '~/components', pathPrefix: false }],
+
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/fonts', '@nuxt/content'],
 
   fonts: {
     families: [

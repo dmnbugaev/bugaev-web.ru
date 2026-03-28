@@ -4,6 +4,15 @@
     <main class="pt-28 pb-20">
       <div class="section-container">
 
+        <!-- Breadcrumbs -->
+        <nav aria-label="Хлебные крошки" style="margin-bottom: 32px; font-size: 0.8rem; color: var(--ink-3); display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">
+          <NuxtLink to="/" style="color: var(--ink-3); text-decoration: none;">Главная</NuxtLink>
+          <span>→</span>
+          <NuxtLink to="/uslugi" style="color: var(--ink-3); text-decoration: none;">Услуги</NuxtLink>
+          <span>→</span>
+          <span style="color: var(--ink);">Настройка CRM YCLIENTS</span>
+        </nav>
+
         <!-- Заголовок -->
         <div class="mb-16">
           <span class="badge mb-5">CRM YCLIENTS</span>
@@ -13,7 +22,7 @@
             финансовый учёт, автонапоминания. Обучаем персонал. Входит в абонемент <strong>50 000 ₽/мес</strong>.
           </p>
           <div class="flex flex-wrap gap-4">
-            <NuxtLink to="/#form" class="btn-primary">Подключить CRM</NuxtLink>
+            <a href="#contact" class="btn-primary">Подключить CRM</a>
             <NuxtLink to="/" class="btn-outline">← На главную</NuxtLink>
           </div>
         </div>
@@ -131,8 +140,11 @@
         <section style="background: var(--ink); border-radius: 20px; padding: 56px 40px; text-align: center;" aria-label="Подключить CRM YCLIENTS для салона красоты">
           <h2 style="font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(1.5rem, 3vw, 2.2rem); color: #fff; margin-bottom: 12px;">Настройте YCLIENTS и перестаньте терять клиентов</h2>
           <p style="color: rgba(255,255,255,0.5); margin-bottom: 32px; max-width: 480px; margin-left: auto; margin-right: auto;">Настройка CRM + сайт + SMM + Telegram-бот в одном абонементе 50 000 ₽/мес.</p>
-          <NuxtLink to="/#form" class="btn-accent">Оставить заявку</NuxtLink>
+          <a href="#contact" class="btn-accent">Оставить заявку</a>
         </section>
+
+        <LeadForm />
+        <ServiceRelated current="/crm-yclients" />
 
       </div>
     </main>
@@ -168,6 +180,14 @@ useHead({
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Главная",              "item": "https://bugaev-web.ru/" },
+        { "@type": "ListItem", "position": 2, "name": "Услуги",               "item": "https://bugaev-web.ru/uslugi" },
+        { "@type": "ListItem", "position": 3, "name": "Настройка CRM YCLIENTS","item": "https://bugaev-web.ru/crm-yclients" }
+      ]
+    },
     {
       "@type": "Service",
       "name": "Настройка CRM YCLIENTS для салона красоты",

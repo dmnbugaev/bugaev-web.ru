@@ -7,6 +7,7 @@
         </Transition>
       </template>
     </NuxtPage>
+    <StickyTelegramCTA />
     <CookieConsent />
   </div>
 </template>
