@@ -180,11 +180,11 @@
 
 <script setup lang="ts">
 const navLinks = [
-  { href: '#features',     label: 'Что входит' },
-  { href: '#how-it-works', label: 'Как работаем' },
-  { href: '#pricing',      label: 'Стоимость' },
-  { href: '#faq',          label: 'FAQ' },
-  { href: '#contact',      label: 'Контакты' },
+  { href: '/',         label: 'Главная' },
+  { href: '/uslugi',   label: 'Услуги' },
+  { href: '/blog',     label: 'Блог' },
+  { href: '/#pricing', label: 'Стоимость' },
+  { href: '/#contact', label: 'Контакты' },
 ]
 
 const isScrolled     = ref(false)

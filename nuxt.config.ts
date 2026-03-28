@@ -127,7 +127,6 @@ export default defineNuxtConfig({
         { rel: 'canonical', href: 'https://bugaev-web.ru/' },
         { rel: 'sitemap', type: 'application/xml', href: '/sitemap.xml' },
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
-        { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
         // Шрифты самохостятся через @nuxt/fonts — внешние preconnect не нужны
       ]
     },

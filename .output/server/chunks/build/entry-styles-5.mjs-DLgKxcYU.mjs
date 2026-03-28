@@ -1,0 +1,2 @@
+const a="header[data-v-00c0a6d4]{background:transparent}header.scrolled[data-v-00c0a6d4]{backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);background:#ffffffd1;box-shadow:0 1px #0000000f,0 4px 20px #0000000a}.fade-enter-active[data-v-00c0a6d4],.fade-leave-active[data-v-00c0a6d4]{transition:opacity .2s ease}.fade-enter-from[data-v-00c0a6d4],.fade-leave-to[data-v-00c0a6d4]{opacity:0}";export{a as H};
+//# sourceMappingURL=entry-styles-5.mjs-DLgKxcYU.mjs.map

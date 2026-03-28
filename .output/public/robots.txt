@@ -1,9 +1,14 @@
 User-agent: *
 Allow: /
-Disallow: /privacy
-Disallow: /cookies
-Disallow: /terms
-Disallow: /oferta
-Disallow: /requisites
+Disallow: /admin/
+Disallow: /api/
+Sitemap: https://bugaev-web.ru/sitemap.xml
 
+User-agent: Yandex
+Allow: /
+Crawl-delay: 1
+Sitemap: https://bugaev-web.ru/sitemap.xml
+
+User-agent: Googlebot
+Allow: /
 Sitemap: https://bugaev-web.ru/sitemap.xml

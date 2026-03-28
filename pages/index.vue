@@ -8,7 +8,8 @@
       <ForWho />
       <Pricing />
       <Advantages />
-      <Testimonials />
+      <!-- TOGGLE REVIEWS: showReviews: false → true в app.config.ts включает блок обратно -->
+      <Testimonials v-if="appConfig.showReviews" />
       <FAQ />
       <LeadForm />
     </main>
@@ -86,6 +87,8 @@
 </template>
 
 <script setup lang="ts">
+const appConfig = useAppConfig()
+
 useSeoMeta({
   title: 'Бугаев Веб — Сайт, SMM и Telegram-бот для салона красоты в Москве | от 50 000 ₽/мес',
   description: 'Бугаев Веб (Бугаев Дмитрий) — комплексное digital-продвижение для салонов красоты, ногтевых студий, косметологов в Москве. Сайт, Telegram-бот, SMM, CRM YCLIENTS под ключ — 50 000 ₽/мес.',

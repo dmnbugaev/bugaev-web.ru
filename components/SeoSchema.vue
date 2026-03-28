@@ -53,12 +53,12 @@ const schema = {
       "url": "https://bugaev-web.ru/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://bugaev-web.ru/og-image.png",
+        "url": "https://bugaev-web.ru/og-image.jpg",
         "width": 1200,
         "height": 630,
         "caption": "Бугаев Веб — digital-продвижение для салонов красоты"
       },
-      "image": "https://bugaev-web.ru/og-image.png",
+      "image": "https://bugaev-web.ru/og-image.jpg",
       "founder": {
         "@type": "Person",
         "@id": "https://bugaev-web.ru/#founder",
