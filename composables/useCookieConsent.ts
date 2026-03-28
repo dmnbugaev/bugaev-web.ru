@@ -87,11 +87,7 @@ export const useCookieConsent = () => {
     if (typeof window === 'undefined') return
     if (metrikaLoaded.value) return
 
-    // ─── Yandex Metrika ──────────────────────────────────────────────────
-    // TODO: Replace 'XXXXXXXX' with your real Yandex Metrika counter ID.
-    // Example: const METRIKA_ID = 12345678
     const METRIKA_ID = 108208585
-    // ─────────────────────────────────────────────────────────────────────
 
     metrikaLoaded.value = true
 

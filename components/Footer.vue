@@ -193,10 +193,12 @@ const legalLinks = [
 ]
 
 const serviceLinks = [
-  { label: 'Сайт-визитка',       href: '#features' },
-  { label: 'Telegram-бот',       href: '#features' },
-  { label: 'Ведение соцсетей',   href: '#features' },
-  { label: 'CRM YCLIENTS',       href: '#features' },
-  { label: 'Стоимость',          href: '#pricing'  },
+  { label: 'Все услуги',       href: '/uslugi'              },
+  { label: 'SMM для салона',   href: '/smm-salon-krasoty'   },
+  { label: 'Сайт для салона',  href: '/sait-salon-krasoty'  },
+  { label: 'Telegram-бот',     href: '/telegram-bot-zapis'  },
+  { label: 'Косметолог',       href: '/kosmetolog'          },
+  { label: 'Барбершоп',        href: '/barbershop'          },
+  { label: 'Блог',             href: '/blog'                },
 ]
 </script>

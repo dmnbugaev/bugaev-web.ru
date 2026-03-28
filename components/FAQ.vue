@@ -32,6 +32,8 @@
           <!-- Question button -->
           <button
             class="w-full flex items-center justify-between gap-4 p-6 text-left"
+            :aria-expanded="openIndex === index"
+            :aria-controls="`faq-answer-${index}`"
             @click="toggle(index)"
           >
             <div class="flex items-start gap-4 flex-1">
@@ -78,8 +80,10 @@
 
           <!-- Answer -->
           <div
+            :id="`faq-answer-${index}`"
             class="accordion-content"
             :class="{ open: openIndex === index }"
+            role="region"
           >
             <div class="px-6 pb-6 pt-0 pl-[4.25rem]">
               <div class="h-px mb-4" style="background: var(--border);" />

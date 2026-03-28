@@ -151,13 +151,13 @@ useSeoMeta({
   ogType: 'website',
   ogLocale: 'ru_RU',
   ogSiteName: 'Бугаев Веб',
-  ogImage: 'https://bugaev-web.ru/og-image.svg',
+  ogImage: 'https://bugaev-web.ru/og-image.jpg',
   ogImageWidth: '1200',
   ogImageHeight: '630',
   twitterCard: 'summary_large_image',
   twitterTitle: 'SMM для салона красоты — Бугаев Веб',
   twitterDescription: 'Ведение Instagram и Telegram для салона красоты. 50 000 ₽/мес.',
-  twitterImage: 'https://bugaev-web.ru/og-image.svg',
+  twitterImage: 'https://bugaev-web.ru/og-image.jpg',
 })
 
 useHead({

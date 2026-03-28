@@ -75,7 +75,9 @@
           <button
             class="md:hidden flex flex-col items-center justify-center gap-1.5 w-9 h-9 rounded-lg transition-colors"
             :style="mobileMenuOpen ? 'background: var(--surface-warm);' : ''"
-            aria-label="Открыть меню"
+            :aria-label="mobileMenuOpen ? 'Закрыть меню' : 'Открыть меню'"
+            :aria-expanded="mobileMenuOpen"
+            aria-controls="mobile-menu-drawer"
             @click="toggleMenu"
           >
             <span :class="['block w-[18px] h-0.5 rounded-full transition-all duration-300', mobileMenuOpen ? 'rotate-45 translate-y-2' : '']" style="background: var(--ink);" />
@@ -101,6 +103,7 @@
 
     <!-- Mobile drawer -->
     <div
+      id="mobile-menu-drawer"
       :class="['mobile-menu fixed top-0 right-0 bottom-0 w-72 z-50 md:hidden', mobileMenuOpen ? 'open' : '']"
       style="background: var(--surface); border-left: 1px solid var(--border);"
     >

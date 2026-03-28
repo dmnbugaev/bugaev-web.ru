@@ -7,6 +7,13 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  <!-- Хаб услуг -->
+  <url>
+    <loc>https://bugaev-web.ru/uslugi</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
   <!-- Страницы услуг -->
   <url>
     <loc>https://bugaev-web.ru/smm-salon-krasoty</loc>
@@ -39,40 +46,70 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bugaev-web.ru/uslugi</loc>
+    <loc>https://bugaev-web.ru/kosmetolog</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- Юридические страницы -->
   <url>
-    <loc>https://bugaev-web.ru/privacy</loc>
+    <loc>https://bugaev-web.ru/barbershop</loc>
     <lastmod>2026-03-26</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Блог -->
+  <url>
+    <loc>https://bugaev-web.ru/blog</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bugaev-web.ru/oferta</loc>
+    <loc>https://bugaev-web.ru/blog/kak-privlech-klientov-v-salon-krasoty</loc>
     <lastmod>2026-03-26</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bugaev-web.ru/terms</loc>
-    <lastmod>2026-03-26</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
+    <loc>https://bugaev-web.ru/blog/telegram-bot-dlya-zapisi-klientov</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bugaev-web.ru/cookies</loc>
-    <lastmod>2026-03-26</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.1</priority>
+    <loc>https://bugaev-web.ru/blog/kak-uvelichit-zapis-v-salone-krasoty</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bugaev-web.ru/requisites</loc>
-    <lastmod>2026-03-26</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.1</priority>
+    <loc>https://bugaev-web.ru/blog/skolko-stoit-smm-dlya-salona-krasoty</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bugaev-web.ru/blog/kak-vesti-instagram-dlya-salona-krasoty</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bugaev-web.ru/blog/kak-razkrutit-salon-krasoty-s-nulya</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bugaev-web.ru/blog/yclients-nastroyka-dlya-salona</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bugaev-web.ru/blog/kontent-plan-dlya-salona-krasoty</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

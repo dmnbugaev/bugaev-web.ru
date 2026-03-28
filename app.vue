@@ -1,6 +1,12 @@
 <template>
   <div>
-    <NuxtPage />
+    <NuxtPage>
+      <template #default="{ Component }">
+        <Transition name="page" mode="out-in" appear>
+          <component :is="Component" />
+        </Transition>
+      </template>
+    </NuxtPage>
     <CookieConsent />
   </div>
 </template>
@@ -17,3 +23,14 @@ router.afterEach(() => {
   nextTick(() => observe())
 })
 </script>
+
+<style>
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.18s ease;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+}
+</style>

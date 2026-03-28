@@ -160,13 +160,13 @@ useSeoMeta({
   ogType: 'website',
   ogLocale: 'ru_RU',
   ogSiteName: 'Бугаев Веб',
-  ogImage: 'https://bugaev-web.ru/og-image.svg',
+  ogImage: 'https://bugaev-web.ru/og-image.jpg',
   ogImageWidth: '1200',
   ogImageHeight: '630',
   twitterCard: 'summary_large_image',
   twitterTitle: 'Telegram-бот для онлайн-записи — Бугаев Веб',
   twitterDescription: 'Автозапись клиентов 24/7, напоминания, снижение неявок. Для салонов красоты Москвы.',
-  twitterImage: 'https://bugaev-web.ru/og-image.svg',
+  twitterImage: 'https://bugaev-web.ru/og-image.jpg',
 })
 
 useHead({

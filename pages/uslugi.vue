@@ -55,6 +55,20 @@
               <span style="color: var(--accent-text); font-size: 0.8rem; font-weight: 600;">Подробнее →</span>
             </NuxtLink>
 
+            <NuxtLink to="/kosmetolog" class="card p-7" style="text-decoration: none; display: block;">
+              <div style="font-size: 2rem; margin-bottom: 16px;">🧴</div>
+              <h2 style="font-weight: 800; font-size: 1.1rem; margin-bottom: 8px; color: var(--ink); font-family: 'Syne', sans-serif;">Продвижение косметолога</h2>
+              <p style="color: var(--ink-3); font-size: 0.875rem; line-height: 1.6; margin-bottom: 16px;">SMM, сайт и Telegram-бот для косметологического кабинета. Первичные клиенты с первого месяца.</p>
+              <span style="color: var(--accent-text); font-size: 0.8rem; font-weight: 600;">Подробнее →</span>
+            </NuxtLink>
+
+            <NuxtLink to="/barbershop" class="card p-7" style="text-decoration: none; display: block;">
+              <div style="font-size: 2rem; margin-bottom: 16px;">✂️</div>
+              <h2 style="font-weight: 800; font-size: 1.1rem; margin-bottom: 8px; color: var(--ink); font-family: 'Syne', sans-serif;">Продвижение барбершопа</h2>
+              <p style="color: var(--ink-3); font-size: 0.875rem; line-height: 1.6; margin-bottom: 16px;">SMM, сайт и Telegram-бот для барбершопа. Заполняем кресла через органический поиск и соцсети.</p>
+              <span style="color: var(--accent-text); font-size: 0.8rem; font-weight: 600;">Подробнее →</span>
+            </NuxtLink>
+
             <div class="card p-7" style="background: var(--ink); border-color: var(--ink);">
               <div style="font-size: 2rem; margin-bottom: 16px;">👤</div>
               <h2 style="font-weight: 800; font-size: 1.1rem; margin-bottom: 8px; color: #fff; font-family: 'Syne', sans-serif;">Личный менеджер</h2>
@@ -129,13 +143,13 @@ useSeoMeta({
   ogType: 'website',
   ogLocale: 'ru_RU',
   ogSiteName: 'Бугаев Веб',
-  ogImage: 'https://bugaev-web.ru/og-image.svg',
+  ogImage: 'https://bugaev-web.ru/og-image.jpg',
   ogImageWidth: '1200',
   ogImageHeight: '630',
   twitterCard: 'summary_large_image',
   twitterTitle: 'Услуги Бугаев Веб — Бугаев Веб',
   twitterDescription: 'SMM, сайт, бот, CRM для бьюти-бизнеса в Москве. 50 000 ₽/мес.',
-  twitterImage: 'https://bugaev-web.ru/og-image.svg',
+  twitterImage: 'https://bugaev-web.ru/og-image.jpg',
 })
 
 useHead({

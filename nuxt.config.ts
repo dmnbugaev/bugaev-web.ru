@@ -23,7 +23,18 @@ export default defineNuxtConfig({
     '/telegram-bot-zapis':  { prerender: true },
     '/crm-yclients':        { prerender: true },
     '/nogtevaiya-studiya':  { prerender: true },
+    '/kosmetolog':          { prerender: true },
+    '/barbershop':          { prerender: true },
     '/uslugi':              { prerender: true },
+    '/blog':                { prerender: true },
+    '/blog/kak-privlech-klientov-v-salon-krasoty':  { prerender: true },
+    '/blog/skolko-stoit-smm-dlya-salona-krasoty':   { prerender: true },
+    '/blog/kak-razkrutit-salon-krasoty-s-nulya':    { prerender: true },
+    '/blog/kak-vesti-instagram-dlya-salona-krasoty': { prerender: true },
+    '/blog/kak-uvelichit-zapis-v-salone-krasoty':   { prerender: true },
+    '/blog/telegram-bot-dlya-zapisi-klientov':       { prerender: true },
+    '/blog/kontent-plan-dlya-salona-krasoty':        { prerender: true },
+    '/blog/yclients-nastroyka-dlya-salona':          { prerender: true },
     // Иммутабельный кэш для хешированных ассетов Nuxt (JS/CSS бандлы)
     '/_nuxt/**': {
       headers: { 'cache-control': 'public, max-age=31536000, immutable' },
@@ -84,12 +95,12 @@ export default defineNuxtConfig({
           content: 'Бугаев Веб (Бугаев Дмитрий) — комплексное digital-продвижение для салонов красоты, ногтевых студий, косметологических клиник и бьюти-мастеров в Москве. Сайт на Nuxt.js, Telegram-бот для онлайн-записи, ведение Instagram и Telegram-канала, настройка CRM YCLIENTS — всё за 50 000 ₽/мес. Результат с первого месяца. Без скрытых платежей.'
         },
         // OG Image — используется при шеринге в соцсетях и мессенджерах
-        { property: 'og:image',        content: 'https://bugaev-web.ru/og-image.svg' },
-        { property: 'og:image:type',   content: 'image/svg+xml' },
+        { property: 'og:image',        content: 'https://bugaev-web.ru/og-image.jpg' },
+        { property: 'og:image:type',   content: 'image/jpeg' },
         { property: 'og:image:width',  content: '1200' },
         { property: 'og:image:height', content: '630' },
         { property: 'og:image:alt',    content: 'Бугаев Веб — Digital-абонемент для салона красоты' },
-        { name: 'twitter:image',       content: 'https://bugaev-web.ru/og-image.svg' },
+        { name: 'twitter:image',       content: 'https://bugaev-web.ru/og-image.jpg' },
         { name: 'twitter:image:alt',   content: 'Бугаев Веб — Digital-абонемент для салона красоты' },
         {
           name: 'keywords',
@@ -117,13 +128,7 @@ export default defineNuxtConfig({
         { rel: 'sitemap', type: 'application/xml', href: '/sitemap.xml' },
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
         { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
-        // Шрифты — preconnect уменьшает задержку на ~200мс
-        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
-        { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-        { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-        // Preload главного шрифта (критический путь рендера)
-        { rel: 'preload', as: 'style', href: 'https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Syne+Mono&display=swap' },
+        // Шрифты самохостятся через @nuxt/fonts — внешние preconnect не нужны
       ]
     },
   },
