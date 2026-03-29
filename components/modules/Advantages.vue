@@ -122,7 +122,7 @@
             <span style="font-size: 1.1em;">→</span>
           </a>
           <a
-            href="https://t.me/bugaev_web"
+            href="https://t.me/bugggd"
             target="_blank"
             rel="noopener noreferrer"
             class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full text-sm font-semibold transition-all duration-200"

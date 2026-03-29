@@ -1,9 +1,3 @@
-<template>
-  <div>
-    <component :is="'script'" type="application/ld+json" v-html="schemaJson" />
-  </div>
-</template>
-
 <script setup>
 const schema = {
   "@context": "https://schema.org",
@@ -53,9 +47,9 @@ const schema = {
       "url": "https://bugaev-web.ru/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://bugaev-web.ru/og-image.jpg",
-        "width": 1200,
-        "height": 630,
+        "url": "https://bugaev-web.ru/favicon.svg",
+        "width": 512,
+        "height": 512,
         "caption": "Бугаев Веб — digital-продвижение для салонов красоты"
       },
       "image": "https://bugaev-web.ru/og-image.jpg",
@@ -143,7 +137,7 @@ const schema = {
       },
       "sameAs": [
         "https://t.me/bugggd",
-        "https://instagram.com/dmnbugaev_"
+        "https://www.instagram.com/dmbugaev_?igsh=NzhiaWJlMzc1NjJz"
       ]
     },
     {
@@ -200,7 +194,7 @@ const schema = {
       ],
       "sameAs": [
         "https://t.me/bugggd",
-        "https://instagram.com/dmnbugaev_"
+        "https://www.instagram.com/dmbugaev_?igsh=NzhiaWJlMzc1NjJz"
       ]
     },
     {
@@ -398,7 +392,7 @@ const schema = {
           "name": "Кто такой Бугаев Дмитрий и чем занимается Бугаев Веб?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Бугаев Дмитрий — основатель агентства Бугаев Веб (Bugaev Web). Специализируется на комплексном digital-продвижении салонов красоты и клиник в Москве: сайты, Telegram-боты, SMM, CRM — в рамках единого абонемента 50 000 ₽/мес. Telegram: @bugggd, Instagram: @dmnbugaev_."
+            "text": "Бугаев Дмитрий — основатель агентства Бугаев Веб (Bugaev Web). Специализируется на комплексном digital-продвижении салонов красоты и клиник в Москве: сайты, Telegram-боты, SMM, CRM — в рамках единого абонемента 50 000 ₽/мес. Telegram: @bugggd, Instagram: @dmbugaev_."
           }
         }
       ]
@@ -406,5 +400,10 @@ const schema = {
   ]
 }
 
-const schemaJson = JSON.stringify(schema)
+useHead({
+  script: [{
+    type: 'application/ld+json',
+    innerHTML: JSON.stringify(schema),
+  }]
+})
 </script>

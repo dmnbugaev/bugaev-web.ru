@@ -13,7 +13,7 @@
             на аппаратную косметологию, чистки, инъекции и уходы — и возвращаем их снова. От <strong>50 000 ₽/мес</strong>.
           </p>
           <div class="flex flex-wrap gap-4">
-            <NuxtLink to="/#form" class="btn-primary">Оставить заявку</NuxtLink>
+            <NuxtLink to="/#contact" class="btn-primary">Оставить заявку</NuxtLink>
             <NuxtLink to="/" class="btn-outline">← На главную</NuxtLink>
           </div>
         </div>
@@ -150,8 +150,8 @@
               Оставьте заявку — обсудим ваш кабинет, поймём что тормозит рост и предложим конкретный план.
             </p>
             <div class="flex flex-wrap gap-4 justify-center">
-              <NuxtLink to="/#form" class="btn-primary">Оставить заявку</NuxtLink>
-              <a href="https://t.me/bugaev_web" target="_blank" rel="noopener noreferrer" class="btn-outline" style="color: #fff; border-color: rgba(255,255,255,0.2);">Написать в Telegram</a>
+              <NuxtLink to="/#contact" class="btn-primary">Оставить заявку</NuxtLink>
+              <a href="https://t.me/bugggd" target="_blank" rel="noopener noreferrer" class="btn-outline" style="color: #fff; border-color: rgba(255,255,255,0.2);">Написать в Telegram</a>
             </div>
           </div>
         </section>
@@ -186,7 +186,11 @@ useSeoMeta({
   ogType: 'website',
   ogLocale: 'ru_RU',
   ogSiteName: 'Бугаев Веб',
+  ogImage: 'https://bugaev-web.ru/og-image.jpg',
+  ogImageWidth: '1200',
+  ogImageHeight: '630',
   twitterCard: 'summary_large_image',
+  twitterImage: 'https://bugaev-web.ru/og-image.jpg',
 })
 
 useHead({
@@ -203,7 +207,6 @@ useHead({
           '@type': 'LocalBusiness',
           name: 'Бугаев Веб',
           url: 'https://bugaev-web.ru',
-          telephone: '',
           address: { '@type': 'PostalAddress', addressLocality: 'Москва', addressCountry: 'RU' },
         },
         areaServed: { '@type': 'City', name: 'Москва' },

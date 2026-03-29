@@ -41,7 +41,7 @@
                 Или напишите нам напрямую в Telegram.
               </p>
               <div class="flex flex-col sm:flex-row gap-3 justify-center">
-                <a href="https://t.me/bugaev_web" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                <a href="https://t.me/bugggd" target="_blank" rel="noopener noreferrer" class="btn-primary">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z" />
                   </svg>
@@ -227,7 +227,7 @@
           <p class="text-sm mb-2" style="color: var(--ink-3);">Предпочитаете общаться напрямую?</p>
           <div class="flex flex-wrap items-center justify-center gap-4">
             <a
-              href="https://t.me/bugaev_web"
+              href="https://t.me/bugggd"
               target="_blank"
               rel="noopener noreferrer"
               class="inline-flex items-center gap-2 text-sm font-semibold transition-colors duration-150"
@@ -236,7 +236,7 @@
               <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z" />
               </svg>
-              @bugaev_web — Telegram ↗
+              @bugggd — Telegram ↗
             </a>
             <a
               href="https://max.ru/join/hPzwZMH8FPTH8xvPLPpzqP2HnHyArReIQkqcP2E4U5Q"

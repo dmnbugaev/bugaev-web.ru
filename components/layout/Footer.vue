@@ -74,7 +74,7 @@
               <ul class="space-y-3">
                 <li>
                   <a
-                    href="https://t.me/bugaev_web"
+                    href="https://t.me/bugggd"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="flex items-center gap-2 text-sm transition-colors duration-150"
@@ -85,7 +85,7 @@
                     <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink: 0;">
                       <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z" />
                     </svg>
-                    @bugaev_web — Telegram
+                    @bugggd — Telegram
                   </a>
                 </li>
                 <li>
@@ -106,13 +106,13 @@
                 </li>
                 <li>
                   <a
-                    href="mailto:hello@bugaev.web"
+                    href="mailto:dmn8ugaev@yandex.ru"
                     class="text-sm transition-colors duration-150"
                     style="color: rgba(255,255,255,0.4);"
                     @mouseenter="(e) => (e.currentTarget as HTMLElement).style.color = '#FFFFFF'"
                     @mouseleave="(e) => (e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.4)'"
                   >
-                    hello@bugaev.web
+                    dmn8ugaev@yandex.ru
                   </a>
                 </li>
                 <li>
@@ -165,12 +165,6 @@ const IconInstagram = defineComponent({
   ]),
 })
 
-const IconVK = defineComponent({
-  render: () => h('svg', { width: 14, height: 14, viewBox: '0 0 24 24', fill: 'rgba(255,255,255,0.45)' }, [
-    h('path', { d: 'M21.547 7h-3.29a.743.743 0 00-.655.392s-1.312 2.416-1.734 3.23C14.734 12.813 14 12.126 14 11.11V7.603A1.104 1.104 0 0012.896 6.5h-2.474a1.982 1.982 0 00-1.75.813s1.255-.204 1.255 1.49c0 .42.022 1.626.04 2.64a.73.73 0 01-1.272.503 21.54 21.54 0 01-2.498-4.543.693.693 0 00-.63-.403h-2.99a.508.508 0 00-.48.685C3.005 10.175 6.918 18 11.38 18h1.878a.742.742 0 00.742-.742v-1.572a.73.73 0 011.244-.515l2.636 2.647a1.1 1.1 0 00.776.32h2.692a1.097 1.097 0 00.769-1.855l-2.534-2.545a.73.73 0 010-1.03l2.537-2.95A1.1 1.1 0 0021.547 7z' }),
-  ]),
-})
-
 const IconMax = defineComponent({
   render: () => h('svg', { width: 14, height: 14, viewBox: '0 0 24 24', fill: 'rgba(255,255,255,0.45)' }, [
     h('path', { d: 'M13 2L4.5 13.5H11L10 22L19.5 10.5H13L13 2Z' }),
@@ -178,10 +172,9 @@ const IconMax = defineComponent({
 })
 
 const socials = [
-  { label: 'Telegram',  href: 'https://t.me/bugaev_web',                  icon: IconTelegram },
+  { label: 'Telegram',  href: 'https://t.me/bugggd',                  icon: IconTelegram },
   { label: 'Max',       href: 'https://max.ru/join/hPzwZMH8FPTH8xvPLPpzqP2HnHyArReIQkqcP2E4U5Q',          icon: IconMax },
-  { label: 'Instagram', href: 'https://instagram.com/dmnbugaev_',          icon: IconInstagram },
-  { label: 'ВКонтакте', href: 'https://vk.com/bugaev_web',                 icon: IconVK },
+  { label: 'Instagram', href: 'https://www.instagram.com/dmbugaev_?igsh=NzhiaWJlMzc1NjJz',          icon: IconInstagram },
 ]
 
 const legalLinks = [

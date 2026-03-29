@@ -59,7 +59,7 @@
             <div style="background: var(--ink); border-radius: 20px; padding: 40px; text-align: center;">
               <h3 style="font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.5rem; color: #fff; margin-bottom: 8px;">{{ article?.ctaTitle }}</h3>
               <p style="color: rgba(255,255,255,0.5); margin-bottom: 24px; font-size: 0.9rem;">{{ article?.ctaText }}</p>
-              <NuxtLink to="/#form" class="btn-accent">{{ article?.ctaBtn }}</NuxtLink>
+              <NuxtLink to="/#contact" class="btn-accent">{{ article?.ctaBtn }}</NuxtLink>
             </div>
 
           </article>
@@ -128,7 +128,7 @@
             <div style="background: var(--accent-dim); border: 1px solid rgba(143,175,138,0.22); border-radius: 16px; padding: 28px; margin-bottom: 24px;">
               <h3 style="font-weight: 700; font-size: 0.9rem; margin-bottom: 8px; color: var(--ink);">{{ article?.sidebarCtaTitle }}</h3>
               <p style="color: var(--ink-3); font-size: 0.8rem; line-height: 1.6; margin-bottom: 16px;">{{ article?.sidebarCtaText }}</p>
-              <NuxtLink to="/#form" class="btn-primary" style="width: 100%; justify-content: center; display: flex;">Оставить заявку</NuxtLink>
+              <NuxtLink to="/#contact" class="btn-primary" style="width: 100%; justify-content: center; display: flex;">Оставить заявку</NuxtLink>
             </div>
 
             <!-- Related links -->

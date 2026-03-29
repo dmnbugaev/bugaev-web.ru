@@ -11,7 +11,7 @@
             Комплексное digital-продвижение для салонов красоты, ногтевых студий, косметологов,
             brow bar, лэш-студий и барбершопов в Москве. Все услуги — в одном абонементе <strong>50 000 ₽/мес</strong>.
           </p>
-          <NuxtLink to="/#form" class="btn-primary">Оставить заявку</NuxtLink>
+          <NuxtLink to="/#contact" class="btn-primary">Оставить заявку</NuxtLink>
         </div>
 
         <div class="h-px mb-16" style="background: var(--border);" />
@@ -73,7 +73,7 @@
               <div style="font-size: 2rem; margin-bottom: 16px;">👤</div>
               <h2 style="font-weight: 800; font-size: 1.1rem; margin-bottom: 8px; color: #fff; font-family: 'Syne', sans-serif;">Личный менеджер</h2>
               <p style="color: rgba(255,255,255,0.5); font-size: 0.875rem; line-height: 1.6; margin-bottom: 16px;">Бугаев Дмитрий на связи 6 дней в неделю. Еженедельные отчёты, стратегия, поддержка.</p>
-              <NuxtLink to="/#form" style="color: var(--accent); font-size: 0.8rem; font-weight: 600; text-decoration: none;">Связаться →</NuxtLink>
+              <NuxtLink to="/#contact" style="color: var(--accent); font-size: 0.8rem; font-weight: 600; text-decoration: none;">Связаться →</NuxtLink>
             </div>
 
           </div>
@@ -124,7 +124,7 @@
         <section style="background: var(--ink); border-radius: 20px; padding: 56px 40px; text-align: center;">
           <h2 style="font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(1.5rem, 3vw, 2.2rem); color: #fff; margin-bottom: 12px;">Все услуги — один платёж 50 000 ₽/мес</h2>
           <p style="color: rgba(255,255,255,0.5); margin-bottom: 32px; max-width: 480px; margin-left: auto; margin-right: auto;">Без найма, без налогов, без разных подрядчиков. Один специалист — вся digital-инфраструктура.</p>
-          <NuxtLink to="/#form" class="btn-accent">Оставить заявку</NuxtLink>
+          <NuxtLink to="/#contact" class="btn-accent">Оставить заявку</NuxtLink>
         </section>
 
       </div>

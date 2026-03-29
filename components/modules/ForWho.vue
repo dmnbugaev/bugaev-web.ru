@@ -74,7 +74,7 @@
           <a href="#contact" class="btn-primary whitespace-nowrap">
             Оставить заявку
           </a>
-          <a href="https://t.me/bugaev_web" target="_blank" rel="noopener noreferrer" class="btn-outline whitespace-nowrap">
+          <a href="https://t.me/bugggd" target="_blank" rel="noopener noreferrer" class="btn-outline whitespace-nowrap">
             Telegram ↗
           </a>
           <a href="https://max.ru/join/hPzwZMH8FPTH8xvPLPpzqP2HnHyArReIQkqcP2E4U5Q" target="_blank" rel="noopener noreferrer" class="btn-outline whitespace-nowrap">
@@ -115,7 +115,7 @@ const pains = [
   },
   {
     problem:  'Боязнь удалёнщиков — непонятно, что они делают и есть ли результат',
-    solution: 'Еженедельные отчёты в Telegram, видите каждое действие и цифры. Личный менеджер на связи 7 дней в неделю.',
+    solution: 'Еженедельные отчёты в Telegram, видите каждое действие и цифры. Личный менеджер на связи 6 дней в неделю.',
   },
   {
     problem:  'Разрозненные подрядчики — отдельно сайт, отдельно SMM, отдельно реклама и всё не связано',

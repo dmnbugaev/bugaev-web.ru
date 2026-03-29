@@ -13,7 +13,7 @@
             Привлекаем новых клиентов и возвращаем существующих. Один абонемент — <strong>50 000 ₽/мес</strong>.
           </p>
           <div class="flex flex-wrap gap-4">
-            <NuxtLink to="/#form" class="btn-primary">Привлечь клиентов</NuxtLink>
+            <NuxtLink to="/#contact" class="btn-primary">Привлечь клиентов</NuxtLink>
             <NuxtLink to="/" class="btn-outline">← На главную</NuxtLink>
           </div>
         </div>
@@ -154,7 +154,7 @@
         <section style="background: var(--ink); border-radius: 20px; padding: 56px 40px; text-align: center;" aria-label="Продвижение ногтевой студии">
           <h2 style="font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(1.5rem, 3vw, 2.2rem); color: #fff; margin-bottom: 12px;">Запустите поток клиентов в ногтевую студию</h2>
           <p style="color: rgba(255,255,255,0.5); margin-bottom: 32px; max-width: 480px; margin-left: auto; margin-right: auto;">SMM + сайт + Telegram-бот + CRM — всё в одном абонементе 50 000 ₽/мес. Результат с первого месяца.</p>
-          <NuxtLink to="/#form" class="btn-accent">Оставить заявку</NuxtLink>
+          <NuxtLink to="/#contact" class="btn-accent">Оставить заявку</NuxtLink>
         </section>
 
       </div>

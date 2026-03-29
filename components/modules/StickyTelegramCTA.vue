@@ -5,7 +5,7 @@
       class="fixed bottom-4 left-4 right-4 z-40 md:hidden"
     >
       <a
-        href="https://t.me/bugaev_web"
+        href="https://t.me/bugggd"
         target="_blank"
         rel="noopener noreferrer"
         class="flex items-center justify-center gap-2 w-full py-3.5 rounded-2xl text-sm font-bold shadow-lg"

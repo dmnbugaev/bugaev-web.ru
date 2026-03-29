@@ -111,7 +111,7 @@
                 </tr>
                 <tr>
                   <td>Telegram</td>
-                  <td><a href="https://t.me/bugaev_web" target="_blank" rel="noopener noreferrer">@bugaev_web</a></td>
+                  <td><a href="https://t.me/bugggd" target="_blank" rel="noopener noreferrer">@bugggd</a></td>
                 </tr>
                 <tr>
                   <td>Адрес осуществления деятельности</td>

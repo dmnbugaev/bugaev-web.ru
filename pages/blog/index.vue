@@ -51,7 +51,7 @@
         <section style="background: var(--ink); border-radius: 20px; padding: 56px 40px; text-align: center;">
           <h2 style="font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(1.5rem, 3vw, 2.2rem); color: #fff; margin-bottom: 12px;">Хватит читать — начните привлекать клиентов</h2>
           <p style="color: rgba(255,255,255,0.5); margin-bottom: 32px; max-width: 460px; margin-left: auto; margin-right: auto;">Бесплатный аудит вашего digital-присутствия. Покажем, что мешает росту и что можно улучшить прямо сейчас.</p>
-          <NuxtLink to="/#form" class="btn-accent">Получить аудит бесплатно</NuxtLink>
+          <NuxtLink to="/#contact" class="btn-accent">Получить аудит бесплатно</NuxtLink>
         </section>
 
       </div>

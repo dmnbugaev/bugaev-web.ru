@@ -28,7 +28,7 @@
             ← На главную
           </button>
           <a
-            href="https://t.me/bugaev_web"
+            href="https://t.me/bugggd"
             target="_blank"
             rel="noopener noreferrer"
             class="btn-outline"

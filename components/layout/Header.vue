@@ -45,7 +45,7 @@
         <div class="flex items-center gap-3">
           <div class="hidden md:flex items-center gap-2">
             <a
-              href="https://t.me/bugaev_web"
+              href="https://t.me/bugggd"
               target="_blank"
               rel="noopener noreferrer"
               class="inline-flex btn-primary text-sm"
@@ -149,7 +149,7 @@
       >
         <div class="flex gap-2">
           <a
-            href="https://t.me/bugaev_web"
+            href="https://t.me/bugggd"
             target="_blank"
             rel="noopener noreferrer"
             class="btn-primary flex-1 justify-center text-sm"

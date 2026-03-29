@@ -109,7 +109,7 @@
         <p class="text-sm mb-3" style="color: var(--ink-3);">Остались вопросы?</p>
         <div class="flex flex-wrap items-center justify-center gap-4">
           <a
-            href="https://t.me/bugaev_web"
+            href="https://t.me/bugggd"
             target="_blank"
             rel="noopener noreferrer"
             class="inline-flex items-center gap-2 text-sm font-semibold transition-colors duration-150"

@@ -12,6 +12,15 @@ export default defineNuxtConfig({
 
   // ── Pre-render статических страниц при билде (HTML отдаётся мгновенно) ──
   routeRules: {
+    // Security headers для всех маршрутов
+    '/**': {
+      headers: {
+        'X-Frame-Options': 'SAMEORIGIN',
+        'X-Content-Type-Options': 'nosniff',
+        'Referrer-Policy': 'strict-origin-when-cross-origin',
+        'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
+      },
+    },
     '/':                    { prerender: true },
     '/privacy':             { prerender: true },
     '/cookies':             { prerender: true },
@@ -120,7 +129,6 @@ export default defineNuxtConfig({
         { name: 'twitter:description', content: 'Сайт + Telegram-бот + SMM + CRM для салона красоты в Москве. Один подрядчик. Один платёж. Бугаев Дмитрий.' }
       ],
       link: [
-        { rel: 'canonical', href: 'https://bugaev-web.ru/' },
         { rel: 'sitemap', type: 'application/xml', href: '/sitemap.xml' },
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
         // Шрифты самохостятся через @nuxt/fonts — внешние preconnect не нужны

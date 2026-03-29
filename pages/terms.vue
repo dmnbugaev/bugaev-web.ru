@@ -107,7 +107,7 @@
             <p>
               ИП Бугаев Дмитрий Сергеевич («Bugaev Web»)<br>
               Email: <a href="mailto:dmnbugaev@gmail.com">dmnbugaev@gmail.com</a><br>
-              Telegram: <a href="https://t.me/bugaev_web" target="_blank" rel="noopener noreferrer">@bugaev_web</a><br>
+              Telegram: <a href="https://t.me/bugggd" target="_blank" rel="noopener noreferrer">@bugggd</a><br>
               Телефон: <a href="tel:+79964145143">+7 (996) 414-51-43</a>
             </p>
           </section>
