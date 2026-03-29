@@ -14,6 +14,7 @@ dist/
 # Logs
 *.log
 npm-debug.log*
+logs/
 
 # OS / Editor
 .DS_Store
@@ -27,3 +28,4 @@ Thumbs.db
 # Dev notes (не для репо)
 promt.txt
 QA_REPORT.md
+REFACTORING_REPORT.md
