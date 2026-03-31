@@ -23,7 +23,7 @@
           <span
             class="text-base font-bold tracking-tight"
             style="color: var(--ink); font-family: 'Syne', sans-serif; letter-spacing: -0.02em;"
-          >Bugaev Web</span>
+          >Bugaev We</span>
         </a>
 
         <!-- Desktop nav -->
