@@ -17,7 +17,8 @@ jobs:
           port: 22222
           script: |
             cd /var/www/bugaev-web.ru
+            git reset --hard HEAD
             git pull origin main
-            npm ci
+            npm install
             npm run build
-            pm2 restart bugaev-web
+            pm2 restart bugaev-web --update-env
