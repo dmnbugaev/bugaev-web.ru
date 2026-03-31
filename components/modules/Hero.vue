@@ -38,7 +38,7 @@
               margin-bottom: 1.25rem;
             "
           >
-            igital‑отдел<br />
+            Digital‑отдел<br />
             и&nbsp;SMM для<br />
             <span style="color: var(--accent);">салона</span><br />
             под ключ
