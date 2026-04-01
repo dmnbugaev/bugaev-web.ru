@@ -15,10 +15,13 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22222
+          envs: NUXT_SMTP_USER,NUXT_SMTP_PASS,NUXT_SMTP_TO
           script: |
             cd /var/www/bugaev-web.ru
             git reset --hard HEAD
             git pull origin main
+            printf 'NUXT_SMTP_USER=%s\nNUXT_SMTP_PASS=%s\nNUXT_SMTP_TO=%s\n' \
+              "$NUXT_SMTP_USER" "$NUXT_SMTP_PASS" "$NUXT_SMTP_TO" > .env
             npm install
             npm run build
             pm2 restart bugaev-web --update-env
