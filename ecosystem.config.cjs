@@ -7,7 +7,7 @@ module.exports = {
       exec_mode: 'fork',
       env: {
         NODE_ENV: 'production',
-        PORT: 3000,
+        PORT: 3003,
         // NUXT_SMTP_USER, NUXT_SMTP_PASS, NUXT_SMTP_TO задаются в .env на сервере
       },
       // Авто-перезапуск при крэше
