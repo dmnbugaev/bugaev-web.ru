@@ -79,7 +79,7 @@ export default defineEventHandler(async (event) => {
   const pageUrl = esc(safePageUrl)
 
   const html = `
-    <h2 style="color:#1a1a1a;font-family:Arial,sans-serif;margin-bottom:16px;">🎯 Новая заявка — Bugaev Web</h2>
+    <h2 style="color:#1a1a1a;font-family:Arial,sans-serif;margin-bottom:16px;">🎯 Новая заявка — ДАН Медиа</h2>
     <table style="border-collapse:collapse;width:100%;max-width:520px;font-family:Arial,sans-serif;font-size:14px;">
       <tr>
         <td style="padding:10px 12px;color:#666;width:130px;border-bottom:1px solid #eee;">Имя</td>
@@ -119,7 +119,7 @@ export default defineEventHandler(async (event) => {
 
   try {
     await transporter.sendMail({
-      from:    `"Bugaev Web" <${smtpUser}>`,
+      from:    `"ДАН Медиа" <${smtpUser}>`,
       to:      smtpTo,
       subject: `Новая заявка: ${name} · ${phone}`,
       html,

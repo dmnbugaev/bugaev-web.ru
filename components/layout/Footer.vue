@@ -21,7 +21,7 @@
             <span
               class="font-bold text-base"
               style="color: #FFFFFF; letter-spacing: -0.02em; font-family: 'Syne', sans-serif;"
-            >Bugaev Web</span>
+            >ДАН Медиа</span>
           </a>
 
           <p class="text-sm leading-relaxed mb-6" style="color: rgba(255,255,255,0.35);">
@@ -130,7 +130,7 @@
       <!-- Bottom row -->
       <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
         <p class="text-xs order-2 sm:order-1 mono" style="color: rgba(255,255,255,0.18);">
-          © {{ currentYear }} Bugaev Web. Все права защищены.
+          © {{ currentYear }} ДАН Медиа. Все права защищены.
         </p>
         <div class="flex flex-wrap items-center gap-4 order-1 sm:order-2">
           <a

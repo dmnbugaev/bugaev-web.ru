@@ -51,7 +51,7 @@
               </div>
               <div>
                 <strong style="display: block; color: var(--ink); font-size: 0.9rem;">Бугаев Дмитрий</strong>
-                <span style="color: var(--ink-3); font-size: 0.8rem;">Основатель Бугаев Веб — digital-продвижение для бьюти-бизнеса</span>
+                <span style="color: var(--ink-3); font-size: 0.8rem;">Основатель ДАН Медиа — digital-продвижение для бьюти-бизнеса</span>
               </div>
             </div>
 
@@ -128,7 +128,7 @@
             <div style="background: var(--accent-dim); border: 1px solid rgba(143,175,138,0.22); border-radius: 16px; padding: 28px; margin-bottom: 24px;">
               <h3 style="font-weight: 700; font-size: 0.9rem; margin-bottom: 8px; color: var(--ink);">{{ article?.sidebarCtaTitle }}</h3>
               <p style="color: var(--ink-3); font-size: 0.8rem; line-height: 1.6; margin-bottom: 16px;">{{ article?.sidebarCtaText }}</p>
-              <NuxtLink to="/#contact" class="btn-primary" style="width: 100%; justify-content: center; display: flex;">Оставить заявку</NuxtLink>
+              <NuxtLink to="/#contact" class="btn-primary" style="width: 100%; justify-content: center; display: flex;">Написать нам</NuxtLink>
             </div>
 
             <!-- Related links -->
@@ -181,7 +181,7 @@ useSeoMeta({
   ogUrl: article.value?.canonical,
   ogType: 'article',
   ogLocale: 'ru_RU',
-  ogSiteName: 'Бугаев Веб',
+  ogSiteName: 'ДАН Медиа',
   ogImage: 'https://bugaev-web.ru/og-image.jpg',
   twitterCard: 'summary_large_image',
   twitterTitle: article.value?.ogTitle,

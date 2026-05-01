@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div style="background: var(--surface);">
     <Header />
     <main class="pt-28 pb-20">
@@ -14,7 +14,7 @@
 
         <div class="h-px mb-16" style="background: var(--border);" />
 
-        <section aria-label="Статьи блога Бугаев Веб">
+        <section aria-label="Статьи блога ДАН Медиа">
           <p v-if="!articles?.length" style="color: var(--ink-3); text-align: center; padding: 48px 0;">
             Статьи скоро появятся. Следите за обновлениями.
           </p>
@@ -66,17 +66,17 @@ const { data: articles } = await useAsyncData('blog-list', () =>
 )
 
 useSeoMeta({
-  title: 'Блог о продвижении салонов красоты — Бугаев Веб | Статьи и советы',
+  title: 'Блог о продвижении салонов красоты — ДАН Медиа | Статьи и советы',
   description: 'Практические статьи о привлечении клиентов в салон красоты, ногтевую студию и косметологический кабинет. SMM, SEO, Telegram-бот, CRM YCLIENTS — реальные инструменты и цифры.',
-  ogTitle: 'Блог Бугаев Веб — Продвижение бьюти-бизнеса',
+  ogTitle: 'Блог ДАН Медиа — Продвижение бьюти-бизнеса',
   ogDescription: 'Статьи о SMM, SEO, Telegram-ботах и CRM для салонов красоты в Москве. Практические руководства с реальными цифрами.',
   ogUrl: 'https://bugaev-web.ru/blog',
   ogType: 'website',
   ogLocale: 'ru_RU',
-  ogSiteName: 'Бугаев Веб',
+  ogSiteName: 'ДАН Медиа',
   ogImage: 'https://bugaev-web.ru/og-image.jpg',
   twitterCard: 'summary_large_image',
-  twitterTitle: 'Блог о продвижении салонов красоты — Бугаев Веб',
+  twitterTitle: 'Блог о продвижении салонов красоты — ДАН Медиа',
   twitterDescription: 'Практические статьи о привлечении клиентов в бьюти-бизнес.',
   twitterImage: 'https://bugaev-web.ru/og-image.jpg',
 })
@@ -90,7 +90,7 @@ useHead({
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'Blog',
-        name: 'Блог Бугаев Веб — Digital-продвижение для бьюти-бизнеса',
+        name: 'Блог ДАН Медиа — Digital-продвижение для бьюти-бизнеса',
         description: 'Практические статьи о привлечении клиентов в салон красоты: SMM, SEO, Telegram-боты, CRM YCLIENTS',
         url: 'https://bugaev-web.ru/blog',
         publisher: { '@id': 'https://bugaev-web.ru/#business' },

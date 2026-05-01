@@ -118,7 +118,7 @@
             class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full text-sm font-semibold transition-all duration-200"
             style="background: var(--ink); color: #FFFFFF;"
           >
-            Оставить заявку
+            Написать нам
             <span style="font-size: 1.1em;">→</span>
           </a>
           <a

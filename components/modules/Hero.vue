@@ -58,7 +58,7 @@
           <!-- CTAs -->
           <div class="flex flex-wrap gap-3 mb-5 sm:mb-7" data-animate="fade-up" data-delay="350">
             <a href="#contact" class="btn-primary">
-              Оставить заявку
+              Написать нам
               <span style="font-size: 1.1em; line-height: 1;">→</span>
             </a>
             <a href="#features" class="btn-outline">
@@ -122,7 +122,7 @@
               class="relative z-10 flex items-center justify-center gap-2 w-full py-3 rounded-xl text-sm font-semibold transition-all duration-200"
               style="background: var(--accent); color: var(--ink);"
             >
-              Оставить заявку
+              Написать нам
               <span>↗</span>
             </a>
           </div>

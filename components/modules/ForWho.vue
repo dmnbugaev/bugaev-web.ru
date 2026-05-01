@@ -67,12 +67,12 @@
         <div>
           <h3 class="text-xl font-bold mb-2" style="color: var(--ink); letter-spacing: -0.02em;">Готовы обсудить ваш салон?</h3>
           <p class="text-sm" style="color: var(--ink-3);">
-            Оставьте заявку — проведём бесплатный аудит и составим план продвижения
+            Напишите нам — проведём бесплатный аудит и составим план продвижения
           </p>
         </div>
         <div class="flex flex-col sm:flex-row gap-3 flex-shrink-0">
           <a href="#contact" class="btn-primary whitespace-nowrap">
-            Оставить заявку
+            Написать нам
           </a>
           <a href="https://t.me/bugggd" target="_blank" rel="noopener noreferrer" class="btn-outline whitespace-nowrap">
             Telegram ↗

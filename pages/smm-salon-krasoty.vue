@@ -22,7 +22,7 @@
             сторис с акциями, обработка директа — без участия вашего персонала. Входит в абонемент <strong>50 000 ₽/мес</strong>.
           </p>
           <div class="flex flex-wrap gap-4">
-            <a href="#contact" class="btn-primary">Оставить заявку</a>
+            <a href="#contact" class="btn-primary">Написать нам</a>
             <NuxtLink to="/" class="btn-outline">← На главную</NuxtLink>
           </div>
         </div>
@@ -123,7 +123,7 @@
             </div>
             <div class="card p-6">
               <h3 style="font-weight: 700; margin-bottom: 8px; font-size: 1rem;">Сколько стоит SMM для салона красоты?</h3>
-              <p style="color: var(--ink-3); font-size: 0.9rem; line-height: 1.6;">Ведение SMM входит в абонемент Бугаев Веб за 50 000 ₽/мес вместе с сайтом, Telegram-ботом и CRM. Отдельно SMM в нашей нише стоит 15 000–50 000 ₽/мес — у нас это плюс всё остальное.</p>
+              <p style="color: var(--ink-3); font-size: 0.9rem; line-height: 1.6;">Ведение SMM входит в абонемент ДАН Медиа за 50 000 ₽/мес вместе с сайтом, Telegram-ботом и CRM. Отдельно SMM в нашей нише стоит 15 000–50 000 ₽/мес — у нас это плюс всё остальное.</p>
             </div>
             <div class="card p-6">
               <h3 style="font-weight: 700; margin-bottom: 8px; font-size: 1rem;">Через сколько будут первые результаты?</h3>
@@ -140,7 +140,7 @@
         <section style="background: var(--ink); border-radius: 20px; padding: 56px 40px; text-align: center;" aria-label="Подключить SMM для салона красоты">
           <h2 style="font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(1.5rem, 3vw, 2.2rem); color: #fff; margin-bottom: 12px;">Запустите SMM для салона красоты уже сегодня</h2>
           <p style="color: rgba(255,255,255,0.5); margin-bottom: 32px; max-width: 480px; margin-left: auto; margin-right: auto;">Входит в абонемент 50 000 ₽/мес вместе с сайтом, ботом и CRM. Результат с первого месяца.</p>
-          <a href="#contact" class="btn-accent">Оставить заявку</a>
+          <a href="#contact" class="btn-accent">Написать нам</a>
         </section>
 
         <LeadForm />
@@ -155,19 +155,19 @@
 
 <script setup lang="ts">
 useSeoMeta({
-  title: 'SMM для салона красоты в Москве — ведение Instagram и Telegram | Бугаев Веб',
+  title: 'SMM для салона красоты в Москве — ведение Instagram и Telegram | ДАН Медиа',
   description: 'Профессиональный SMM для салона красоты: ведение Instagram и Telegram-канала, контент-план, публикации 3–4 раза/неделю, сторис, обработка директа. Москва. Входит в абонемент 50 000 ₽/мес.',
-  ogTitle: 'SMM для салона красоты в Москве | Бугаев Веб',
+  ogTitle: 'SMM для салона красоты в Москве | ДАН Медиа',
   ogDescription: 'Ведение Instagram и Telegram для салона красоты под ключ. Контент-план, посты, сторис, директ. Входит в абонемент 50 000 ₽/мес.',
   ogUrl: 'https://bugaev-web.ru/smm-salon-krasoty',
   ogType: 'website',
   ogLocale: 'ru_RU',
-  ogSiteName: 'Бугаев Веб',
+  ogSiteName: 'ДАН Медиа',
   ogImage: 'https://bugaev-web.ru/og-image.jpg',
   ogImageWidth: '1200',
   ogImageHeight: '630',
   twitterCard: 'summary_large_image',
-  twitterTitle: 'SMM для салона красоты — Бугаев Веб',
+  twitterTitle: 'SMM для салона красоты — ДАН Медиа',
   twitterDescription: 'Ведение Instagram и Telegram для салона красоты. 50 000 ₽/мес.',
   twitterImage: 'https://bugaev-web.ru/og-image.jpg',
 })
@@ -209,12 +209,12 @@ const schema = {
         {
           "@type": "Question",
           "name": "Мне нужно самому что-то делать в соцсетях при SMM-ведении?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Только присылать 15–20 фото работ в месяц. Тексты, сторис, ответы на директ — делает Бугаев Веб. Вы занимаетесь бизнесом." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Только присылать 15–20 фото работ в месяц. Тексты, сторис, ответы на директ — делает ДАН Медиа. Вы занимаетесь бизнесом." }
         },
         {
           "@type": "Question",
           "name": "Сколько стоит SMM для салона красоты в Москве?",
-          "acceptedAnswer": { "@type": "Answer", "text": "В абонементе Бугаев Веб SMM (Instagram + Telegram) входит вместе с сайтом, ботом и CRM за 50 000 ₽/мес. Рыночная стоимость только SMM — 15 000–50 000 ₽/мес." }
+          "acceptedAnswer": { "@type": "Answer", "text": "В абонементе ДАН Медиа SMM (Instagram + Telegram) входит вместе с сайтом, ботом и CRM за 50 000 ₽/мес. Рыночная стоимость только SMM — 15 000–50 000 ₽/мес." }
         },
         {
           "@type": "Question",

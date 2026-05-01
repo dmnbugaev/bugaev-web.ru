@@ -1,6 +1,6 @@
 <template>
   <section style="padding-top: 48px; border-top: 1px solid var(--border);">
-    <h2 style="font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.25rem; margin-bottom: 20px; color: var(--ink);">Другие услуги Бугаев Веб</h2>
+    <h2 style="font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.25rem; margin-bottom: 20px; color: var(--ink);">Другие услуги ДАН Медиа</h2>
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
       <NuxtLink
         v-for="service in relatedServices"

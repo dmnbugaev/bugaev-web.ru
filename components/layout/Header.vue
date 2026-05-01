@@ -23,7 +23,7 @@
           <span
             class="text-base font-bold tracking-tight"
             style="color: var(--ink); font-family: 'Syne', sans-serif; letter-spacing: -0.02em;"
-          >Bugaev Web</span>
+          >ДАН Медиа</span>
         </a>
 
         <!-- Desktop nav -->
@@ -115,7 +115,7 @@
               <circle cx="9" cy="9.5" r="1.8" fill="var(--ink)" />
             </svg>
           </div>
-          <span class="font-bold text-sm" style="color: var(--ink); font-family: 'Syne', sans-serif;">Bugaev Web</span>
+          <span class="font-bold text-sm" style="color: var(--ink); font-family: 'Syne', sans-serif;">ДАН Медиа</span>
         </a>
         <button
           class="w-8 h-8 flex items-center justify-center rounded-lg transition-colors"

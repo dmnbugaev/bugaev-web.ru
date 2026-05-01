@@ -89,7 +89,7 @@
           <!-- Buttons -->
           <div class="flex flex-col sm:flex-row gap-3">
             <a href="#contact" class="btn-primary flex-1 justify-center text-base py-4">
-              Оставить заявку
+              Написать нам
               <span style="font-size: 1.1em;">→</span>
             </a>
             <a
