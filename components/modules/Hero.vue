@@ -43,7 +43,7 @@
             <span style="color: var(--accent);">салона</span><br />
             под ключ
           </h1>
-
+//
           <!-- Subtitle -->
           <p
             data-animate="fade-up"
