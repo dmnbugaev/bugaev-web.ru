@@ -40,7 +40,7 @@
                 <span
                   class="font-bold leading-none"
                   style="font-family: 'Syne', sans-serif; font-size: 3.8rem; color: var(--ink); letter-spacing: -0.04em;"
-                >50 000</span>
+                >30 000</span>
                 <span class="text-2xl font-semibold mb-1.5" style="color: var(--ink-3);">₽</span>
               </div>
               <p class="mono text-xs tracking-widest uppercase" style="color: var(--ink-3);">в месяц · без НДС</p>

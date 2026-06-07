@@ -10,7 +10,7 @@
           <h1 class="section-title mb-5">Продвижение<br><span style="color: var(--accent);">косметолога</span> в Москве</h1>
           <p class="section-subtitle max-w-2xl mb-8">
             SMM, сайт и Telegram-бот для косметолога или косметологического кабинета. Привлекаем первичных клиентов
-            на аппаратную косметологию, чистки, инъекции и уходы — и возвращаем их снова. От <strong>50 000 ?/мес</strong>.
+            на аппаратную косметологию, чистки, инъекции и уходы — и возвращаем их снова. От <strong>30 000 ?/мес</strong>.
           </p>
           <div class="flex flex-wrap gap-4">
             <NuxtLink to="/#contact" class="btn-primary">Написать нам</NuxtLink>
@@ -180,9 +180,9 @@
 <script setup lang="ts">
 useSeoMeta({
   title: 'Продвижение косметолога в Москве — SMM, сайт, Telegram-бот | ДАН Медиа',
-  description: 'Продвижение косметолога и косметологического кабинета в Москве: SEO-сайт, ведение Instagram, Telegram-бот для онлайн-записи, настройка YCLIENTS. Первичные клиенты с первого месяца. От 50 000 ?/мес.',
+  description: 'Продвижение косметолога и косметологического кабинета в Москве: SEO-сайт, ведение Instagram, Telegram-бот для онлайн-записи, настройка YCLIENTS. Первичные клиенты с первого месяца. От 30 000 ?/мес.',
   ogTitle: 'Продвижение косметолога в Москве | ДАН Медиа',
-  ogDescription: 'SMM, сайт и Telegram-бот для косметолога. Привлекаем первичных клиентов и выстраиваем систему возврата. От 50 000 ?/мес.',
+  ogDescription: 'SMM, сайт и Telegram-бот для косметолога. Привлекаем первичных клиентов и выстраиваем систему возврата. От 30 000 ?/мес.',
   ogType: 'website',
   ogLocale: 'ru_RU',
   ogSiteName: 'ДАН Медиа',
@@ -211,7 +211,7 @@ useHead({
         },
         areaServed: { '@type': 'City', name: 'Москва' },
         serviceType: 'Digital-маркетинг для косметолога',
-        offers: { '@type': 'Offer', priceCurrency: 'RUB', price: '50000', priceSpecification: { '@type': 'UnitPriceSpecification', priceType: 'https://schema.org/MinimumAnnotatedPrice' } },
+        offers: { '@type': 'Offer', priceCurrency: 'RUB', price: '30000', priceSpecification: { '@type': 'UnitPriceSpecification', priceType: 'https://schema.org/MinimumAnnotatedPrice' } },
         url: 'https://bugaev-web.ru/kosmetolog',
       }),
     },
@@ -234,7 +234,7 @@ useHead({
           {
             '@type': 'Question',
             name: 'Сколько стоит продвижение косметолога?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Абонемент на комплексное продвижение (сайт, SMM, Telegram-бот, CRM) стоит от 50 000 ?/мес. Это один платёж вместо оплаты нескольких подрядчиков.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Абонемент на комплексное продвижение (сайт, SMM, Telegram-бот, CRM) стоит от 30 000 ?/мес. Это один платёж вместо оплаты нескольких подрядчиков.' },
           },
           {
             '@type': 'Question',

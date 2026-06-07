@@ -10,7 +10,7 @@
           <h1 class="section-title mb-5">Продвижение<br><span style="color: var(--accent);">ногтевой студии</span><br>в Москве</h1>
           <p class="section-subtitle max-w-2xl mb-8">
             SMM, сайт, Telegram-бот для онлайн-записи и CRM для ногтевой студии и мастеров маникюра.
-            Привлекаем новых клиентов и возвращаем существующих. Один абонемент — <strong>50 000 ?/мес</strong>.
+            Привлекаем новых клиентов и возвращаем существующих. Один абонемент — <strong>30 000 ?/мес</strong>.
           </p>
           <div class="flex flex-wrap gap-4">
             <NuxtLink to="/#contact" class="btn-primary">Привлечь клиентов</NuxtLink>
@@ -153,7 +153,7 @@
         <!-- CTA -->
         <section style="background: var(--ink); border-radius: 20px; padding: 56px 40px; text-align: center;" aria-label="Продвижение ногтевой студии">
           <h2 style="font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(1.5rem, 3vw, 2.2rem); color: #fff; margin-bottom: 12px;">Запустите поток клиентов в ногтевую студию</h2>
-          <p style="color: rgba(255,255,255,0.5); margin-bottom: 32px; max-width: 480px; margin-left: auto; margin-right: auto;">SMM + сайт + Telegram-бот + CRM — всё в одном абонементе 50 000 ?/мес. Результат с первого месяца.</p>
+          <p style="color: rgba(255,255,255,0.5); margin-bottom: 32px; max-width: 480px; margin-left: auto; margin-right: auto;">SMM + сайт + Telegram-бот + CRM — всё в одном абонементе 30 000 ?/мес. Результат с первого месяца.</p>
           <NuxtLink to="/#contact" class="btn-accent">Написать нам</NuxtLink>
         </section>
 
@@ -167,9 +167,9 @@
 <script setup lang="ts">
 useSeoMeta({
   title: 'Продвижение ногтевой студии в Москве — SMM, сайт, бот для записи | ДАН Медиа',
-  description: 'Комплексное продвижение ногтевой студии и мастеров маникюра в Москве: ведение Instagram, сайт с SEO, Telegram-бот для онлайн-записи, CRM YCLIENTS. Абонемент 50 000 ?/мес.',
+  description: 'Комплексное продвижение ногтевой студии и мастеров маникюра в Москве: ведение Instagram, сайт с SEO, Telegram-бот для онлайн-записи, CRM YCLIENTS. Абонемент 30 000 ?/мес.',
   ogTitle: 'Продвижение ногтевой студии в Москве | ДАН Медиа',
-  ogDescription: 'SMM, сайт, Telegram-бот и CRM для ногтевой студии. Клиенты из Instagram и поисковых систем. Абонемент 50 000 ?/мес.',
+  ogDescription: 'SMM, сайт, Telegram-бот и CRM для ногтевой студии. Клиенты из Instagram и поисковых систем. Абонемент 30 000 ?/мес.',
   ogUrl: 'https://bugaev-web.ru/nogtevaiya-studiya',
   ogType: 'website',
   ogLocale: 'ru_RU',
@@ -200,7 +200,7 @@ const schema = {
       "serviceType": "SMM и digital-продвижение ногтевой студии",
       "offers": {
         "@type": "Offer",
-        "price": "50000",
+        "price": "30000",
         "priceCurrency": "RUB",
         "availability": "https://schema.org/InStock",
         "description": "Абонемент Digital + SMM для ногтевой студии"

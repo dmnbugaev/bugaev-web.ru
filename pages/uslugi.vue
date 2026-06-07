@@ -9,7 +9,7 @@
           <h1 class="section-title mb-5">Услуги <span style="color: var(--accent);">ДАН Медиа</span><br>для бьюти-бизнеса</h1>
           <p class="section-subtitle max-w-2xl mb-8">
             Комплексное digital-продвижение для салонов красоты, ногтевых студий, косметологов,
-            brow bar, лэш-студий и барбершопов в Москве. Все услуги — в одном абонементе <strong>50 000 ₽/мес</strong>.
+            brow bar, лэш-студий и барбершопов в Москве. Все услуги — в одном абонементе <strong>30 000 ₽/мес</strong>.
           </p>
           <NuxtLink to="/#contact" class="btn-primary">Написать нам</NuxtLink>
         </div>
@@ -122,7 +122,7 @@
 
         <!-- CTA -->
         <section style="background: var(--ink); border-radius: 20px; padding: 56px 40px; text-align: center;">
-          <h2 style="font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(1.5rem, 3vw, 2.2rem); color: #fff; margin-bottom: 12px;">Все услуги — один платёж 50 000 ₽/мес</h2>
+          <h2 style="font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(1.5rem, 3vw, 2.2rem); color: #fff; margin-bottom: 12px;">Все услуги — один платёж 30 000 ₽/мес</h2>
           <p style="color: rgba(255,255,255,0.5); margin-bottom: 32px; max-width: 480px; margin-left: auto; margin-right: auto;">Без найма, без налогов, без разных подрядчиков. Один специалист — вся digital-инфраструктура.</p>
           <NuxtLink to="/#contact" class="btn-accent">Написать нам</NuxtLink>
         </section>
@@ -136,9 +136,9 @@
 <script setup lang="ts">
 useSeoMeta({
   title: 'Услуги ДАН Медиа для салонов красоты — SMM, сайт, бот, CRM | Москва',
-  description: 'Все услуги ДАН Медиа для бьюти-бизнеса: SMM для салона красоты, разработка сайта, Telegram-бот для онлайн-записи, настройка CRM YCLIENTS. Москва. Один абонемент 50 000 ₽/мес.',
+  description: 'Все услуги ДАН Медиа для бьюти-бизнеса: SMM для салона красоты, разработка сайта, Telegram-бот для онлайн-записи, настройка CRM YCLIENTS. Москва. Один абонемент 30 000 ₽/мес.',
   ogTitle: 'Услуги ДАН Медиа — Digital-продвижение для салонов красоты',
-  ogDescription: 'SMM, сайт, Telegram-бот, CRM YCLIENTS для салонов красоты в Москве. Один абонемент 50 000 ₽/мес.',
+  ogDescription: 'SMM, сайт, Telegram-бот, CRM YCLIENTS для салонов красоты в Москве. Один абонемент 30 000 ₽/мес.',
   ogUrl: 'https://bugaev-web.ru/uslugi',
   ogType: 'website',
   ogLocale: 'ru_RU',
@@ -148,7 +148,7 @@ useSeoMeta({
   ogImageHeight: '630',
   twitterCard: 'summary_large_image',
   twitterTitle: 'Услуги ДАН Медиа — ДАН Медиа',
-  twitterDescription: 'SMM, сайт, бот, CRM для бьюти-бизнеса в Москве. 50 000 ₽/мес.',
+  twitterDescription: 'SMM, сайт, бот, CRM для бьюти-бизнеса в Москве. 30 000 ₽/мес.',
   twitterImage: 'https://bugaev-web.ru/og-image.jpg',
 })
 

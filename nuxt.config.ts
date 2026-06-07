@@ -93,11 +93,11 @@ export default defineNuxtConfig({
       htmlAttrs: { lang: 'ru' },
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
-      title: 'ДАН Медиа — Сайт, SMM и Telegram-бот для салона красоты в Москве | от 50 000 ₽/мес',
+      title: 'ДАН Медиа — Сайт, SMM и Telegram-бот для салона красоты в Москве | от 30 000 ₽/мес',
       meta: [
         {
           name: 'description',
-          content: 'ДАН Медиа (Бугаев Дмитрий) — комплексное digital-продвижение для салонов красоты, ногтевых студий, косметологических клиник и бьюти-мастеров в Москве. Сайт на Nuxt.js, Telegram-бот для онлайн-записи, ведение Instagram и Telegram-канала, настройка CRM YCLIENTS — всё за 50 000 ₽/мес. Результат с первого месяца. Без скрытых платежей.'
+          content: 'ДАН Медиа (Бугаев Дмитрий) — комплексное digital-продвижение для салонов красоты, ногтевых студий, косметологических клиник и бьюти-мастеров в Москве. Сайт на Nuxt.js, Telegram-бот для онлайн-записи, ведение Instagram и Telegram-канала, настройка CRM YCLIENTS — всё за 30 000 ₽/мес. Результат с первого месяца. Без скрытых платежей.'
         },
         // OG Image — используется при шеринге в соцсетях и мессенджерах
         { property: 'og:image',        content: 'https://bugaev-web.ru/og-image.jpg' },
@@ -120,12 +120,12 @@ export default defineNuxtConfig({
         { name: 'ICBM', content: '55.7558, 37.6173' },
         { property: 'og:type', content: 'website' },
         { property: 'og:url', content: 'https://bugaev-web.ru/' },
-        { property: 'og:title', content: 'ДАН Медиа — Сайт, SMM и Telegram-бот для салона красоты | 50 000 ₽/мес' },
+        { property: 'og:title', content: 'ДАН Медиа — Сайт, SMM и Telegram-бот для салона красоты | 30 000 ₽/мес' },
         { property: 'og:description', content: 'Помогаем салонам красоты и клиникам в Москве зарабатывать больше. Сайт, бот для записи, ведение соцсетей, CRM — под ключ за одну подписку от ДАН Медиа.' },
         { property: 'og:locale', content: 'ru_RU' },
         { property: 'og:site_name', content: 'ДАН Медиа' },
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: 'ДАН Медиа — Digital-абонемент для салона красоты — 50 000 ₽/мес' },
+        { name: 'twitter:title', content: 'ДАН Медиа — Digital-абонемент для салона красоты — 30 000 ₽/мес' },
         { name: 'twitter:description', content: 'Сайт + Telegram-бот + SMM + CRM для салона красоты в Москве. Один подрядчик. Один платёж. Бугаев Дмитрий.' }
       ],
       link: [

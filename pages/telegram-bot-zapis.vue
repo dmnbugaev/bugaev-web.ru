@@ -20,7 +20,7 @@
           <p class="section-subtitle max-w-2xl mb-8">
             Автоматическая запись клиентов в салон красоты 24/7 — без администратора.
             Бот принимает заявки, показывает свободное время, отправляет напоминания.
-            Неявки снижаются на <strong>60–70%</strong>. Входит в абонемент <strong>50 000 ?/мес</strong>.
+            Неявки снижаются на <strong>60–70%</strong>. Входит в абонемент <strong>30 000 ?/мес</strong>.
           </p>
           <div class="flex flex-wrap gap-4">
             <a href="#contact" class="btn-primary">Подключить бота</a>
@@ -132,7 +132,7 @@
             </div>
             <div class="card p-6">
               <h3 style="font-weight: 700; margin-bottom: 8px; font-size: 1rem;">Сколько стоит Telegram-бот для онлайн-записи?</h3>
-              <p style="color: var(--ink-3); font-size: 0.9rem; line-height: 1.6;">При отдельном заказе разработка бота — от 30 000–50 000 ?. В абонементе ДАН Медиа бот входит в стоимость 50 000 ?/мес без доплат.</p>
+              <p style="color: var(--ink-3); font-size: 0.9rem; line-height: 1.6;">При отдельном заказе разработка бота — от 30 000–30 000 ?. В абонементе ДАН Медиа бот входит в стоимость 30 000 ?/мес без доплат.</p>
             </div>
             <div class="card p-6">
               <h3 style="font-weight: 700; margin-bottom: 8px; font-size: 1rem;">Как клиенты узнают о боте?</h3>
@@ -148,7 +148,7 @@
         <!-- CTA -->
         <section style="background: var(--ink); border-radius: 20px; padding: 56px 40px; text-align: center;" aria-label="Подключить Telegram-бот для онлайн-записи">
           <h2 style="font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(1.5rem, 3vw, 2.2rem); color: #fff; margin-bottom: 12px;">Подключите онлайн-запись через Telegram-бот</h2>
-          <p style="color: rgba(255,255,255,0.5); margin-bottom: 32px; max-width: 480px; margin-left: auto; margin-right: auto;">Бот + сайт + SMM + CRM в одном абонементе 50 000 ?/мес. Запись пойдёт уже в первую неделю.</p>
+          <p style="color: rgba(255,255,255,0.5); margin-bottom: 32px; max-width: 480px; margin-left: auto; margin-right: auto;">Бот + сайт + SMM + CRM в одном абонементе 30 000 ?/мес. Запись пойдёт уже в первую неделю.</p>
           <a href="#contact" class="btn-accent">Написать нам</a>
         </section>
 
@@ -165,9 +165,9 @@
 <script setup lang="ts">
 useSeoMeta({
   title: 'Telegram-бот для онлайн-записи клиентов в салон красоты | ДАН Медиа',
-  description: 'Telegram-бот для онлайн-записи: автозапись 24/7, напоминания клиентам, снижение неявок на 70%, интеграция с CRM YCLIENTS. Для салонов красоты Москвы. Входит в абонемент 50 000 ?/мес.',
+  description: 'Telegram-бот для онлайн-записи: автозапись 24/7, напоминания клиентам, снижение неявок на 70%, интеграция с CRM YCLIENTS. Для салонов красоты Москвы. Входит в абонемент 30 000 ?/мес.',
   ogTitle: 'Telegram-бот для онлайн-записи в салон красоты | ДАН Медиа',
-  ogDescription: 'Автоматическая запись клиентов 24/7 без администратора. Напоминания, снижение неявок на 70%. Входит в абонемент 50 000 ?/мес.',
+  ogDescription: 'Автоматическая запись клиентов 24/7 без администратора. Напоминания, снижение неявок на 70%. Входит в абонемент 30 000 ?/мес.',
   ogUrl: 'https://bugaev-web.ru/telegram-bot-zapis',
   ogType: 'website',
   ogLocale: 'ru_RU',
@@ -206,7 +206,7 @@ const schema = {
       "serviceType": "Разработка Telegram-бота для онлайн-записи",
       "offers": {
         "@type": "Offer",
-        "price": "50000",
+        "price": "30000",
         "priceCurrency": "RUB",
         "availability": "https://schema.org/InStock",
         "description": "Входит в абонемент Digital + SMM"
@@ -223,7 +223,7 @@ const schema = {
         {
           "@type": "Question",
           "name": "Сколько стоит Telegram-бот для онлайн-записи в салон красоты?",
-          "acceptedAnswer": { "@type": "Answer", "text": "При отдельном заказе — от 30 000 ?. В абонементе ДАН Медиа бот входит без доплат: 50 000 ?/мес включает бота, сайт, SMM и CRM." }
+          "acceptedAnswer": { "@type": "Answer", "text": "При отдельном заказе — от 30 000 ?. В абонементе ДАН Медиа бот входит без доплат: 30 000 ?/мес включает бота, сайт, SMM и CRM." }
         },
         {
           "@type": "Question",

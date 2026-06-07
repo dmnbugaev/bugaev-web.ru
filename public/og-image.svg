@@ -63,7 +63,7 @@
   <line x1="80" y1="500" x2="1120" y2="500" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
 
   <!-- Price block -->
-  <text x="80" y="548" font-family="Arial Black, Arial, sans-serif" font-size="38" font-weight="900" fill="#FFFFFF" letter-spacing="-0.02em">50 000 ₽ / мес</text>
+  <text x="80" y="548" font-family="Arial Black, Arial, sans-serif" font-size="38" font-weight="900" fill="#FFFFFF" letter-spacing="-0.02em">30 000 ₽ / мес</text>
   <text x="320" y="548" font-family="Arial, sans-serif" font-size="18" fill="rgba(255,255,255,0.35)" letter-spacing="0.01em"> — без скрытых платежей</text>
 
   <!-- CTA pill -->

@@ -10,7 +10,7 @@
           <h1 class="section-title mb-5">Продвижение<br><span style="color: var(--accent);">барбершопа</span> в Москве</h1>
           <p class="section-subtitle max-w-2xl mb-8">
             SMM, сайт и Telegram-бот для барбершопа. Заполняем кресла через Instagram, Telegram и органический поиск —
-            без дорогой таргетированной рекламы. Один подрядчик. Один платёж. От <strong>50 000 ?/мес</strong>.
+            без дорогой таргетированной рекламы. Один подрядчик. Один платёж. От <strong>30 000 ?/мес</strong>.
           </p>
           <div class="flex flex-wrap gap-4">
             <NuxtLink to="/#contact" class="btn-primary">Написать нам</NuxtLink>
@@ -118,7 +118,7 @@
           <div class="grid gap-5 max-w-2xl">
             <div class="card p-6">
               <h3 style="font-weight: 700; margin-bottom: 8px; color: var(--ink);">Сколько стоит продвижение барбершопа?</h3>
-              <p style="color: var(--ink-3); font-size: 0.9rem; line-height: 1.6;">Абонемент стоит от 50 000 ?/мес — включает сайт, SMM, Telegram-бот и CRM. Это дешевле, чем нанимать трёх отдельных специалистов.</p>
+              <p style="color: var(--ink-3); font-size: 0.9rem; line-height: 1.6;">Абонемент стоит от 30 000 ?/мес — включает сайт, SMM, Telegram-бот и CRM. Это дешевле, чем нанимать трёх отдельных специалистов.</p>
             </div>
             <div class="card p-6">
               <h3 style="font-weight: 700; margin-bottom: 8px; color: var(--ink);">Нужен ли Яндекс.Директ или таргет?</h3>
@@ -175,9 +175,9 @@
 <script setup lang="ts">
 useSeoMeta({
   title: 'Продвижение барбершопа в Москве — SMM, сайт, Telegram-бот | ДАН Медиа',
-  description: 'Продвижение барбершопа в Москве: SEO-сайт, ведение Instagram, Telegram-бот для онлайн-записи, настройка YCLIENTS. Заполняем кресла без дорогой рекламы. От 50 000 ?/мес.',
+  description: 'Продвижение барбершопа в Москве: SEO-сайт, ведение Instagram, Telegram-бот для онлайн-записи, настройка YCLIENTS. Заполняем кресла без дорогой рекламы. От 30 000 ?/мес.',
   ogTitle: 'Продвижение барбершопа в Москве | ДАН Медиа',
-  ogDescription: 'SMM, сайт и Telegram-бот для барбершопа. Заполняем кресла через Instagram и органический поиск. От 50 000 ?/мес.',
+  ogDescription: 'SMM, сайт и Telegram-бот для барбершопа. Заполняем кресла через Instagram и органический поиск. От 30 000 ?/мес.',
   ogType: 'website',
   ogLocale: 'ru_RU',
   ogSiteName: 'ДАН Медиа',
@@ -206,7 +206,7 @@ useHead({
         },
         areaServed: { '@type': 'City', name: 'Москва' },
         serviceType: 'Digital-маркетинг для барбершопа',
-        offers: { '@type': 'Offer', priceCurrency: 'RUB', price: '50000', priceSpecification: { '@type': 'UnitPriceSpecification', priceType: 'https://schema.org/MinimumAnnotatedPrice' } },
+        offers: { '@type': 'Offer', priceCurrency: 'RUB', price: '30000', priceSpecification: { '@type': 'UnitPriceSpecification', priceType: 'https://schema.org/MinimumAnnotatedPrice' } },
         url: 'https://bugaev-web.ru/barbershop',
       }),
     },
@@ -219,7 +219,7 @@ useHead({
           {
             '@type': 'Question',
             name: 'Сколько стоит продвижение барбершопа?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Абонемент стоит от 50 000 ?/мес — включает сайт, SMM, Telegram-бот и CRM YCLIENTS. Это дешевле, чем нанимать трёх отдельных специалистов.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Абонемент стоит от 30 000 ?/мес — включает сайт, SMM, Telegram-бот и CRM YCLIENTS. Это дешевле, чем нанимать трёх отдельных специалистов.' },
           },
           {
             '@type': 'Question',

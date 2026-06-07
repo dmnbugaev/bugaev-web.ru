@@ -19,7 +19,7 @@
           <h1 class="section-title mb-5">Сайт для салона<br><span style="color: var(--accent);">красоты</span> под ключ</h1>
           <p class="section-subtitle max-w-2xl mb-8">
             Быстрый SEO-оптимизированный сайт-визитка для салона красоты на Nuxt.js: прайс-лист,
-            портфолио работ, форма онлайн-записи, адаптация под смартфоны. Входит в абонемент <strong>50 000 ?/мес</strong>.
+            портфолио работ, форма онлайн-записи, адаптация под смартфоны. Входит в абонемент <strong>30 000 ?/мес</strong>.
           </p>
           <div class="flex flex-wrap gap-4">
             <a href="#contact" class="btn-primary">Заказать сайт</a>
@@ -116,7 +116,7 @@
           <div style="max-width: 720px; display: flex; flex-direction: column; gap: 16px;">
             <div class="card p-6">
               <h3 style="font-weight: 700; margin-bottom: 8px; font-size: 1rem;">Сколько стоит разработка сайта для салона красоты?</h3>
-              <p style="color: var(--ink-3); font-size: 0.9rem; line-height: 1.6;">При отдельном заказе — от 80 000 ?. В абонементе ДАН Медиа разработка сайта входит без доплат — за 50 000 ?/мес получаете сайт + SMM + бот + CRM.</p>
+              <p style="color: var(--ink-3); font-size: 0.9rem; line-height: 1.6;">При отдельном заказе — от 80 000 ?. В абонементе ДАН Медиа разработка сайта входит без доплат — за 30 000 ?/мес получаете сайт + SMM + бот + CRM.</p>
             </div>
             <div class="card p-6">
               <h3 style="font-weight: 700; margin-bottom: 8px; font-size: 1rem;">Как долго делается сайт для салона красоты?</h3>
@@ -136,7 +136,7 @@
         <!-- CTA -->
         <section style="background: var(--ink); border-radius: 20px; padding: 56px 40px; text-align: center;" aria-label="Заказать сайт для салона красоты">
           <h2 style="font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(1.5rem, 3vw, 2.2rem); color: #fff; margin-bottom: 12px;">Получите сайт для салона красоты в составе абонемента</h2>
-          <p style="color: rgba(255,255,255,0.5); margin-bottom: 32px; max-width: 480px; margin-left: auto; margin-right: auto;">50 000 ?/мес — сайт + SMM + Telegram-бот + CRM YCLIENTS. Без доплат и скрытых платежей.</p>
+          <p style="color: rgba(255,255,255,0.5); margin-bottom: 32px; max-width: 480px; margin-left: auto; margin-right: auto;">30 000 ?/мес — сайт + SMM + Telegram-бот + CRM YCLIENTS. Без доплат и скрытых платежей.</p>
           <a href="#contact" class="btn-accent">Написать нам</a>
         </section>
 
@@ -153,9 +153,9 @@
 <script setup lang="ts">
 useSeoMeta({
   title: 'Разработка сайта для салона красоты в Москве под ключ | ДАН Медиа',
-  description: 'Сайт для салона красоты: прайс-лист, портфолио работ, онлайн-запись, SEO под запросы вашего района Москвы. Nuxt.js, скорость 100/100. Входит в абонемент 50 000 ?/мес.',
+  description: 'Сайт для салона красоты: прайс-лист, портфолио работ, онлайн-запись, SEO под запросы вашего района Москвы. Nuxt.js, скорость 100/100. Входит в абонемент 30 000 ?/мес.',
   ogTitle: 'Сайт для салона красоты под ключ в Москве | ДАН Медиа',
-  ogDescription: 'Разработка сайта для салона красоты: прайс, портфолио, онлайн-запись, SEO. Входит в абонемент 50 000 ?/мес.',
+  ogDescription: 'Разработка сайта для салона красоты: прайс, портфолио, онлайн-запись, SEO. Входит в абонемент 30 000 ?/мес.',
   ogUrl: 'https://bugaev-web.ru/sait-salon-krasoty',
   ogType: 'website',
   ogLocale: 'ru_RU',
@@ -165,7 +165,7 @@ useSeoMeta({
   ogImageHeight: '630',
   twitterCard: 'summary_large_image',
   twitterTitle: 'Сайт для салона красоты — ДАН Медиа',
-  twitterDescription: 'Разработка сайта для салона красоты в Москве. Входит в абонемент 50 000 ?/мес.',
+  twitterDescription: 'Разработка сайта для салона красоты в Москве. Входит в абонемент 30 000 ?/мес.',
   twitterImage: 'https://bugaev-web.ru/og-image.jpg',
 })
 
@@ -194,7 +194,7 @@ const schema = {
       "serviceType": "Разработка сайтов для бьюти-бизнеса",
       "offers": {
         "@type": "Offer",
-        "price": "50000",
+        "price": "30000",
         "priceCurrency": "RUB",
         "availability": "https://schema.org/InStock",
         "description": "Входит в абонемент Digital + SMM"
@@ -206,7 +206,7 @@ const schema = {
         {
           "@type": "Question",
           "name": "Сколько стоит сайт для салона красоты?",
-          "acceptedAnswer": { "@type": "Answer", "text": "При отдельном заказе — от 80 000 ?. В абонементе ДАН Медиа разработка сайта входит без доплат — 50 000 ?/мес включает сайт + SMM + бот + CRM." }
+          "acceptedAnswer": { "@type": "Answer", "text": "При отдельном заказе — от 80 000 ?. В абонементе ДАН Медиа разработка сайта входит без доплат — 30 000 ?/мес включает сайт + SMM + бот + CRM." }
         },
         {
           "@type": "Question",

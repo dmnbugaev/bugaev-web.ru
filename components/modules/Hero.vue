@@ -43,7 +43,7 @@
             <span style="color: var(--accent);">салона</span><br />
             под ключ
           </h1>
-//
+
           <!-- Subtitle -->
           <p
             data-animate="fade-up"
@@ -94,7 +94,7 @@
                   line-height: 1;
                   letter-spacing: -0.04em;
                 "
-              >50 000</span>
+              >30 000</span>
               <span class="text-xl font-semibold mb-1.5" style="color: rgba(255,255,255,0.4);">₽</span>
             </div>
 
@@ -163,7 +163,7 @@
                   letter-spacing: -0.03em;
                   color: white;
                 "
-              >50 000</span>
+              >30 000</span>
               <span style="color: rgba(255,255,255,0.45); font-size: 1rem; font-weight: 600;">₽</span>
             </div>
           </div>
