@@ -9,7 +9,7 @@
             <span class="badge">Связаться</span>
           </div>
           <h2 class="section-title mb-3" data-animate="fade-up" data-delay="100">
-            Ваш персональный digital-отдел и SMM — за 50&nbsp;000&nbsp;₽/мес
+            Ваш персональный digital-отдел и SMM — за 30&nbsp;000&nbsp;₽/мес
           </h2>
           <p class="section-subtitle" data-animate="fade-up" data-delay="200">
             Напишите нам в мессенджер — ответим в течение часа и обсудим, как помочь вашему бизнесу.

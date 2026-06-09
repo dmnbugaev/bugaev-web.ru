@@ -13,7 +13,7 @@
           data-delay="100"
         >
           Что входит в подписку<br />
-          <span style="color: var(--accent);">50&nbsp;000&nbsp;₽ в месяц</span>
+          <span style="color: var(--accent);">30&nbsp;000&nbsp;₽ в месяц</span>
         </h2>
         <p class="section-subtitle-light max-w-lg" data-animate="fade-up" data-delay="200">
           5 направлений в одной подписке — комплексный маркетинг для салона красоты без скрытых доплат
@@ -88,7 +88,7 @@
       >
         <p class="text-base" style="color: rgba(255,255,255,0.4);">
           Всё включено в одну подписку —
-          <span class="font-bold text-lg" style="color: var(--accent);">50&nbsp;000&nbsp;₽/мес</span>,
+          <span class="font-bold text-lg" style="color: var(--accent);">30&nbsp;000&nbsp;₽/мес</span>,
           без скрытых доплат
         </p>
       </div>

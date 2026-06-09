@@ -26,7 +26,7 @@
 
           <p class="text-sm leading-relaxed mb-6" style="color: rgba(255,255,255,0.35);">
             IT-отдел + SMM под ключ для салонов красоты
-            и beauty-клиник за&nbsp;50&nbsp;000&nbsp;₽/мес.
+            и beauty-клиник за&nbsp;30&nbsp;000&nbsp;₽/мес.
           </p>
 
           <!-- Social icons -->

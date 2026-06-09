@@ -50,7 +50,7 @@
             data-delay="250"
             style="font-size: clamp(0.875rem, 1.5vw, 1rem); line-height: 1.65; color: var(--ink-3); max-width: 400px; margin-bottom: 1.75rem;"
           >
-            Единая подписка 50&nbsp;000&nbsp;₽/мес — удалённый digital‑отдел
+            Единая подписка 30&nbsp;000&nbsp;₽/мес — удалённый digital‑отдел
             и SMM для салона красоты в Москве.
             Рост заявок с первого месяца.
           </p>
